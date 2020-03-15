@@ -6,7 +6,7 @@
                 <nav>
                     <ul class="nav">
                         <li><a href="{{route('dashboard')}}" {{Route::is('dashboard')?'class=active':''}}><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-                        <li><a href="{{route('elements')}}" {{Route::is('elements')?'class=active':''}}><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
+                        <li><a href="{{route('elements')}}" {{Route::is('elements')?'class=active':''}}><i class="lnr lnr-code"></i> <span>EPBM Pengajar</span></a></li>
                         <li><a href="{{route('charts')}}" {{Route::is('charts')?'class=active':''}}><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
                         <li><a href="{{route('panels')}}" {{Route::is('panels')?'class=active':''}}><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
                         <li><a href="{{route('notification')}}" {{Route::is('notification')?'class=active':''}}><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
