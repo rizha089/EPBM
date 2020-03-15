@@ -1,6 +1,6 @@
 <div class="sidebar">
             <div class="brand">
-                <a href="index.html"><img src="klorofil/img/logo.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+                <a href="index.html"><img src="klorofil/img/logoSCB.png" alt="Logo" class="img-responsive logo"></a>
             </div>
             <div class="sidebar-scroll">
                 <nav>
