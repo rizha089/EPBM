@@ -27,3 +27,7 @@ Route::group(['middleware'=>'guest'],function(){
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
