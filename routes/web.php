@@ -31,3 +31,9 @@ Route::group(['middleware'=>'guest'],function(){
 
 
 
+<<<<<<< HEAD
+=======
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+>>>>>>> f8c7d41c1db9934fc3d9a0f3c2d35199c8a3d0e8
