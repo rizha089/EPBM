@@ -17,7 +17,7 @@
            <h3 class="panel-title"><b> Muhammad Adam </b></h3> 
         </div>
         <div class="panel-body">
-            <div class="row">
+            <div class="col">
                 <div class="col-md-3">
                     <div class="metric">
                         <p>
@@ -27,8 +27,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="metric2">
-                        
+                    <div class="metric">
                         <p>
                             <span class="number"> <font color="white">Kegiatan Ekskul </font> </span>
                             <span class="title"><font color="white">2 </font> </span>
@@ -36,8 +35,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="metric3">
-                        
+                    <div class="metric">
                         <p>
                             <span class="number"> <font color="white"> Keuangan </font> </span>
                             <span class="title"> <font color="white"> 2.500.000 </font> </span>
@@ -45,8 +43,6 @@
                     </div>
                 </div>
                 
-           
-            <!-- END REALTIME CHART -->
         </div>
     </div>
 </div>

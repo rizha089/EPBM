@@ -18,12 +18,14 @@
         <div class="panel-body">
             <div class="row">
                 <div class="row-md-3">
+                    <a href="{{route('isi')}}" {{Route::is('isi')?'class=active':''}}>
                     <div class="metric">
                         <p>Mata Pelajaran</p>
                         <p>
                             <span class="title">Matematika</span>
                         </p>
                     </div>
+                    </a>
                 </div>
                 <div class="row-md-3">
                     <div class="metric">
