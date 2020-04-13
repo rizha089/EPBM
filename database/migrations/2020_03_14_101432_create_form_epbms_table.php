@@ -14,7 +14,7 @@ class CreateFormEpbmsTable extends Migration
     public function up()
     {
         Schema::create('form_epbms', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->UnsignedInteger('id_guru');
             $table->UnsignedInteger('id_pertanyaan');
             $table->UnsignedInteger('id_matpel');
