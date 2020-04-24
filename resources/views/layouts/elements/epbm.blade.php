@@ -58,84 +58,182 @@
                         <table class="table project-table">
                             <thead>
                                 <tr>
-                                    <th>Aspek</th>
-                                    <th>Progress</th>
-                                    <th>Leader</th>
-                                    <th>Status</th>
+                                    <th>Aspek-aspek</th>
+                                    <th>Sangat Buruk</th>
+                                    <th>Buruk</th>
+                                    <th>Cukup baik</th>
+                                    <th>Baik</th>
+                                    <th>Sangat baik</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td><a href="#">Spot Media</a></td>
                                     <td>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                                <span>60% Complete</span>
-                                            </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
                                         </div>
                                     </td>
-                                    <td><img src="klorofil/img/user2.png" alt="Avatar" class="avatar img-circle"> <a href="#">Michael</a></td>
-                                    <td><span class="label label-success">ACTIVE</span></td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">E-Commerce Site</a></td>
                                     <td>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%;">
-                                                <span>33% Complete</span>
-                                            </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
                                         </div>
                                     </td>
-                                    <td><img src="klorofil/img/user1.png" alt="Avatar" class="avatar img-circle"> <a href="#">Antonius</a></td>
-                                    <td><span class="label label-warning">PENDING</span></td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">Project 123GO</a></td>
                                     <td>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;">
-                                                <span>68% Complete</span>
-                                            </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
                                         </div>
                                     </td>
-                                    <td><img src="klorofil/img/user1.png" alt="Avatar" class="avatar img-circle"> <a href="#">Antonius</a></td>
-                                    <td><span class="label label-success">ACTIVE</span></td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">Wordpress Theme</a></td>
                                     <td>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-                                                <span>75%</span>
-                                            </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
                                         </div>
                                     </td>
-                                    <td><img src="klorofil/img/user2.png" alt="Avatar" class="avatar img-circle"> <a href="#">Michael</a></td>
-                                    <td><span class="label label-success">ACTIVE</span></td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">Project 123GO</a></td>
                                     <td>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                                <span>100%</span>
-                                            </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
                                         </div>
                                     </td>
-                                    <td><img src="klorofil/img/user1.png" alt="Avatar" class="avatar img-circle" /> <a href="#">Antonius</a></td>
-                                    <td><span class="label label-default">CLOSED</span></td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">Redesign Landing Page</a></td>
                                     <td>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                                <span>100%</span>
-                                            </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
                                         </div>
                                     </td>
-                                    <td><img src="klorofil/img/user5.png" alt="Avatar" class="avatar img-circle" /> <a href="#">Jason</a></td>
-                                    <td><span class="label label-default">CLOSED</span></td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
