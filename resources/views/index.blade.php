@@ -57,7 +57,7 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="/login" img src="klorofil/img/user.png" class="img-circle" alt="Avatar"> <span>LOGIN</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                                <a href="/login" img src="klorofil/img/user.png" class="img-circle" alt="Avatar"> <span>LOGIN</span> </a>
                                 <!-- <ul class="dropdown-menu">
                                     <li><a href="{{route('profile')}}"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
                                     <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>

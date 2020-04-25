@@ -17,6 +17,8 @@
         </div>
         <div class="panel-body">
             <div class="row">
+                
+            @for ($i=0; $i<5; $i++)
                 <div class="row-md-3">
                     <a href="{{route('isi')}}" {{Route::is('isi')?'class=active':''}}>
                     <div class="metric">
@@ -27,6 +29,7 @@
                     </div>
                     </a>
                 </div>
+            @endfor
                 <div class="row-md-3">
                     <div class="metric">
                         <p>Mata Pelajaran</p>
@@ -55,6 +58,7 @@
         </div>
     </div>
 </div>
+
 @endsection
 
 

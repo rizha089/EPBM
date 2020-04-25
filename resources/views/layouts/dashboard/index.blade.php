@@ -21,24 +21,24 @@
                 <div class="col-md-3">
                     <div class="metric">
                         <p>
-                            <span class="number"> <font color="white"> Hafalan Juz </font> </span>
-                            <span class="title"> <font color="white"> 5 </font> </span>
+                            <span class="number"> <font color="black"> Hafalan Juz </font> </span>
+                            <span class="title"> <font color="black"> 5 </font> </span>
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="metric">
                         <p>
-                            <span class="number"> <font color="white">Kegiatan Ekskul </font> </span>
-                            <span class="title"><font color="white">2 </font> </span>
+                            <span class="number"> <font color="black">Kegiatan Ekskul </font> </span>
+                            <span class="title"><font color="black">2 </font> </span>
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="metric">
                         <p>
-                            <span class="number"> <font color="white"> Keuangan </font> </span>
-                            <span class="title"> <font color="white"> 2.500.000 </font> </span>
+                            <span class="number"> <font color="black"> Keuangan </font> </span>
+                            <span class="title"> <font color="black"> 2.500.000 </font> </span>
                         </p>
                     </div>
                 </div>

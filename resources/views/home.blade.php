@@ -39,6 +39,7 @@
                 @yield('content')
                     You're Logged in
                     <p> {{ Auth::user()->name }} <p>
+                    <p> {{ Auth::user() }}<p>
             </div>
             <!-- END MAIN CONTENT -->
             <footer>
