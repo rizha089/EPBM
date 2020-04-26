@@ -9,18 +9,21 @@
 @endsection
 
 @section('content')
+
+@for ($i = 0; $i<3; $i++)
 <div class="container-fluid">
     <div class="panel panel-profile">
         <div class="clearfix">
             <!-- LEFT COLUMN -->
             <div class="profile-left">
                 <!-- PROFILE HEADER -->
+                <br>
                 <div class="profile-header">
                     <div class="overlay"></div>
                     <div class="profile-main">
-                        <img src="klorofil/img/user-medium.png" class="img-circle" alt="Avatar">
-                        <h3 class="name">Samuel Gold</h3>
-                        <span class="online-status status-available">Available</span>
+                        <img src="/klorofil/img/user-medium.png" class="img-circle" alt="Avatar">
+                        <h3 class="name">Nama Guru</h3>
+                        <br>
                     </div>
                     <div class="profile-stat">
                         <div class="row">
@@ -37,19 +40,6 @@
                     </div>
                 </div>
                 <!-- END PROFILE HEADER -->
-                <!-- PROFILE DETAIL -->
-                <div class="profile-detail">
-                    <div class="profile-info">
-                        <h4 class="heading">Basic Info</h4>
-                        <ul class="list-unstyled list-justify">
-                            <li>Birthdate <span>24 Aug, 2016</span></li>
-                            <li>Mobile <span>(124) 823409234</span></li>
-                            <li>Email <span>samuel@mydomain.com</span></li>
-                            <li>Website <span><a href="https://www.themeineed.com">www.themeineed.com</a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- END PROFILE DETAIL -->
             </div>
             <!-- END LEFT COLUMN -->
             <!-- RIGHT COLUMN -->
@@ -67,31 +57,32 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            <form action = "" method = "GET">
                                 <tr>
                                     <td><a href="#">Spot Media</a></td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan1" id="blankRadio1" value="1" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan1" id="blankRadio1" value="2" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan1" id="blankRadio1" value="3" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan1" id="blankRadio1" value="4" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan1" id="blankRadio1" value="5" aria-label="...">
                                         </div>
                                     </td>
                                 </tr>
@@ -99,27 +90,27 @@
                                     <td><a href="#">E-Commerce Site</a></td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan2" id="blankRadio1" value="1" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan2" id="blankRadio1" value="2" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan2" id="blankRadio1" value="3" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan2" id="blankRadio1" value="4" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan2" id="blankRadio1" value="5" aria-label="...">
                                         </div>
                                     </td>
                                 </tr>
@@ -127,27 +118,27 @@
                                     <td><a href="#">Project 123GO</a></td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan3" id="blankRadio1" value="1" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan3" id="blankRadio1" value="2" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan3" id="blankRadio1" value="3" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan3" id="blankRadio1" value="4" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan3" id="blankRadio1" value="5" aria-label="...">
                                         </div>
                                     </td>
                                 </tr>
@@ -155,27 +146,27 @@
                                     <td><a href="#">Wordpress Theme</a></td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan4" id="blankRadio1" value="1" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan4" id="blankRadio1" value="2" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan4" id="blankRadio1" value="3" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan4" id="blankRadio1" value="4" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan4" id="blankRadio1" value="5" aria-label="...">
                                         </div>
                                     </td>
                                 </tr>
@@ -183,58 +174,31 @@
                                     <td><a href="#">Project 123GO</a></td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan5" id="blankRadio1" value="1" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan5" id="blankRadio1" value="2" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan5" id="blankRadio1" value="3" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan5" id="blankRadio1" value="4" aria-label="...">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            <input class="form-check-input position-static" type="radio" name="Pertanyaan5" id="blankRadio1" value="5" aria-label="...">
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td><a href="#">Redesign Landing Page</a></td>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-                                        </div>
-                                    </td>
-                                </tr>
+                                </form>
                             </tbody>
                         </table>
                     </div>
@@ -243,10 +207,10 @@
             <!-- END RIGHT COLUMN -->
         </div>
     </div>
-    
+
 </div>
 
-
+@endfor
 @endsection
 
 
