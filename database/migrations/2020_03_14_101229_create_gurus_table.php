@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateGurusTable extends Migration
 {
@@ -13,15 +13,14 @@ class CreateGurusTable extends Migration
      */
     public function up()
     {
-        Schema::create('gurus', function (Blueprint $table) {
-            $table  ->increments('id');
-            $table  ->string('namaGuru');
-            $table  ->string('tempatLahir');
-            $table  ->date('tanggalLahir');
-            $table  ->string('alamat');
-            $table  ->string('jenisKelamin');
-            $table  ->float('ratings');
-            $table  ->timestamps();
+        Schema::create('guru', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('nip')->unique();
+            $table->string('email')->unique();
+            $table->string('nama');
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -32,6 +31,6 @@ class CreateGurusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gurus');
+        Schema::dropIfExists('guru');
     }
 }

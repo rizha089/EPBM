@@ -7,9 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 class Guru extends Model
 {
     //
-    protected $fillable = ['namaGuru', 'tempatLahir', 'tanggalLahir', 'alamat', 'jenisKelamin', 'ratings'];
+    protected $table = "guru";
 
-    public function mataPelajarans(){
-        return $this->hasMany(MataPelajaran::class);
+    protected $fillable = [
+        'nip',
+        'email',
+        'nama'
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token'
+    ];
+
+    public function matpel_gurus(){
+        return $this->belongsToMany('App\MataPelajaran');
     }
 }

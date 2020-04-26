@@ -7,13 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class MataPelajaran extends Model
 {
     //
-    protected $fillable = ['namaMatpel'];
+    protected $table = "mata_pelajaran";
 
-    public function siswas(){
-        return $this->belongsToMany(Siswa::class);
+    public $incrementing = false;
+    protected $keyType = 'string';
+    protected $primaryKey = 'kode_matpel';
+
+    public function siswa(){
+        return $this->belongsToMany('App\Siswa');
     }
 
-    public function gurus(){
-        return $this->belongsToMany(Guru::class);
+    public function guru(){
+        return $this->belongsToMany('App\Guru');
     }
 }

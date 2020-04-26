@@ -1,9 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use App\User;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateSiswasTable extends Migration
 {
@@ -14,16 +13,15 @@ class CreateSiswasTable extends Migration
      */
     public function up()
     {
-        Schema::create('siswas', function (Blueprint $table) {
-            $table  ->increments('id');
-            $table  ->string('nama');
-            $table  ->string('tempatLahir');
-            $table  ->date('tanggalLahir');
-            $table  ->string('alamat');
-            $table  ->string('jenisKelamin');
-            $table  ->string('jenisProgram');
-            $table  ->string('kelas');
-            $table  ->timestamps();
+        Schema::create('siswa', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('nis')->unique();
+            $table->string('email')->unique();
+            $table->string('nama');
+            $table->string('kelas');
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -34,6 +32,6 @@ class CreateSiswasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('siswas');
+        Schema::dropIfExists('siswa');
     }
 }
