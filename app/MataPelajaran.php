@@ -20,4 +20,8 @@ class MataPelajaran extends Model
     public function guru(){
         return $this->belongsToMany('App\Guru');
     }
+
+    public function rate_pertanyaans(){
+        return $this->hasMany('App\RatePertanyaan');
+    }
 }

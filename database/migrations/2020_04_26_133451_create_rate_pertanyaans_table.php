@@ -26,9 +26,9 @@ class CreateRatePertanyaansTable extends Migration
             $table->double('averageRate');
             $table->timestamps();
 
-            $table->foreign('id_guru')->references('id')->on('guru');
-            $table->foreign('id_siswa')->references('id')->on('siswa');
-            $table->foreign('kode_matpel')->references('kode_matpel')->on('mata_pelajaran');
+            $table->foreign('id_guru')->references('id')->on('guru')->onDelete('cascade');
+            $table->foreign('id_siswa')->references('id')->on('siswa')->onDelete('cascade');
+            $table->foreign('kode_matpel')->references('kode_matpel')->on('mata_pelajaran')->onDelete('cascade');
         });
     }
 

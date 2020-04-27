@@ -19,3 +19,4 @@ Route::get('gurus','GuruController@gurus');      //api guru
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/rating/new', 'RatingController@setRating');
