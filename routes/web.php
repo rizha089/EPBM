@@ -11,7 +11,6 @@
 
 */
 
-
 Auth::routes();
 
 Route::group(['middleware'=>'guest'],function(){
@@ -24,15 +23,8 @@ Route::group(['middleware'=>'guest'],function(){
 	Route::get('/tables', ['as'=>'tables','uses'=>'TablesController@index']);
 	Route::get('/typography', ['as'=>'typography','uses'=>'TypographyController@index']);
 	Route::get('/icons', ['as'=>'icons','uses'=>'IconsController@index']);
-	// Route::get('/epbm/isi/{id}', ['as'=>'isi','uses'=>'EpbmController@isiEPBM']);
-	Route::get('/epbm/isi/{id}', 'EpbmController@isiEPBM');
-	
-	
 });
 
-
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 // Route::get('/epbm', 'MatPelController@index');

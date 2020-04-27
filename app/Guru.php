@@ -23,4 +23,8 @@ class Guru extends Model
     public function matpel_gurus(){
         return $this->belongsToMany('App\MataPelajaran');
     }
+
+    public function rate_pertanyaans(){
+        return $this->hasMany('App\RatePertanyaan');
+    }
 }

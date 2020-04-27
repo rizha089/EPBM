@@ -19,4 +19,8 @@ class Siswa extends Model
     public function matpel_siswas(){
         return $this->belongsToMany('App\MataPelajaran');
     }
+
+    public function rate_pertanyaans(){
+        return $this->hasMany('App\RatePertanyaan');
+    }
 }
