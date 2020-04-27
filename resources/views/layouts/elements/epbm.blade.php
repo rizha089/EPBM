@@ -10,7 +10,7 @@
 
 @section('content')
 
-@foreach ($guru -> all() as $i)
+@foreach ($guru as $g)
 <div class="container-fluid">
     <div class="panel panel-profile">
         <div class="clearfix">
@@ -22,7 +22,7 @@
                     <div class="overlay"></div>
                     <div class="profile-main">
                         <img src="/klorofil/img/user-medium.png" class="img-circle" alt="Avatar">
-                        <h3 class="name">{{$i->nama}}</h3>
+                        <h3 class="name">{{$g->nama}}</h3>
                         <br>
                     </div>
                     <div class="profile-stat">

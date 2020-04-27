@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\MataPelajaran;
 use App\Guru;
-
+use App\MatpelGuru;
 class EpbmController extends Controller
 {
     public function __construct()
@@ -21,7 +21,7 @@ class EpbmController extends Controller
 
     public function isiEPBM(Request $request, $id)
     {
-        $mata_pelajaran = MataPelajaran::where('id', $id)->first();
-        return view('layouts/elements/epbm', compact('mata_pelajaran'));
+        $guru = Guru::get();
+        return view('layouts/elements/epbm', compact('guru'));
     }
 }
