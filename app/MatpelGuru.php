@@ -11,10 +11,14 @@ class MatpelGuru extends Model
 
     protected $fillable = [
         'id_guru',
-        'kode_matpel',    
+        'id_matpel',    
     ];
 
     public function guru(){
-        return $this->belongsToMany('App\Guru');
+        return $this->belongsTo('App\Guru','id_guru', 'id');
+    }
+
+    public function matpel(){
+        return $this->belongsTo('App\MataPelajaran','id_matpel', 'id');
     }
 }

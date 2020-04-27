@@ -19,8 +19,8 @@ class CreateMatpelSiswasTable extends Migration
             $table->string('kode_matpel');
             $table->timestamps();
 
-            $table->foreign('id_siswa')->references('id')->on('siswa');
-            $table->foreign('kode_matpel')->references('kode_matpel')->on('mata_pelajaran');
+            $table->foreign('id_siswa')->references('id')->on('siswa')->onDelete('cascade');
+            $table->foreign('kode_matpel')->references('kode_matpel')->on('mata_pelajaran')->onDelete('cascade');
         });
     }
 

@@ -20,8 +20,8 @@ class CreateRatingGurusTable extends Migration
             $table->double('rating');
             $table->timestamps();
             
-            $table->foreign('id_guru')->references('id')->on('guru');
-            $table->foreign('id_siswa')->references('id')->on('siswa');
+            $table->foreign('id_guru')->references('id')->on('guru')->onDelete('cascade');
+            $table->foreign('id_siswa')->references('id')->on('siswa')->onDelete('cascade');
         });
     }
 

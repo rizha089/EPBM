@@ -16,11 +16,11 @@ class CreateMatpelGurusTable extends Migration
         Schema::create('matpel_guru', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedBigInteger('id_guru');
-            $table->string('kode_matpel');
+            $table->Integer('id_matpel') -> unsigned();
             $table->timestamps();
 
-            $table->foreign('id_guru')->references('id')->on('guru');
-            $table->foreign('kode_matpel')->references('kode_matpel')->on('mata_pelajaran');
+            $table->foreign('id_guru')->references('id')->on('guru')->onDelete('cascade');
+            $table->foreign('id_matpel')->references('id')->on('mata_pelajaran')->onDelete('cascade');
         });
     }
 

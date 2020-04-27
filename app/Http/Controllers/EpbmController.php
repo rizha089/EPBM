@@ -21,7 +21,7 @@ class EpbmController extends Controller
 
     public function isiEPBM(Request $request, $id)
     {
-        $guru = Guru::get();
-        return view('layouts/elements/epbm', compact('guru'));
+        $matpel_guru = MatpelGuru::where('id_matpel', $id)->get();
+        return view('layouts/elements/epbm', compact('matpel_guru'));
     }
 }
