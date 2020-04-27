@@ -10,7 +10,7 @@
 
 @section('content')
 
-@for ($i = 0; $i<3; $i++)
+@foreach ($guru -> all() as $i)
 <div class="container-fluid">
     <div class="panel panel-profile">
         <div class="clearfix">
@@ -22,7 +22,7 @@
                     <div class="overlay"></div>
                     <div class="profile-main">
                         <img src="/klorofil/img/user-medium.png" class="img-circle" alt="Avatar">
-                        <h3 class="name">Nama Guru</h3>
+                        <h3 class="name">{{$i->nama}}</h3>
                         <br>
                     </div>
                     <div class="profile-stat">
@@ -210,7 +210,7 @@
 
 </div>
 
-@endfor
+@endforeach
 @endsection
 
 

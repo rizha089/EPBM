@@ -15,6 +15,8 @@ class CreateMataPelajaransTable extends Migration
     {
         Schema::create('mata_pelajaran', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('user');
             $table->string('kode_matpel')->unique();
             $table->string('nama_matpel');
             $table->timestamps();

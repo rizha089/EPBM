@@ -8,7 +8,7 @@ class MataPelajaran extends Model
 {
     //
     protected $table = "mata_pelajaran";
-
+    protected $fillable = ['kode_matpel','nama_matpel'];
     public $incrementing = false;
     protected $keyType = 'string';
     protected $primaryKey = 'kode_matpel';
