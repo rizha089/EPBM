@@ -23,7 +23,14 @@ Route::group(['middleware'=>'guest'],function(){
 	Route::get('/tables', ['as'=>'tables','uses'=>'TablesController@index']);
 	Route::get('/typography', ['as'=>'typography','uses'=>'TypographyController@index']);
 	Route::get('/icons', ['as'=>'icons','uses'=>'IconsController@index']);
+<<<<<<< HEAD
 	Route::get('/epbm/isi', ['as'=>'isi','uses'=>'EpbmController@index']);
+=======
+	// Route::get('/epbm/isi/{id}', ['as'=>'isi','uses'=>'EpbmController@isiEPBM']);
+	Route::get('/epbm/isi/{id}', 'EpbmController@isiEPBM');
+	
+	
+>>>>>>> ee5bbe095fa6be6852e05281a2f9a8dbce49fc99
 });
 
 

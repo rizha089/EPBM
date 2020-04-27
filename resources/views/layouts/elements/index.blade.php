@@ -20,7 +20,7 @@
                 
             @foreach ($mata_pelajaran ->all() as $i)
                 <div class="row-md-3">
-                    <a href="{{route('isi')}}" {{Route::is('isi')?'class=active':''}}>
+                    <a href="/epbm/isi/{{$i->id}}" >
                     <div class="metric">
                         <p>Mata Pelajaran</p>
                         <p>
