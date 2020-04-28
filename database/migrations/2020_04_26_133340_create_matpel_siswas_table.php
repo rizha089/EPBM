@@ -13,14 +13,14 @@ class CreateMatpelSiswasTable extends Migration
      */
     public function up()
     {
-        Schema::create('matpel_siswa', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('mata_pelajaran_siswa', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('mata_pelajaran_id');
             $table->unsignedBigInteger('id_siswa');
-            $table->string('kode_matpel');
             $table->timestamps();
 
-            $table->foreign('id_siswa')->references('id')->on('siswa')->onDelete('cascade');
-            $table->foreign('kode_matpel')->references('kode_matpel')->on('mata_pelajaran')->onDelete('cascade');
+            // $table->foreign('id_siswa')->references('id')->on('siswa')->onDelete('cascade');
+            // $table->foreign('kode_matpel')->references('kode_matpel')->on('mata_pelajaran')->onDelete('cascade');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateMatpelSiswasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('matpel_siswa');
+        Schema::dropIfExists('mata_pelajaran_siswa');
     }
 }

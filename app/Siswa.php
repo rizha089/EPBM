@@ -16,11 +16,11 @@ class Siswa extends Model
         'remember_token'
     ];
 
-    public function matpel_siswas(){
+    public function matpel_siswa(){
         return $this->belongsToMany('App\MataPelajaran');
     }
 
-    public function rate_pertanyaans(){
+    public function rate_pertanyaan(){
         return $this->hasMany('App\RatePertanyaan');
     }
 }

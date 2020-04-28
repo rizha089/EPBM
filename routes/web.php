@@ -36,3 +36,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 // Route::get('/epbm', 'MatPelController@index');
+Route::get('/test', 'MatpelUser@index');

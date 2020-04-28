@@ -9,9 +9,7 @@ class MataPelajaran extends Model
     //
     protected $table = "mata_pelajaran";
     protected $fillable = ['kode_matpel','nama_matpel'];
-    public $incrementing = false;
-    protected $keyType = 'string';
-    protected $primaryKey = 'kode_matpel';
+    // protected $primaryKey = 'kode_matpel';
 
     public function siswa(){
         return $this->belongsToMany('App\Siswa');
@@ -21,7 +19,7 @@ class MataPelajaran extends Model
         return $this->belongsToMany('App\Guru');
     }
 
-    public function rate_pertanyaans(){
+    public function rate_pertanyaan(){
         return $this->hasMany('App\RatePertanyaan');
     }
 }
