@@ -17,7 +17,7 @@ class CreateMatpelGurusTable extends Migration
             $table->increments('id');
             $table->unsignedBigInteger('id_guru');
             $table->Integer('id_matpel') -> unsigned();
-            $table->boolean('filled')->default(0)->change();
+            $table->Integer('filled')->default(0);
             $table->timestamps();
 
             $table->foreign('id_guru')->references('id')->on('guru')->onDelete('cascade');

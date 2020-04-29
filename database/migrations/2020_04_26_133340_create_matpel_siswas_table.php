@@ -17,7 +17,7 @@ class CreateMatpelSiswasTable extends Migration
             $table->id();
             $table->unsignedBigInteger('mata_pelajaran_id');
             $table->unsignedBigInteger('id_siswa');
-            $table->boolean('filled')->default(0)->change();
+            $table->Integer('filled')->default(0);
             $table->timestamps();
 
             // $table->foreign('id_siswa')->references('id')->on('siswa')->onDelete('cascade');
