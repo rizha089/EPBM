@@ -26,14 +26,11 @@ Route::group(['middleware'=>'guest'],function(){
 	Route::get('/icons', ['as'=>'icons','uses'=>'IconsController@index']);
 	// Route::get('/epbm/isi/{id}', ['as'=>'isi','uses'=>'EpbmController@isiEPBM']);
 	Route::get('/epbm/isi/{id}', 'EpbmController@isiEPBM');
-	
-	
 });
-
-
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 // Route::get('/epbm', 'MatPelController@index');
 Route::get('/test', 'MatpelUser@index');
+Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');

@@ -12,7 +12,7 @@ class Guru extends Model
     protected $fillable = [
         'nip',
         'email',
-        'nama'
+        'nama',
     ];
 
     protected $hidden = [

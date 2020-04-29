@@ -25,7 +25,7 @@ class RatingController extends Controller
                 $request->pertanyaan3 + $request->pertanyaan4 + $request->pertanyaan5
             ) / 5
         ]);
-        
-        return new RateResource($rate);
+
+        return redirect()->back();
     }
 }
