@@ -11,7 +11,8 @@ class MatpelGuru extends Model
 
     protected $fillable = [
         'id_guru',
-        'id_matpel',    
+        'id_matpel',
+        'filled'
     ];
 
     public function guru(){
