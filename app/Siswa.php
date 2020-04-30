@@ -23,11 +23,7 @@ class Siswa extends Authenticatable
     ];
 
     public function matpel_siswa(){
-<<<<<<< Updated upstream
         return $this->belongsToMany('App\MataPelajaran')->withPivot('filled', 0);
-=======
-        return $this->belongsToMany('App\MataPelajaran')->wherePivot('filled', 0);
->>>>>>> Stashed changes
     }
 
     public function rate_pertanyaan(){

@@ -14,7 +14,7 @@
 
 Auth::routes();
 
-Route::group(['middleware'=>'guest'],function(){
+Route::group(['middleware'=>'auth'],function(){
 	Route::get('/', ['as'=>'dashboard','uses'=>'DashboardController@index']);
 	Route::get('/epbm', ['as'=>'elements','uses'=>'ElementController@index']);
 	Route::get('/charts', ['as'=>'charts','uses'=>'ChartsController@index']);
@@ -28,7 +28,7 @@ Route::group(['middleware'=>'guest'],function(){
 	Route::get('/epbm/isi/{id}', 'EpbmController@isiEPBM');
 });
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index');
 // Route::get('/epbm', 'MatPelController@index');
