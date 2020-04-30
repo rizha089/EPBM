@@ -14,7 +14,7 @@ class Siswa extends Authenticatable
     protected $table = "siswa";
 
     protected $fillable = [
-        'nis', 'email', 'nama', 'kelas'
+        'nis', 'email', 'nama', 'kelas', 'password'
     ];
 
     protected $hidden = [
