@@ -11,7 +11,7 @@ class RatePertanyaan extends Model
     protected $fillable = [
         'id_siswa',
         'id_guru',
-        'kode_matpel',
+        'id_matpel',
         'pertanyaan1',
         'pertanyaan2',
         'pertanyaan3',

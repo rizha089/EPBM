@@ -23,10 +23,14 @@ class Siswa extends Authenticatable
     ];
 
     public function matpel_siswa(){
-        return $this->belongsToMany('App\MataPelajaran')->withPivot('filled', 0);
+        return $this->belongsToMany('App\MataPelajaran');
     }
 
     public function rate_pertanyaan(){
         return $this->hasMany('App\RatePertanyaan');
+    }
+
+    public function programs(){
+        return $this->hasMany('App\Programs');
     }
 }

@@ -17,7 +17,7 @@ class CreateRatePertanyaansTable extends Migration
             $table->increments('id');
             $table->unsignedBigInteger('id_siswa');
             $table->unsignedBigInteger('id_guru');
-            $table->string('kode_matpel');
+            $table->unsignedBigInteger('id_matpel');
             $table->double('pertanyaan1');
             $table->double('pertanyaan2');
             $table->double('pertanyaan3');
@@ -28,7 +28,7 @@ class CreateRatePertanyaansTable extends Migration
 
             $table->foreign('id_guru')->references('id')->on('guru')->onDelete('cascade');
             $table->foreign('id_siswa')->references('id')->on('siswa')->onDelete('cascade');
-            $table->foreign('kode_matpel')->references('kode_matpel')->on('mata_pelajaran')->onDelete('cascade');
+            $table->foreign('id_matpel')->references('id')->on('mata_pelajaran')->onDelete('cascade');
         });
     }
 

@@ -27,4 +27,8 @@ class Guru extends Model
     public function rate_pertanyaans(){
         return $this->hasMany('App\RatePertanyaan');
     }
+
+    public function programs(){
+        return $this->hasMany('App\Programs');
+    }
 }

@@ -30,7 +30,7 @@ Route::group(['middleware'=>'auth'],function(){
 
 
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->middleware('auth');
 // Route::get('/epbm', 'MatPelController@index');
 Route::get('/test', 'MatpelUser@index');
 Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');

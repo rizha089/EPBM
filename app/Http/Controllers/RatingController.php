@@ -14,7 +14,7 @@ class RatingController extends Controller
         $rate = RatePertanyaan::create([
             'id_siswa' => $request->id_siswa,
             'id_guru' => $request->id_guru,
-            'kode_matpel' => $request->kode_matpel,
+            'id_matpel' => $request->id_matpel,
             'pertanyaan1' => $request->pertanyaan1,
             'pertanyaan2' => $request->pertanyaan2,
             'pertanyaan3' => $request->pertanyaan3,
@@ -25,6 +25,8 @@ class RatingController extends Controller
                 $request->pertanyaan3 + $request->pertanyaan4 + $request->pertanyaan5
             ) / 5
         ]);
+
+        // $matpelFilled = /App/MatpelGuru::where('id_guru', )
 
         return redirect()->back();
     }

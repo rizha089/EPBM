@@ -24,7 +24,7 @@
                     <div class="metric">
                         <p>Mata Pelajaran</p>
                         <p>
-                            <span class="title">{{$i -> nama_matpel}}</span>
+                            <span class="title">{{$i->nama_matpel}}</span>
                         </p>
                     </div>
                     </a>

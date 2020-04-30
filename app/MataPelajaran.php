@@ -12,7 +12,7 @@ class MataPelajaran extends Model
     // protected $primaryKey = 'kode_matpel';
 
     public function siswa(){
-        return $this->belongsToMany('App\Siswa');
+        return $this->belongsToMany('App\Siswa', 'id_siswa', 'id');
     }
 
     public function guru(){
@@ -21,5 +21,9 @@ class MataPelajaran extends Model
 
     public function rate_pertanyaan(){
         return $this->hasMany('App\RatePertanyaan');
+    }
+
+    public function programs(){
+        return $this->hasMany('App\Programs');
     }
 }

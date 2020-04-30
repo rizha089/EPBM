@@ -16,7 +16,7 @@ class CreateMatpelGurusTable extends Migration
         Schema::create('matpel_guru', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedBigInteger('id_guru');
-            $table->Integer('id_matpel') -> unsigned();
+            $table->unsignedBigInteger('id_matpel');
             $table->Integer('filled')->default(0);
             $table->timestamps();
 
