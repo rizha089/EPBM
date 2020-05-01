@@ -23,7 +23,8 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="klorofil/img/user.png" class="img-circle" alt="Avatar"> <span>{{ Auth::user()->nama }}</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                                @if(Auth::check())
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('klorofil/img/user.png')}}" class="img-circle" alt="Avatar"> <span>{{ Auth::user()->nama }}</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{{route('profile')}}"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
                                     <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
@@ -36,6 +37,9 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
+                                @else
+                                    <a href="{{route('login')}}" ><img src="klorofil/img/user.png" class="img-circle" alt="Avatar"> <span>LOGIN</span></a>
+                                @endif
                             </li>
                         </ul>
                     </div>

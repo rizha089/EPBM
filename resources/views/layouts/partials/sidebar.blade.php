@@ -5,11 +5,15 @@
             <div class="sidebar-scroll">
                 <nav>
                     <ul class="nav">
+                    @if(Auth::check())
                         <li><a href="{{route('dashboard')}}" {{Route::is('dashboard')?'class=active':''}}><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
                         <li><a href="{{route('elements')}}" {{Route::is('elements')?'class=active':''}}><i class="lnr lnr-code"></i> <span>EPBM Pengajar</span></a></li>
                         <li><a href="{{route('profile')}}" {{Route::is('profile')?'class=active':''}}>Profile</a></li>
+                    @else
+                        <li><a href="{{route('dashboard')}}" {{Route::is('dashboard')?'class=active':''}}><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
                         <li><a href="{{route('login')}}" {{Route::is('login')?'class=active':''}}>Login</a></li>
                         <li><a href="{{route('register')}}" {{Route::is('login')?'class=active':''}}>Register</a></li>
+                    @endif
                     </ul>
                 </nav>
             </div>

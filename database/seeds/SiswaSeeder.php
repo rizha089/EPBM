@@ -36,6 +36,14 @@ class SiswaSeeder extends Seeder
         	'password' => '$2b$10$VhFUkEt1TQKhG8tFJkpfReSpmKTwEPHhxnm80TzNo.Rn0.XLJsweO'
         ]);
 
+        DB::table('siswa')->insert([
+        	'nis' 	=> 004,
+        	'email' => 'aa@gmail.com',
+        	'nama'	=> 'ASS',
+        	'kelas'	=> '12',
+        	'password' => bcrypt('123123')
+        ]);
+
     }
 
 }
