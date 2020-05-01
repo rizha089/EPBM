@@ -37,9 +37,46 @@
             <!-- MAIN CONTENT -->
             <div class="main-content">
                 @yield('content')
-                    You're Logged in
-                    <p> {{ Auth::user()->nama }} <p>
-                    <p> {{ Auth::user() }}<p>
+
+            <div class="container-fluid">
+                <!-- OVERVIEW -->
+                <div class="panel panel-headline">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Selamat Datang,</h3>
+                    <h3 class="panel-title"><b> {{Auth::user()->nama}} </b></h3> 
+                    </div>
+                    <div class="panel-body">
+                        <div class="col">
+                            <div class="col-md-3">
+                                <div class="metric">
+                                    <p>
+                                        <span class="number"> <font color="black"> Hafalan Juz </font> </span>
+                                        <span class="title"> <font color="black"> 5 </font> </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="metric">
+                                    <p>
+                                        <span class="number"> <font color="black">Kegiatan Ekskul </font> </span>
+                                        <span class="title"><font color="black">2 </font> </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="metric">
+                                    <p>
+                                        <span class="number"> <font color="black"> Keuangan </font> </span>
+                                        <span class="title"> <font color="black"> 2.500.000 </font> </span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                    </div>
+                </div>
+            </div>
+
+                   
             </div>
             <!-- END MAIN CONTENT -->
             <footer>

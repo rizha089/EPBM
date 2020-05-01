@@ -1,24 +1,71 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-                <div class="panel-body">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+
+
+    <title>SMP CENDEKIA BAZNAS</title>
+  </head>
+  <body> 
+  <div class="container">
+  <div class="mt-5">
+  
+    <div class="card mb-8" >
+  <div class="row no-gutters">
+    <div class="col-md-5">
+        <img src="/klorofil/img/lOGIN.jpg" alt="Logo" class="img-responsive logo">
+    </div>
+    <div class="col-md-6">
+      <div class="mt-5">
+        <h5 class="card-title">REGISTER</h5>
+        <p class="card-text"><div class="panel panel-default">
+                
+        <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+                        <div class="form-group{{ $errors->has('nama') ? ' has-error' : '' }}">
+                            <label for="nama" class="col-md-4 control-label">Name</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="nama" type="text" class="form-control" name="nama" value="{{ old('nama') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('nama'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('nama') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('nis') ? ' has-error' : '' }}">
+                            <label for="nis" class="col-md-4 control-label">NIS</label>
+
+                            <div class="col-md-6">
+                                <input id="nis" type="text" class="form-control" name="nis" value="{{ old('nis') }}" required autofocus>
+
+                                @if ($errors->has('nis'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('nis') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('kelas') ? ' has-error' : '' }}">
+                            <label for="kelas" class="col-md-4 control-label">Kelas</label>
+
+                            <div class="col-md-6">
+                                <input id="kelas" type="text" class="form-control" name="kelas" value="{{ old('kelas') }}" required autofocus>
+
+                                @if ($errors->has('kelas'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('kelas') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -69,8 +116,17 @@
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>
+            </div></p>
+      
+      </div>
     </div>
+</div>       
+</div>        
 </div>
-@endsection
+</div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

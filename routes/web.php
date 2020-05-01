@@ -11,11 +11,11 @@
 
 */
 
+Route::get('/', ['as'=>'dashboard','uses'=>'DashboardController@index']);
 
 Auth::routes();
 
 Route::group(['middleware'=>'auth'],function(){
-	Route::get('/', ['as'=>'dashboard','uses'=>'DashboardController@index']);
 	Route::get('/epbm', ['as'=>'elements','uses'=>'ElementController@index']);
 	Route::get('/charts', ['as'=>'charts','uses'=>'ChartsController@index']);
 	Route::get('/panels', ['as'=>'panels','uses'=>'PanelsController@index']);
