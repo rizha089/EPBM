@@ -63,7 +63,7 @@
                                     {{ csrf_field() }}
                                     <input type="hidden" name="id_siswa" value="{{ Auth::user()->id}}">
                                     <input type="hidden" name="id_guru" value=" {{ $g->guru->id }} ">
-                                    <input type="hidden" name="kode_matpel" value=" {{$g->matpel->kode_matpel}} ">
+                                    <input type="hidden" name="id_matpel" value=" {{$g->matpel->id}} ">
                                     <tr>
                                         <td>Penjelasan</td>
                                         <td>

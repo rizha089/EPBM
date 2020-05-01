@@ -12,7 +12,7 @@ class Programs extends Model
 	protected $fillable = [
 		'guru_id',
 		'mata_pelajaran_id',
-		'siswa_id'
+		'siswa_id',
 		'filled'
 	];
 
@@ -28,4 +28,4 @@ class Programs extends Model
 		return $this->belongsTo('\App\Siswa', 'id_siswa', 'id');
 	}
 }
-}
+
