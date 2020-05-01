@@ -58,12 +58,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {{-- <h1> {{$g->matpel->id}} </h1> --}}
+
                                 <form action = "/rating/mata-pelajaran/guru/set-rating" method = "POST">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="id_siswa" value="{{ Auth::user()->id}}">
                                     <input type="hidden" name="id_guru" value=" {{ $g->guru->id }} ">
-                                    <input type="hidden" name="id_matpel" value=" {{ $g->matpel->id }} ">
+                                    <input type="hidden" name="kode_matpel" value=" {{$g->matpel->kode_matpel}} ">
                                     <tr>
                                         <td>Penjelasan</td>
                                         <td>
