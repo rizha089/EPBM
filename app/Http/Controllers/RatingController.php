@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\RatePertanyaanResource as RateResource;
 use Illuminate\Http\Request;
-
+use App\Programs;
 use App\RatePertanyaan;
+
+
 class RatingController extends Controller
 {
     //
     public function setRating(Request $request){
-        $rate = RatePertanyaan::create([
+        $rate = RatePertanyaan::firstOrCreate([
             'id_siswa' => $request->id_siswa,
             'id_guru' => $request->id_guru,
             'id_matpel' => $request->id_matpel,
@@ -26,8 +28,9 @@ class RatingController extends Controller
             ) / 5
         ]);
 
-        // $matpelFilled = /App/MatpelGuru::where('id_guru', )
+        $matpelFilled = Programs::where('id_matpel', $request->id_matpel)->where('id_siswa', $request->id_siswa)->where('id_guru', $request->id_guru)->update(['filled' => 1]);
 
+        // dd($matpelFilled);
         return redirect()->back();
     }
 }

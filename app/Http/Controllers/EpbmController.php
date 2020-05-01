@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\MataPelajaran;
 use App\Guru;
 use App\MatpelGuru;
+use App\Programs;
 class EpbmController extends Controller
 {
     public function __construct()
@@ -21,8 +23,12 @@ class EpbmController extends Controller
 
     public function isiEPBM(Request $request, $id)
     {
-        $matpel_guru = MatpelGuru::where('id_matpel', $id)->where('filled', 0)->get();
-        // dd($matpel_guru[0]->matpel->id);
+        // $matpel_guru = MatpelGuru::where('id_matpel', $id)->where('filled', 0)->get();
+
+        $id_siswa = Auth::id();
+        $matpel_guru = Programs::where('id_matpel', $id)->where('id_siswa', $id_siswa)->where('filled', 0)->get();
+
+        // dd($matpel_guru[0]);
         return view('layouts/elements/epbm', compact('matpel_guru'));
     }  
 }
