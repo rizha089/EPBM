@@ -14,101 +14,113 @@
   <body> 
   <div class="container">
   <div class="mt-5">
-  
-    <div class="card mb-8" >
-  <div class="row no-gutters">
-    <div class="col-md-5">
+        <div class="mb-5">
+    <div class="card" >
+    <div class="row">
+    <div class="col-sm">
         <img src="/klorofil/img/lOGIN.jpg" alt="Logo" class="img-responsive logo">
     </div>
-    <div class="col-md-6">
-      <div class="mt-5">
-        <h5 class="card-title">REGISTER</h5>
-        <p class="card-text"><div class="panel panel-default">
-                
-        <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
+        
 
-                        <div class="form-group{{ $errors->has('nama') ? ' has-error' : '' }}">
-                            <label for="nama" class="col-md-4 control-label">Name</label>
+    <div class="col-sm">
+    <div class="mt-5">
+      
+      <h5 class="card-title">REGISTER</h5>
+      <p class="card-text"><div class="panel panel-default">
+              
+      <div class="panel-body">
+                  <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
+                      {{ csrf_field() }}
 
-                            <div class="col-md-6">
-                                <input id="nama" type="text" class="form-control" name="nama" value="{{ old('nama') }}" required autofocus>
+                      <div class="form-group{{ $errors->has('nama') ? ' has-error' : '' }}">
+                          <label for="nama" class="control-label">Name</label>
 
-                                @if ($errors->has('nama'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('nama') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                          
+                              <input id="nama" type="text" class="form-control" name="nama" value="{{ old('nama') }}" required autofocus>
 
-                        <div class="form-group{{ $errors->has('nis') ? ' has-error' : '' }}">
-                            <label for="nis" class="col-md-4 control-label">NIS</label>
+                              @if ($errors->has('nama'))
+                                  <span class="help-block">
+                                      <strong>{{ $errors->first('nama') }}</strong>
+                                  </span>
+                              @endif
+                          
+                      </div>
 
-                            <div class="col-md-6">
-                                <input id="nis" type="text" class="form-control" name="nis" value="{{ old('nis') }}" required autofocus>
+                      <div class="form-group{{ $errors->has('nis') ? ' has-error' : '' }}">
+                          <label for="nis" class="control-label">NIS</label>
 
-                                @if ($errors->has('nis'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('nis') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                          
+                              <input id="nis" type="text" class="form-control" name="nis" value="{{ old('nis') }}" required autofocus>
 
-                        <div class="form-group{{ $errors->has('kelas') ? ' has-error' : '' }}">
-                            <label for="kelas" class="col-md-4 control-label">Kelas</label>
+                              @if ($errors->has('nis'))
+                                  <span class="help-block">
+                                      <strong>{{ $errors->first('nis') }}</strong>
+                                  </span>
+                              @endif
+                          
+                      </div>
 
-                            <div class="col-md-6">
-                                <input id="kelas" type="text" class="form-control" name="kelas" value="{{ old('kelas') }}" required autofocus>
+                      <div class="form-group{{ $errors->has('kelas') ? ' has-error' : '' }}">
+                          <label for="kelas" class="control-label">Kelas</label>
 
-                                @if ($errors->has('kelas'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('kelas') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                         
+                              <input id="kelas" type="text" class="form-control" name="kelas" value="{{ old('kelas') }}" required autofocus>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                              @if ($errors->has('kelas'))
+                                  <span class="help-block">
+                                      <strong>{{ $errors->first('kelas') }}</strong>
+                                  </span>
+                              @endif
+                          
+                      </div>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                      <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                          <label for="email" class="control-label">E-Mail Address</label>
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                          
+                              <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                              @if ($errors->has('email'))
+                                  <span class="help-block">
+                                      <strong>{{ $errors->first('email') }}</strong>
+                                  </span>
+                              @endif
+                          
+                      </div>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                      
+                          </div>
+                          </div>
+                      </div>
+</div>
+    <div class="col-sm">
+    <div class="form-group">
+    <div class="mt-6">
+    
+    <div class="col-md-8">
+    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                          <label for="password" class="control-label">Password</label>
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                          
+                              <input id="password" type="password" class="form-control" name="password" required>
 
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                              @if ($errors->has('password'))
+                                  <span class="help-block">
+                                      <strong>{{ $errors->first('password') }}</strong>
+                                  </span>
+                              @endif
+                          </div>
+                          </div>
+                          <div class="col-md-8">
+                            <label for="password-confirm" class="control-label">Confirm Password</label>
 
-                            <div class="col-md-6">
+                            
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
+                            
+                        
+                                <div class="mt-2">
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register
                                 </button>
@@ -117,14 +129,12 @@
                     </form>
                 </div>
             </div></p>
-      
+      </div>
       </div>
     </div>
-</div>       
-</div>        
-</div>
-</div>
-</div>
+
+   
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    <script src="/js/bootstrap.min.js"></script>
