@@ -3,16 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Guru extends Model
+class Guru extends Authenticatable
 {
-    //
+    use Notifiable;
     protected $table = "guru";
 
     protected $fillable = [
+        'nama',
         'nip',
         'email',
-        'nama',
+        'password'
     ];
 
     protected $hidden = [

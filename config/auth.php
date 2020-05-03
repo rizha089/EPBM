@@ -57,6 +57,17 @@ return [
             'provider' => 'siswas',
             'hash' => false,
         ],
+
+        'guru' => [
+            'driver' => 'session',
+            'provider' => 'gurus',
+        ],
+
+        'api-guru' => [
+            'driver' => 'token',
+            'provider' => 'gurus',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -85,6 +96,11 @@ return [
         'siswas' => [
             'driver' => 'eloquent',
             'model' => App\Siswa::class,
+        ],
+
+        'gurus' => [
+            'driver' => 'eloquent',
+            'model' => App\Guru::class,
         ],
 
         // 'users' => [
@@ -118,6 +134,13 @@ return [
 
         'siswas' => [
             'provider' => 'siswas',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'gurus' => [
+            'provider' => 'gurus',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
