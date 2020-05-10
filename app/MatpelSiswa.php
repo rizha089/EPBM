@@ -11,7 +11,7 @@ class MatpelSiswa extends Model
 
     protected $fillable = [
         'mata_pelajaran_id',
-        'id_siswa',
+        'siswa_id',
         'filled'
     ];
 }

@@ -24,7 +24,6 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/tables', ['as'=>'tables','uses'=>'TablesController@index']);
 	Route::get('/typography', ['as'=>'typography','uses'=>'TypographyController@index']);
 	Route::get('/icons', ['as'=>'icons','uses'=>'IconsController@index']);
-	// Route::get('/epbm/isi/{id}', ['as'=>'isi','uses'=>'EpbmController@isiEPBM']);
 	Route::get('/epbm/isi/{id}', 'EpbmController@isiEPBM');
 });
 

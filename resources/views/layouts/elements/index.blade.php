@@ -18,42 +18,36 @@
         <div class="panel-body">
             <div class="row">
                 
-            @foreach ($mata_pelajaran ->all() as $i)
-                <div class="row-md-3">
-                    <a href="/epbm/isi/{{$i->id}}" >
-                    <div class="metric">
-                        <p>Mata Pelajaran</p>
-                        <p>
-                            <span class="title">{{$i -> nama_matpel}}</span>
-                        </p>
+                @foreach ($mata_pelajaran_filled as $i)  {{-- Ini untuk udh keisi --}}
+                    <div class="row-md-3">
+                        
+                            <div class="metric" style="color:green">
+                                <p>
+                                    <span class="title">{{$i -> nama_matpel}}</span>
+                                </p>
+                            </div>
+                        
                     </div>
-                    </a>
-                </div>
-            @endforeach
-                <div class="row-md-3">
-                    <div class="metric">
-                        <p>Mata Pelajaran</p>
-                        <p>
-                            <span class="title">Bahasa Indonesia</span>
-                        </p>
+                @endforeach
+
+                @foreach ($mata_pelajaran_unfilled as $i) {{-- Ini untuk belum keisi --}}
+                    <div class="row-md-3">
+                        <a href="/epbm/isi/{{$i->id}}" style="color: blue">
+                            <div class="metric">
+                                <p>
+                                    <span class="title">{{$i -> nama_matpel}}</span>
+                                </p>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="row-md-3">
-                    <div class="metric">
-                        <p>Mata Pelajaran</p>
-                        <p>
-                            <span class="title">Ilmu Pengetahuan Alam</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="row-md-3">
-                    <div class="metric">
-                        <p>Mata Pelajaran</p>
-                        <p>
-                            <span class="title">Ilmu Pengetahuan Sosial</span>
-                        </p>
-                    </div>
-                </div>
+                @endforeach
+
+
+
+
+
+            
+                
             </div> 
         </div>
     </div>

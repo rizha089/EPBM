@@ -31,6 +31,6 @@ class RatingController extends Controller
         $matpelFilled = Programs::where('id_matpel', $request->id_matpel)->where('id_siswa', $request->id_siswa)->where('id_guru', $request->id_guru)->update(['filled' => 1]);
 
         // dd($matpelFilled);
-        return redirect()->back();
+        return back();
     }
 }
