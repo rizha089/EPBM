@@ -11,36 +11,84 @@ class SiswaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        //insert data
         DB::table('siswa')->insert([
-        	'nis' 	=> 001,
-        	'email' => 'sinat@gmail.com',
-        	'nama'	=> 'sinat',
+        	'nis' 	=> 991,
+        	'email' => 'jono@gmail.com',
+        	'nama'	=> 'Jono',
         	'kelas'	=> '12',
-        	'password' => '$2b$10$uXsnRUcNMWfcaIXK0F3jIeipSmeYbc2mpqhV8IEKDG8tgG/tOYCEO'
+        	'password' => bcrypt('123123')
         ]);
 
         DB::table('siswa')->insert([
-        	'nis' 	=> 002,
-        	'email' => 'lanang@gmail.com',
-        	'nama'	=> 'lanang',
-        	'kelas'	=> '12',
-        	'password' => '$2b$10$GTRibGaDPxyQbKUwEDZ8j.AaKbB6blag9kwYe3WGwlufYyFn/2bri'
+        	'nis' 	=> 992,
+        	'email' => 'Tegar@gmail.com',
+        	'nama'	=> 'Tegar',
+        	'kelas'	=> '10',
+        	'password' => bcrypt('123123')
+		]);
+		
+		DB::table('siswa')->insert([
+        	'nis' 	=> 993,
+        	'email' => 'joni@gmail.com',
+        	'nama'	=> 'Joni',
+        	'kelas'	=> '11',
+        	'password' => bcrypt('123123')
         ]);
 
         DB::table('siswa')->insert([
-        	'nis' 	=> 003,
-        	'email' => 'rizha@gmail.com',
-        	'nama'	=> 'rizha',
+        	'nis' 	=> 994,
+        	'email' => 'ahmad@gmail.com',
+        	'nama'	=> 'Ahmad',
         	'kelas'	=> '12',
-        	'password' => '$2b$10$VhFUkEt1TQKhG8tFJkpfReSpmKTwEPHhxnm80TzNo.Rn0.XLJsweO'
+        	'password' => bcrypt('123123')
+		]);
+		
+		DB::table('siswa')->insert([
+        	'nis' 	=> 995,
+        	'email' => 'jeni@gmail.com',
+        	'nama'	=> 'Jeni',
+        	'kelas'	=> '12',
+        	'password' => bcrypt('123123')
         ]);
 
         DB::table('siswa')->insert([
-        	'nis' 	=> 004,
-        	'email' => 'aa@gmail.com',
-        	'nama'	=> 'ASS',
+        	'nis' 	=> 996,
+        	'email' => 'ani@gmail.com',
+        	'nama'	=> 'Ani',
+        	'kelas'	=> '10',
+        	'password' => bcrypt('123123')
+		]);
+		
+		DB::table('siswa')->insert([
+        	'nis' 	=> 997,
+        	'email' => 'ana@gmail.com',
+        	'nama'	=> 'Ana',
         	'kelas'	=> '12',
+        	'password' => bcrypt('123123')
+        ]);
+
+        DB::table('siswa')->insert([
+        	'nis' 	=> 998,
+        	'email' => 'ina@gmail.com',
+        	'nama'	=> 'Ina',
+        	'kelas'	=> '11',
+        	'password' => bcrypt('123123')
+		]);
+		
+		DB::table('siswa')->insert([
+        	'nis' 	=> 999,
+        	'email' => 'ari@gmail.com',
+        	'nama'	=> 'Ari',
+        	'kelas'	=> '12',
+        	'password' => bcrypt('123123')
+        ]);
+
+        DB::table('siswa')->insert([
+        	'nis' 	=> 1001,
+        	'email' => 'budi@gmail.com',
+        	'nama'	=> 'Budi',
+        	'kelas'	=> '10',
         	'password' => bcrypt('123123')
         ]);
 

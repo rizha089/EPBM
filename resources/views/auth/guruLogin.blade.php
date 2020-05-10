@@ -26,7 +26,7 @@
     <div class="col-md-6">
       <div class="card-body">
       <div class="mt-5">
-        <h5 class="card-title">MASUK</h5>
+        <h5 class="card-title">LOGIN GURU</h5>
         <p class="card-text"><div class="panel panel-default">
                 
                 <div class="panel-body">
