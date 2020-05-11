@@ -121,7 +121,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>pertanyaan 3</td>
+                                        <td>Penampilan</td>
                                         <td>
                                             <div class="form-check">
                                                 <input class="form-check-input position-static" type="radio" name="pertanyaan3" id="blankRadio1" value="1" aria-label="...">
@@ -149,7 +149,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Wpertanyaan 4</td>
+                                        <td>Guru menyampaikan tujuan pembelajaran di awal pertemuan</td>
                                         <td>
                                             <div class="form-check">
                                                 <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="1" aria-label="...">

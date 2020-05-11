@@ -8,11 +8,11 @@ class DashboardController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 
     public function index()
     {
-        return view('layouts/dashboard/index');
+        return view('/home');
     }
 }
