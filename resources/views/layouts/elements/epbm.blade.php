@@ -27,14 +27,11 @@
                         </div>
                         <div class="profile-stat">
                             <div class="row">
-                                <div class="col-md-4 stat-item">
-                                    45 <span>Projects</span>
+                                <div class="col-md-6 stat-item">
+                                    45010231093019 <span>NISN</span>
                                 </div>
-                                <div class="col-md-4 stat-item">
-                                    15 <span>Awards</span>
-                                </div>
-                                <div class="col-md-4 stat-item">
-                                    2174 <span>Points</span>
+                                <div class="col-md-6 stat-item">
+                                    30 <span>Umur</span>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +146,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Wpertanyaan 4</td>
+                                        <td>Pertanyaan 4</td>
                                         <td>
                                             <div class="form-check">
                                                 <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="1" aria-label="...">
