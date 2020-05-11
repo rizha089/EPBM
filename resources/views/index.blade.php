@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="apple-touch-icon" sizes="76x76" href="klorofil/img/logoDoang.png">
     <link rel="icon" type="image/png" sizes="96x96" href="klorofil/img/logoDoang.png">
-
+    <script src = "https://d3js.org/d3.v4.min.js"></script>
     @section('css')
         <!-- CSS -->
         {{ Html::style('klorofil/css/bootstrap.min.css')}}
         {{ Html::style('klorofil/css/vendor/icon-sets.css')}}
         {{ Html::style('klorofil/css/main.min.css')}}
         {{ Html::style('klorofil/css/demo.css')}}
-
+        {{ Html::style('css/graph.css')}}
         @yield('extra-style')
 
         <!-- GOOGLE FONTS -->
@@ -55,7 +55,7 @@
         {{ Html::script('klorofil/js/plugins/jquery-easypiechart/jquery.easypiechart.min.js') }}
         {{ Html::script('klorofil/js/plugins/chartist/chartist.min.js') }}
         {{ Html::script('klorofil/js/klorofil.min.js') }}
-
+        {{ Html::script('https://d3js.org/d3.v4.min.js')}}
         @yield('extra-script')
     @show
 

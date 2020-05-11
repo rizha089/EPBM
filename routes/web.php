@@ -31,8 +31,10 @@ Route::group(['middleware'=>'auth'],function(){
 
 Route::get('/home', 'HomeController@index')->middleware('auth');
 // Route::get('/epbm', 'MatPelController@index');
+// Route::get('/charts', ['as'=>'charts','uses'=>'ChartsController@index']);
 Route::get('/test', 'MatpelUser@index');
 Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');
+<<<<<<< Updated upstream
 
 //route guru
 Route::get('/guru', function(){
@@ -42,3 +44,5 @@ Route::get('guru-login','Auth\GuruController@showLoginForm');
 Route::post('guru-login', ['as' => 'guru-login', 'uses' => 'Auth\GuruController@login']);
 Route::get('guru-register','Auth\GuruController@showRegisterPage');
 Route::post('guru-register', 'Auth\GuruController@register')->name('guru.register');
+=======
+>>>>>>> Stashed changes
