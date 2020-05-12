@@ -65,7 +65,7 @@
                                         <td>Penjelasan</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="1" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="1" aria-label="..." required>
                                             </div>
                                         </td>
                                         <td>
@@ -93,7 +93,7 @@
                                         <td>Pembawaan Materi</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan2" id="blankRadio1" value="1" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan2" id="blankRadio1" value="1" aria-label="..." required>
                                             </div>
                                         </td>
                                         <td>
@@ -121,7 +121,7 @@
                                         <td>Penampilan</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan3" id="blankRadio1" value="1" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan3" id="blankRadio1" value="1" aria-label="..." required>
                                             </div>
                                         </td>
                                         <td>
@@ -149,7 +149,7 @@
                                         <td>Guru menyampaikan tujuan pembelajaran di awal pertemuan</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="1" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="1" aria-label="..." required>
                                             </div>
                                         </td>
                                         <td>
@@ -177,7 +177,7 @@
                                         <td>pertanyaan 5</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan5" id="blankRadio1" value="1" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan5" id="blankRadio1" value="1" aria-label="..." required>
                                             </div>
                                         </td>
                                         <td>

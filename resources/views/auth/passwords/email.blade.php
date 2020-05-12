@@ -13,14 +13,14 @@
     </head>
 
     <body>
-    <div class="mt-5">
-    <div class="mx-auto" style="width: 710px">
+    <div class="mt-6">
+    <div class="mx-auto" style="width: 800px">
     <div class="card">
   <div class="card-body">
   <div class="row mx-lg-n5">
     <div class="col-4">
-    
-    <img src="/klorofil/img/logoDoang.png" alt="Logo" 
+
+    <img src="/klorofil/img/logoDoang.png" alt="Logo"
             class="img-responsive logo">
 
 </div>
@@ -46,16 +46,10 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Send Password Reset Link
-                                </button>
+                                <button type="submit" class="btn btn-primary">Send Password Reset Link</button>
                             </div>
                         </div>
-                        <div class="col-md-8 col-md-offset-4">
-                        <a class="btn btn-link" href="http://127.0.0.1:8000/login">
-                        <-Back
-                                </a>
-                        </div>
+                        <a class="btn btn-link" href="{{ route('login') }}">Register</a>
                     </form>
   </div>
   </div>
