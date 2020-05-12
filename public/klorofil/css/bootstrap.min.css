@@ -155,7 +155,10 @@ html input[type=button],
 input[type=reset],
 input[type=submit] {
     -webkit-appearance: button;
-    cursor: pointer
+    cursor: pointer;
+    float: right;
+    width: 100px;
+    height: 30px;
 }
 
 button[disabled],
@@ -3279,7 +3282,9 @@ input[type=checkbox],
 input[type=radio] {
     margin: 4px 0 0;
     margin-top: 1px\9;
-    line-height: normal
+    line-height: normal;
+    width: 60px;
+    height: 60px;
 }
 
 input[type=file] {

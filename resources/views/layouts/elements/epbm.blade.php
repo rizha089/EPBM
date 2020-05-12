@@ -27,14 +27,11 @@
                         </div>
                         <div class="profile-stat">
                             <div class="row">
-                                <div class="col-md-4 stat-item">
-                                    45 <span>Projects</span>
+                                <div class="col-md-6 stat-item">
+                                    1234059 <span>NISN</span>
                                 </div>
-                                <div class="col-md-4 stat-item">
-                                    15 <span>Awards</span>
-                                </div>
-                                <div class="col-md-4 stat-item">
-                                    2174 <span>Points</span>
+                                <div class="col-md-6 stat-item">
+                                    30 <span>Umur</span>
                                 </div>
                             </div>
                         </div>
