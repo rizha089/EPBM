@@ -44,7 +44,7 @@ span {
 
                 @foreach ($mata_pelajaran_filled as $i)  {{-- Ini untuk udh keisi --}}
                 <div class="row-md-3">
-                        <a href="/epbm/isi/{{$i->id}}" style="color: black">
+                        <a style="color: black">
                                 <p id="terisi">
                                 <span style="font-size: 90%"> <font color="black"> Mata Pelajaran </font> </span>
                                 <br><span style="font-size: 230%">{{$i -> nama_matpel}}</span></br>
