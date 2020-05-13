@@ -24,7 +24,6 @@ class ElementController extends Controller
         // $matpelSiswa = $siswa->matpel_siswa()->get();
         $matpelSiswafilled = $siswa->matpel_siswa()->where('filled', 1)->get();
         $matpelSiswaunfilled = $siswa->matpel_siswa()->where('filled', 0)->get();
-
         // dd(compact($matpelSiswa));
         return view('layouts/elements/index', [
         	'mata_pelajaran_filled' => $matpelSiswafilled,

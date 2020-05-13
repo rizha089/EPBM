@@ -19,19 +19,19 @@
                     <div class="overlay"></div>
                     <div class="profile-main">
                         <img src="klorofil/img/user-medium.png" class="img-circle" alt="Avatar">
-                        <h3 class="name">Samuel Gold</h3>
+                        <h3 class="name"> {{Auth::user()->nama}}</h3>
                         <span class="online-status status-available">Available</span>
                     </div>
                     <div class="profile-stat">
                         <div class="row">
                             <div class="col-md-4 stat-item">
-                                45 <span>Projects</span>
+                                NIS <span> {{Auth::user()->nis}}</span>
                             </div>
                             <div class="col-md-4 stat-item">
-                                15 <span>Awards</span>
+                                Kelas <span> {{Auth::user()->kelas}}</span>
                             </div>
                             <div class="col-md-4 stat-item">
-                                2174 <span>Points</span>
+                                Jenis Program <span>Tahfidz</span>
                             </div>
                         </div>
                     </div>
@@ -40,12 +40,14 @@
                 <!-- PROFILE DETAIL -->
                 <div class="profile-detail">
                     <div class="profile-info">
-                        <h4 class="heading">Basic Info</h4>
+                        <h4 class="heading">Data Siswa</h4>
                         <ul class="list-unstyled list-justify">
-                            <li>Birthdate <span>24 Aug, 2016</span></li>
-                            <li>Mobile <span>(124) 823409234</span></li>
-                            <li>Email <span>samuel@mydomain.com</span></li>
-                            <li>Website <span><a href="https://www.themeineed.com">www.themeineed.com</a></span></li>
+                            <li>Jenis Kelamin <span>Laki-laki</span></li>
+                            <li>Golongan Darah <span>O</span></li>
+                            <li>Tempat Lahir <span>Jakarta</span></li>
+                            <li>Tanggal Lahir <span>24 Aug, 2016</span></li>
+                            <li>Alamat <span>Jalan Perwira</span></li>
+                            <li>Email <span> {{Auth::user()->email}}</span></li>
                         </ul>
                     </div>
                     <div class="profile-info">

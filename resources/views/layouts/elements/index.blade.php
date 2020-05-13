@@ -9,6 +9,30 @@
 @endsection
 
 @section('content')
+<style>
+#belumterisi {
+  border: 1px solid gray;
+  border-radius: 5px;
+  background: #F62525;
+  padding: 15px;
+  width: 1150px;
+  height: 95px;
+}
+
+#terisi {
+  border: 1px solid gray;
+  border-radius: 5px;
+  background: #7FF779;
+  padding: 15px;
+  width: 1150px;
+  height: 95px;
+}
+
+span {
+    font-family: montserrat;
+}
+</style>
+
 <div class="container-fluid">
     <!-- OVERVIEW -->
     <div class="panel panel-headline">
@@ -17,27 +41,25 @@
         </div>
         <div class="panel-body">
             <div class="row">
-                
+
                 @foreach ($mata_pelajaran_filled as $i)  {{-- Ini untuk udh keisi --}}
-                    <div class="row-md-3">
-                        
-                            <div class="metric" style="color:green">
-                                <p>
-                                    <span class="title">{{$i -> nama_matpel}}</span>
+                <div class="row-md-3">
+                        <a style="color: black">
+                                <p id="terisi">
+                                <span style="font-size: 90%"> <font color="black"> Mata Pelajaran </font> </span>
+                                <br><span style="font-size: 230%">{{$i -> nama_matpel}}</span></br>
                                 </p>
-                            </div>
-                        
+                        </a>
                     </div>
                 @endforeach
 
                 @foreach ($mata_pelajaran_unfilled as $i) {{-- Ini untuk belum keisi --}}
                     <div class="row-md-3">
-                        <a href="/epbm/isi/{{$i->id}}" style="color: blue">
-                            <div class="metric">
-                                <p>
-                                    <span class="title">{{$i -> nama_matpel}}</span>
+                        <a href="/epbm/isi/{{$i->id}}" style="color: black">
+                                <p id="belumterisi">
+                                <span style="font-size: 90%"> <font color="black"> Mata Pelajaran </font> </span>
+                                <br><span style="font-size: 230%">{{$i -> nama_matpel}}</span></br>
                                 </p>
-                            </div>
                         </a>
                     </div>
                 @endforeach
@@ -46,9 +68,9 @@
 
 
 
-            
-                
-            </div> 
+
+
+            </div>
         </div>
     </div>
 </div>

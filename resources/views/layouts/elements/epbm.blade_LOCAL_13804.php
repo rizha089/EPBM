@@ -27,11 +27,14 @@
                         </div>
                         <div class="profile-stat">
                             <div class="row">
-                                <div class="col-md-6 stat-item">
-                                    1234059 <span>NISN</span>
+                                <div class="col-md-4 stat-item">
+                                    45 <span>Projects</span>
                                 </div>
-                                <div class="col-md-6 stat-item">
-                                    30 <span>Umur</span>
+                                <div class="col-md-4 stat-item">
+                                    15 <span>Awards</span>
+                                </div>
+                                <div class="col-md-4 stat-item">
+                                    2174 <span>Points</span>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +68,7 @@
                                         <td>Penjelasan</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="1" aria-label="..." required>
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="1" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
@@ -93,7 +96,7 @@
                                         <td>Pembawaan Materi</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan2" id="blankRadio1" value="1" aria-label="..." required>
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan2" id="blankRadio1" value="1" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
@@ -121,7 +124,7 @@
                                         <td>Penampilan</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan3" id="blankRadio1" value="1" aria-label="..." required>
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan3" id="blankRadio1" value="1" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
@@ -146,10 +149,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Guru menyampaikan tujuan pembelajaran di awal pertemuan</td>
+                                        <td>Pertanyaan 4</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="1" aria-label="..." required>
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="1" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
@@ -177,7 +180,7 @@
                                         <td>pertanyaan 5</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan5" id="blankRadio1" value="1" aria-label="..." required>
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan5" id="blankRadio1" value="1" aria-label="...">
                                             </div>
                                         </td>
                                         <td>

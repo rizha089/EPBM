@@ -9033,7 +9033,9 @@ button.bg-dark:hover {
 .my-6 {
     margin-top: 5.5rem !important
 }
-
+.mt-log {
+    margin-top: 7.5rem !important
+}
 
 .mr-5,
 .mx-5 {

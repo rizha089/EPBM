@@ -41,5 +41,5 @@ class EpbmController extends Controller
         else{
             return view('layouts/elements/epbm', compact('matpel_guru'));
         }
-    }  
+    }
 }

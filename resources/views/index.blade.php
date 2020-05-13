@@ -31,9 +31,6 @@
         <!-- END SIDEBAR -->
         <!-- MAIN -->
         <div class="main">
-            <!-- NAVBAR -->
-            @include("layouts/partials/header")
-            <!-- END NAVBAR -->
             <!-- MAIN CONTENT -->
             <div class="main-content">
                 @yield('content')

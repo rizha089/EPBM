@@ -1601,14 +1601,14 @@ ul.activity-list>li .timestamp {
 .profile-header .profile-main {
     position: relative;
     padding: 20px;
-    background-image: url(../img/profile-bg.png?1480069110);
+    background-color: #32cf4d;
     background-repeat: no-repeat;
     background-size: cover
 }
 
 .profile-header .name {
     margin: 8px 0 0;
-    font-size: 22px
+    font-size: 36px
 }
 
 .profile-header .online-status {
@@ -1675,7 +1675,7 @@ ul.activity-timeline>li:after {
 
 .profile-header .profile-stat {
     position: relative;
-    background-color: #0AF
+    background-color: #005639
 }
 
 .profile-header .profile-stat .stat-item {
@@ -1690,7 +1690,7 @@ ul.activity-timeline>li:after {
     right: 0;
     width: 1px;
     height: 100%;
-    background-color: #3bf
+    background-color: #005639
 }
 
 .profile-header .profile-stat .stat-item:last-child:after {

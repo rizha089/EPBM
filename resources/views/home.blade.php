@@ -1,6 +1,44 @@
 <!doctype html>
 <html lang="en">
+<style>
+#rcorners1 {
+  border-radius: 5px 30px;
+  background: #228B22;
+  padding: 15px;
+  width: 230px;
+  height: 120px;
+}
 
+#rcorners2 {
+  border-radius: 5px 30px;
+  background: #BB0000;
+  padding: 15px;
+  width: 230px;
+  height: 120px;
+}
+
+#rcorners3 {
+  border-radius: 5px 30px;
+  background: #ffbf00;
+  padding: 15px;
+  width: 230px;
+  height: 120px;
+}
+
+#rcorners4 {
+  border-radius: 5px 30px;
+  background: #157BCE;
+  padding: 15px;
+  width: 230px;
+  height: 120px;
+}
+
+span {
+    font-family: montserrat;
+    font-weight: bold;
+}
+
+</style>
 <head>
     <title>Dashboard | SCB - @yield('title')</title>
     <meta charset="utf-8">
@@ -43,40 +81,40 @@
                 <div class="panel panel-headline">
                     <div class="panel-heading">
                         <h3 class="panel-title">Selamat Datang,</h3>
-                    <h3 class="panel-title"><b> {{Auth::user()->nama}} </b></h3> 
+                    <h3 class="panel-title"><b> {{Auth::user()->nama}} </b></h3>
                     </div>
                     <div class="panel-body">
                         <div class="col">
                             <div class="col-md-3">
-                                <div class="metric">
-                                    <p>
-                                        <span class="number"> <font color="black"> Hafalan Juz </font> </span>
-                                        <span class="title"> <font color="black"> 5 </font> </span>
+                                    <p id="rcorners1">
+                                        <span style="font-size: 125%;"> <font color="white"> Hafalan Juz </font> </span>
+                                        <br><span style="font-size: 300%;float: right;padding: 0px 20px 15px 0px"> <font color="white"> 5 </font> </span></br>
                                     </p>
-                                </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="metric">
-                                    <p>
-                                        <span class="number"> <font color="black">Kegiatan Ekskul </font> </span>
-                                        <span class="title"><font color="black">2 </font> </span>
+                                    <p id="rcorners2">
+                                        <span style="font-size: 125%;"> <font color="white"> Kegiatan Ekskul </font> </span>
+                                        <br><span style="font-size: 300%;float: right;padding: 0px 20px 15px 0px"> <font color="white"> 2 </font> </span></br>
                                     </p>
-                                </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="metric">
-                                    <p>
-                                        <span class="number"> <font color="black"> Keuangan </font> </span>
-                                        <span class="title"> <font color="black"> 2.500.000 </font> </span>
+                                    <p id="rcorners3">
+                                        <span style="font-size: 125%;"> <font color="white"> Keuangan </font> </span>
+                                        <br><span style="font-size: 200%;float: right;padding: 0px 0px 15px 0px"> <font color="white"> 2.500.000 </font> </span></br>
                                     </p>
-                                </div>
                             </div>
-                            
+                            <div class="col-md-3">
+                                    <p id="rcorners4">
+                                        <span style="font-size: 125%;"> <font color="white"> Keuangan </font> </span>
+                                        <br><span style="font-size: 200%;float: right;padding: 0px 0px 15px 0px"> <font color="white"> 2.500.000 </font> </span></br>
+                                    </p>
+                            </div>
+
                     </div>
                 </div>
             </div>
 
-                   
+
             </div>
             <!-- END MAIN CONTENT -->
             <footer>
