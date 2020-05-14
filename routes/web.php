@@ -27,14 +27,12 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/epbm/isi/{id}', 'EpbmController@isiEPBM');
 });
 
-
-
 Route::get('/home', 'HomeController@index')->middleware('auth');
-// Route::get('/epbm', 'MatPelController@index');
 Route::get('/test', 'MatpelUser@index');
 Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');
 
-//route guru
+
+// route guru
 Route::get('/guru', function(){
     return view('guruPage');
 })->middleware('auth:guru')->name('guruPage');
