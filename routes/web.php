@@ -28,11 +28,8 @@ Route::group(['middleware'=>'auth'],function(){
 });
 
 Route::get('/home', 'HomeController@index')->middleware('auth');
-<<<<<<< HEAD
-=======
 // Route::get('/epbm', 'MatPelController@index');
 // Route::get('/charts', ['as'=>'charts','uses'=>'ChartsController@index']);
->>>>>>> 7211818665e74f2d8f1959f7196e32531d673449
 Route::get('/test', 'MatpelUser@index');
 Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');
 
