@@ -1475,7 +1475,13 @@ img {
 }
 
 .img-circle {
-    border-radius: 50%
+    border-radius: 100%;
+}
+
+.img-guru {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
 }
 
 hr {
