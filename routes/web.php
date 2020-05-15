@@ -12,6 +12,8 @@
 */
 
 Route::get('/', ['as'=>'dashboard','uses'=>'DashboardController@index']);
+Route::get('/tambahMatpel', 'DashboardController@getMatpelList');
+Route::post('/tambahMatpel', 'DashboardController@tambahMatpel');
 
 Auth::routes();
 

@@ -10,9 +10,9 @@ class Programs extends Model
 	protected $table = 'programs';
 
 	protected $fillable = [
-		'guru_id',
-		'mata_pelajaran_id',
-		'siswa_id',
+		'id_guru',
+		'id_matpel',
+		'id_siswa',
 		'filled'
 	];
 
