@@ -28,7 +28,7 @@
                         <div class="profile-stat">
                             <div class="row">
                                 <div class="col-md-6 stat-item">
-                                    1234059 <span>NISN</span>
+                                {{$g->guru->nip}} <span>NIP</span>
                                 </div>
                                 <div class="col-md-6 stat-item">
                                     30 <span>Umur</span>
@@ -61,146 +61,38 @@
                                     <input type="hidden" name="id_siswa" value="{{ Auth::user()->id}}">
                                     <input type="hidden" name="id_guru" value=" {{ $g->guru->id }} ">
                                     <input type="hidden" name="id_matpel" value=" {{$g->mata_pelajaran->id}} ">
+
+                                    @foreach ($tanya as $t)
                                     <tr>
-                                        <td>Penjelasan</td>
+                                        <td>{{$t->list_pertanyaan}}</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="1" aria-label="..." required>
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="1" aria-label="..." required>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="2" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="2" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="3" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="3" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="4" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="4" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="5" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="5" aria-label="...">
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Pembawaan Materi</td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan2" id="blankRadio1" value="1" aria-label="..." required>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan2" id="blankRadio1" value="2" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan2" id="blankRadio1" value="3" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan2" id="blankRadio1" value="4" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan2" id="blankRadio1" value="5" aria-label="...">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Penampilan</td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan3" id="blankRadio1" value="1" aria-label="..." required>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan3" id="blankRadio1" value="2" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan3" id="blankRadio1" value="3" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan3" id="blankRadio1" value="4" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan3" id="blankRadio1" value="5" aria-label="...">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Guru menyampaikan tujuan pembelajaran di awal pertemuan</td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="1" aria-label="..." required>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="2" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="3" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="4" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan4" id="blankRadio1" value="5" aria-label="...">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>pertanyaan 5</td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan5" id="blankRadio1" value="1" aria-label="..." required>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan5" id="blankRadio1" value="2" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan5" id="blankRadio1" value="3" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan5" id="blankRadio1" value="4" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan5" id="blankRadio1" value="5" aria-label="...">
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    @endforeach
+
                                     <tr>
                                         <td colspan="6">
                                             <input type="submit" value="Submit" name="submit" type="Submit">

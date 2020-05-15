@@ -32,8 +32,6 @@ Route::get('/home', 'HomeController@index')->middleware('auth');
 // Route::get('/charts', ['as'=>'charts','uses'=>'ChartsController@index']);
 Route::get('/test', 'MatpelUser@index');
 Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');
-
-
 // route guru
 Route::get('/guru', function(){
     return view('guruPage');

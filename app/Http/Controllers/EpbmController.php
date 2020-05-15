@@ -9,6 +9,8 @@ use App\Guru;
 use App\MatpelGuru;
 use App\Programs;
 use App\MatpelSiswa;
+use App\Pertanyaan;
+
 class EpbmController extends Controller
 {
     public function __construct()
@@ -39,7 +41,9 @@ class EpbmController extends Controller
             return redirect()->action('ElementController@index');
         }
         else{
-            return view('layouts/elements/epbm', compact('matpel_guru'));
+            $tanya = Pertanyaan::all();
+            return view('layouts/elements/epbm', compact('matpel_guru','tanya'));
         }
+
     }
 }
