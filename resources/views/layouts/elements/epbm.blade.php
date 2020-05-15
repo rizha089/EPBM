@@ -17,13 +17,11 @@
                 <!-- LEFT COLUMN -->
                 <div class="profile-left">
                     <!-- PROFILE HEADER -->
-                    <br>
                     <div class="profile-header">
                         <div class="overlay"></div>
                         <div class="profile-main">
-                            {{-- <img src="/klorofil/img/user-medium.png" class="img-circle" alt="Avatar"> --}}
+                            <img src="/klorofil/img/avatar.png" class="img-guru" alt="Avatar">
                             <h3 class="name">{{$g->guru->nama}}</h3>
-                            <br>
                         </div>
                         <div class="profile-stat">
                             <div class="row">
@@ -47,8 +45,8 @@
                                 <thead>
                                     <tr>
                                         <th>Aspek-aspek</th>
-                                        <th>Sangat Buruk</th>
-                                        <th>Buruk</th>
+                                        <th>Sangat kurang baik</th>
+                                        <th>Kurang baik</th>
                                         <th>Cukup baik</th>
                                         <th>Baik</th>
                                         <th>Sangat baik</th>
