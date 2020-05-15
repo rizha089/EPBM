@@ -67,27 +67,27 @@
                                         <td>{{$t->list_pertanyaan}}</td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="1" aria-label="..." required>
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="1" aria-label="..." required>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="2" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="2" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="3" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="3" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="4" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="4" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-check">
-                                                <input class="form-check-input position-static" type="radio" name="pertanyaan1" id="1" value="5" aria-label="...">
+                                                <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="5" aria-label="...">
                                             </div>
                                         </td>
                                     </tr>
