@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
+<style>
+span { width:100%; display:inline-block; }
+span.align-right { text-align:right; }
 
+</style>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -22,7 +26,7 @@
     <div class="col-md-6">
       <div class="card-body">
       <div class="mt-5">
-        <h5 class="card-title">MASUK</h5>
+        <h5 class="card-title">MASUK SEBAGAI SISWA</h5>
         <p class="card-text"><div class="panel panel-default">
 
                 <div class="panel-body">
@@ -81,7 +85,6 @@
                             <a class="btn btn-link" href="{{ route('password.request') }}">Forgot Your Password?</a>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div></p>

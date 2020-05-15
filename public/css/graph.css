@@ -1,0 +1,8 @@
+.bar-chart {
+    background-color: #C7D9D9;
+}
+
+.grid .tick line {
+    stroke: #045c3c;
+    stroke-opacity: 0.2;
+}
