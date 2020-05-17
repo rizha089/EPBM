@@ -15,21 +15,20 @@ class CreateSiswasTable extends Migration
     {
         Schema::create('siswa', function (Blueprint $table) {
             $table->id();
-            $table->string('token');
+            $table->string('token')->nullable();
             $table->string('email')->unique();
             $table->string('password');
-            $table->unsignedBigInteger('nis')->unique();
-            $table->unsignedBigInteger('nisn')->unique();
-            $table->unsignedBigInteger('nik')->unique();
+            $table->string('nis')->unique();
+            $table->string('nisn')->unique();
+            $table->string('nik')->unique();
             $table->string('kelas');
             $table->string('nama');
             $table->string('nama_panggilan');
             $table->string('jenis_kelamin');
             $table->string('agama');
-            $table->unsignedBigInteger('telepon');
+            $table->string('telepon');
             $table->string('tinggal');
-            $table->string('tempat_lahir');
-            $table->date('tanggal_lahir');
+            $table->string('ttl');
             $table->string('kewarganegaraan');
             $table->string('yatim');
             $table->string('alamat');
@@ -37,8 +36,8 @@ class CreateSiswasTable extends Migration
             $table->string('kelurahan');
             $table->string('kecamatan');
             $table->string('kota');
-            $table->unsignedBigInteger('nomor_kk');
-            $table->date('tanggal_gabung');
+            $table->string('nomor_kk');
+            $table->string('tanggal_gabung');
             $table->string('asal_sekolah');
             $table->rememberToken();
             $table->timestamps();

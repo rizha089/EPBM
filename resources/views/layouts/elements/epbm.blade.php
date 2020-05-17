@@ -92,6 +92,23 @@
                                     @endforeach
 
                                     <tr>
+                                        <td>
+                                            Apa yang menjadi kelebiham dari pengajar tsb
+                                        </td>
+                                        <td colspan="5">
+                                            <textarea name="pertanyaan8"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Apq yang Perlu ditingkatkan dari pengajar tsb
+                                        </td>
+                                        <td colspan="5">
+                                            <textarea name="pertanyaan9"></textarea>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
                                         <td colspan="6">
                                             <input type="submit" value="Submit" name="submit" type="Submit">
                                         </td>

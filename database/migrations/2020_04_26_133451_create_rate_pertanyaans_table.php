@@ -18,11 +18,15 @@ class CreateRatePertanyaansTable extends Migration
             $table->unsignedBigInteger('id_siswa');
             $table->unsignedBigInteger('id_guru');
             $table->unsignedBigInteger('id_matpel');
-            $table->double('pertanyaan1');
-            $table->double('pertanyaan2');
-            $table->double('pertanyaan3');
-            $table->double('pertanyaan4');
-            $table->double('pertanyaan5');
+            $table->double('1');
+            $table->double('2');
+            $table->double('3');
+            $table->double('4');
+            $table->double('5');
+            $table->double('6');
+            $table->double('7');
+            $table->string('pertanyaan8');
+            $table->string('pertanyaan9');
             $table->double('averageRate');
             $table->timestamps();
 
