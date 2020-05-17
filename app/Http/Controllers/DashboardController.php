@@ -31,21 +31,24 @@ class DashboardController extends Controller
 
     public function tambahMatpel(Request $request)
     {
-        //tambah matpel ke tabel mata pelajaran siswa
-        $tambahMatpel = MatpelSiswa::firstOrCreate([        
-            'mata_pelajaran_id' => $request->input('tambahMatpel'),
-            'siswa_id' => Auth::user()->id,
+        // tambah matpel ke tabel mata pelajaran siswa
+        $id_siswa = Auth::user()->id;
+        $id_matpel = $request->input('tambahMatpel');
 
+        $tambahMatpel = MatpelSiswa::firstOrCreate([        
+            'mata_pelajaran_id' => $id_matpel,
+            'siswa_id' => $id_siswa,
         ]);
         
+        $guru = \App\MatpelGuru::where('id_matpel', $id_matpel)->get();
         
-        // $tambahProgram = Programs::firstOrCreate([
-        //     'id_guru' => MatpelGuru::where('id_matpel', $request->input('tambahMatpel'))->get(),
-        //     'id_matpel' => $request->input('tambahMatpel'),
-        //     'id_siswa' => Auth::user()->id,
-
-        // ]);
-        
+        for ($j=0; $j < count($guru); $j++) { 
+            $program = Programs::FirstOrCreate([
+                'id_guru' => $guru[$j]->guru->id,
+                'id_matpel' => $id_matpel,
+                'id_siswa' => $id_siswa
+            ]);
+        }
         return back();
     }
 }

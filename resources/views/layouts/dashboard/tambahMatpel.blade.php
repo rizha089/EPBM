@@ -86,6 +86,8 @@ span {
                    <h3 class="panel-heading"><b>Tambah Mata Pelajaran</b></h3>
 
                    <div class="panel-body">
+
+
                     <form class="form-horizontal" role="form" method="POST" action="/tambahMatpel">
                         {{ csrf_field() }}
                     
@@ -96,18 +98,15 @@ span {
                                 @foreach ($mata_pelajaran as $matpel)
                                     <option value="{{$matpel-> id}}">{{$matpel-> nama_matpel}}</option>
                                 @endforeach
-                                
                             </select>
-                                
                             </div>
 
                             <input class="btn btn-primary" type="submit" value="Tambahkan" name="submit" type="Submit">
                         </div>
-
                     </form>
+                   </div>
                 </div>
             </div>
-        </div>
 
 
             </div>
