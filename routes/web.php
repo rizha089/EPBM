@@ -46,5 +46,22 @@ Route::post('guru-login', ['as' => 'guru-login', 'uses' => 'Auth\GuruController@
 Route::get('guru-register','Auth\GuruController@showRegisterPage');
 Route::post('guru-register', 'Auth\GuruController@register')->name('guru.register');
 
+
+// route admin
+Route::get('/admin', function(){
+    return view('admin');
+})->middleware('auth:admin')->name('admin');
+Route::get('admin-login','Auth\AdminController@showLoginForm');
+Route::post('admin-login', ['as' => 'admin-login', 'uses' => 'Auth\AdminController@login']);
+Route::get('admin-register','Auth\AdminController@showRegisterPage');
+Route::post('admin-register', 'Auth\AdminController@register')->name('admin.register');
+Route::get('/admin/daftarsiswa', ['as'=>'daftarsiswa','uses'=>'Auth\AdminController@daftarsiswa']);
+Route::get('/admin/siswa/hapus/{id}', 'Auth\AdminController@siswaDelete');
+Route::get('/admin/daftarguru', ['as'=>'daftarguru','uses'=>'Auth\AdminController@daftarguru']);
+Route::get('/admin/guru/hapus/{id}', 'Auth\AdminController@guruDelete');
+Route::get('/admin/daftarmatpel', ['as'=>'daftarmatpel','uses'=>'Auth\AdminController@daftarMatpel']);
+Route::get('/admin/matpel/hapus/{id}', 'Auth\AdminController@matpelDelete');
+
+
 Route::get('/test', 'MatpelUser@index');
 Route::post('/test', 'MatpelUser@tambah');
