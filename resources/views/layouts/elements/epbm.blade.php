@@ -93,18 +93,18 @@
 
                                     <tr>
                                         <td>
-                                            Apa yang menjadi kelebiham dari pengajar tsb
+                                            Hal apakah yang menjadi kelebihan dari pengajar tersebut?
                                         </td>
                                         <td colspan="5">
-                                            <textarea name="pertanyaan8"></textarea>
+                                            <textarea type="text" name="pertanyaan8" placeholder="Isi Jawaban Anda Disini" style="width:90%; height:150px;border-radius: 4px;resize:none;"></textarea>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            Apq yang Perlu ditingkatkan dari pengajar tsb
+                                            Hal apakah yang perlu ditingkatkan dari pengajar tersebut?
                                         </td>
                                         <td colspan="5">
-                                            <textarea name="pertanyaan9"></textarea>
+                                        <textarea type="text" name="pertanyaan9" placeholder="Isi Jawaban Anda Disini" style="width:90%; height:150px;border-radius: 4px;resize:none;"></textarea>
                                         </td>
                                     </tr>
 

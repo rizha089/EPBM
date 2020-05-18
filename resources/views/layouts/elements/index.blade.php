@@ -13,7 +13,7 @@
 #belumterisi {
   border: 1px solid gray;
   border-radius: 5px;
-  background: #F62525;
+  background: #ffc107;
   padding: 15px;
   width: 1150px;
   height: 95px;
@@ -22,7 +22,7 @@
 #terisi {
   border: 1px solid gray;
   border-radius: 5px;
-  background: #7FF779;
+  background: #28a745;
   padding: 15px;
   width: 1150px;
   height: 95px;
