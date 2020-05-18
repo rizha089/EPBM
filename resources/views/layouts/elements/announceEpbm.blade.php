@@ -81,6 +81,7 @@ span{
                                 ini isinya term and condition cuy ini isinya term and condition cuy
                     </div>
                     <a style="margin-top: 50px;border-radius:4px; position: absolute;right: 100px;" href="{{ route('epbmOnline.EPBM')}}" >Isi EPBM</a>
+                    <a href="{{ route('epbmOnline.EPBM')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Isi EPBM</a>
                 </div>
             </div>
     </div
