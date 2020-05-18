@@ -37,9 +37,7 @@ Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRatin
 
 
 // route guru
-Route::get('/guru', function(){
-    return view('guruPage');
-})->middleware('auth:guru')->name('guruPage');
+Route::get('/guru', 'GuruController@index')->middleware('auth:guru')->name('guruPage');
 Route::get('guru-login','Auth\GuruController@showLoginForm');
 Route::post('guru-login', ['as' => 'guru-login', 'uses' => 'Auth\GuruController@login']);
 Route::get('guru-register','Auth\GuruController@showRegisterPage');

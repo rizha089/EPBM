@@ -17,6 +17,10 @@ class RatePertanyaan extends Model
         'pertanyaan3',
         'pertanyaan4',
         'pertanyaan5',
+        'pertanyaan6',
+        'pertanyaan7',
+        'pertanyaan8',
+        'pertanyaan9',
         'averageRate',
     ];
 
