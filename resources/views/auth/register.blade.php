@@ -30,7 +30,7 @@ window.history.back();
     <div class="col-sm">
 
     <div class="mt-5">
-      <h5 class="card-title">REGISTER</h5>
+      <h5 class="card-title">DAFTAR</h5>
       <p class="card-text"><div class="panel panel-default">
 
       <div class="panel-body">
@@ -38,7 +38,7 @@ window.history.back();
                       {{ csrf_field() }}
 
                       <div class="form-group{{ $errors->has('nama') ? ' has-error' : '' }}">
-                          <label for="nama" class="control-label">Name</label>
+                          <label for="nama" class="control-label">Nama</label>
 
 
                               <input id="nama" type="text" class="form-control" name="nama" value="{{ old('nama') }}" required autofocus>
@@ -80,7 +80,7 @@ window.history.back();
                       </div>
 
                       <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                          <label for="email" class="control-label">E-Mail Address</label>
+                          <label for="email" class="control-label">Alamat Surel</label>
 
 
                               <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -104,7 +104,7 @@ window.history.back();
 
     <div class="col-md-8">
     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                          <label for="password" class="control-label">Password</label>
+                          <label for="password" class="control-label">Kata Sandi</label>
 
 
                               <input id="password" type="password" class="form-control" name="password" required>
@@ -117,7 +117,7 @@ window.history.back();
                           </div>
                           </div>
                           <div class="col-md-8">
-                            <label for="password-confirm" class="control-label">Confirm Password</label>
+                            <label for="password-confirm" class="control-label">Konfirmasi Kata Sandi</label>
 
 
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -125,8 +125,8 @@ window.history.back();
 
                         <div class="mt-3">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary"> Register </button>
-                            <a class="btn btn-link" onclick="goBack()">Sign In</a>
+                            <button type="submit" class="btn btn-primary"> Daftar </button>
+                            <a class="btn btn-link" onclick="goBack()">Masuk</a>
                         </div>
                     </form>
                 </div>

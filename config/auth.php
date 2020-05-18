@@ -68,6 +68,11 @@ return [
             'provider' => 'gurus',
             'hash' => false,
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
     ],
 
     /*
@@ -101,6 +106,11 @@ return [
         'gurus' => [
             'driver' => 'eloquent',
             'model' => App\Guru::class,
+        ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
         ],
 
         // 'users' => [
@@ -141,6 +151,13 @@ return [
 
         'gurus' => [
             'provider' => 'gurus',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'admins' => [
+            'provider' => 'admins',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
