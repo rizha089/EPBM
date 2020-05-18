@@ -25,7 +25,7 @@
     <div class="col-sm">
     <div class="mt-5">
 
-      <h5 class="card-title">REGISTER GURU</h5>
+      <h5 class="card-title">DAFTAR GURU</h5>
       <p class="card-text"><div class="panel panel-default">
 
       <div class="panel-body">
@@ -33,7 +33,7 @@
                       {{ csrf_field() }}
 
                       <div class="form-group{{ $errors->has('nama') ? ' has-error' : '' }}">
-                          <label for="nama" class="control-label">Name</label>
+                          <label for="nama" class="control-label">Nama</label>
 
 
                               <input id="nama" type="text" class="form-control" name="nama" value="{{ old('nama') }}" required autofocus>
@@ -62,7 +62,7 @@
 
 
                       <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                          <label for="email" class="control-label">E-Mail Address</label>
+                          <label for="email" class="control-label">Alamat Surel</label>
 
 
                               <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -86,7 +86,7 @@
 
     <div class="col-md-8">
     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                          <label for="password" class="control-label">Password</label>
+                          <label for="password" class="control-label">Kata Sandi</label>
 
 
                               <input id="password" type="password" class="form-control" name="password" required>
@@ -99,7 +99,7 @@
                           </div>
                           </div>
                           <div class="col-md-8">
-                            <label for="password-confirm" class="control-label">Confirm Password</label>
+                            <label for="password-confirm" class="control-label">Konfirmasi Kata Sandi</label>
 
 
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -109,9 +109,9 @@
                         <div class="form-group">
                             <div class="col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Register
+                                    Daftar
                                 </button>
-                                <a class="btn btn-link" href="{{ route('guru-login') }}"> Sign In</a>
+                                <a class="btn btn-link" href="{{ route('guru-login') }}">Masuk</a>
                             </div>
                         </div>
                     </form>
