@@ -43,6 +43,7 @@ return array(
     'App\\MataPelajaran' => $baseDir . '/app/MataPelajaran.php',
     'App\\MatpelGuru' => $baseDir . '/app/MatpelGuru.php',
     'App\\MatpelSiswa' => $baseDir . '/app/MatpelSiswa.php',
+    'App\\Pertanyaan' => $baseDir . '/app/Pertanyaan.php',
     'App\\Programs' => $baseDir . '/app/Programs.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

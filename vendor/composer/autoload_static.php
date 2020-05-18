@@ -508,6 +508,7 @@ class ComposerStaticIniteccd96905cc1d89f8510b49fb9710533
         'App\\MataPelajaran' => __DIR__ . '/../..' . '/app/MataPelajaran.php',
         'App\\MatpelGuru' => __DIR__ . '/../..' . '/app/MatpelGuru.php',
         'App\\MatpelSiswa' => __DIR__ . '/../..' . '/app/MatpelSiswa.php',
+        'App\\Pertanyaan' => __DIR__ . '/../..' . '/app/Pertanyaan.php',
         'App\\Programs' => __DIR__ . '/../..' . '/app/Programs.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
