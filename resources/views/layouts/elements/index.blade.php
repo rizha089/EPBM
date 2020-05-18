@@ -16,7 +16,6 @@
 span{
     font-family: 'Montserrat', sans-serif;
 }
-</style>
 
 #belumterisi {
   border: 1px solid gray;
