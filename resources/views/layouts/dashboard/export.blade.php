@@ -70,28 +70,47 @@
                     <!-- <a href="/pegawai/tambah" class="btn btn-primary">Input Guru</a> -->
                     <br/>
                     <br/>
-                    <table class="table table-bordered table-hover table-striped">
-                        <thead>
-                            <tr>
-                                <th>Nama</th>
-                                <th>NIP</th>
-                                <th>Email</th>
-                                <th>OPSI</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($daftarGuru as $s)
-                            <tr>
-                                <td>{{ $s->nama }}</td>
-                                <td>{{ $s->nip}}</td>
-                                <td>{{ $s->email }}</td>
-                                <td>
-                                    <a href="/admin/guru/hapus/{{ $s->id }}" class="btn btn-danger">Hapus</a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <table class='table table-bordered'>
+			<thead>
+				<tr>
+					<th>No</th>
+					<th>ID Siswa</th>
+					<th>ID Guru</th>
+					<th>ID Matpel</th>
+                    <th>Soal 1</th>
+                    <th>Soal 2</th>
+                    <th>Soal 3</th>
+                    <th>Soal 4</th>
+                    <th>Soal 5</th>
+                    <th>Soal 6</th>
+                    <th>Soal 7</th>
+                    <th>Soal 8</th>
+                    <th>Soal 9</th>
+                    <th>Rata-rata</th>
+				</tr>
+			</thead>
+			<tbody>
+				@php $i=1 @endphp
+				@foreach($rating as $s)
+				<tr>
+					<td>{{ $i++ }}</td>
+					<td>{{$s->id_siswa}}</td>
+					<td>{{$s->id_guru}}</td>
+					<td>{{$s->id_matpel}}</td>
+                    <td>{{$s->pertanyaan1}}</td>
+                    <td>{{$s->pertanyaan2}}</td>
+                    <td>{{$s->pertanyaan3}}</td>
+                    <td>{{$s->pertanyaan4}}</td>
+                    <td>{{$s->pertanyaan5}}</td>
+                    <td>{{$s->pertanyaan6}}</td>
+                    <td>{{$s->pertanyaan7}}</td>
+                    <td>{{$s->pertanyaan8}}</td>
+                    <td>{{$s->pertanyaan9}}</td>
+                    <td>{{$s->averageRate}}</td>
+                </tr>
+				@endforeach
+			</tbody>
+		</table>
                 </div>
             </div>
         </div>

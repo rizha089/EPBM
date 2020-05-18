@@ -67,5 +67,5 @@ Route::get('/test', 'MatpelUser@index');
 Route::post('/test', 'MatpelUser@tambah');
 
 // route excel
-
+Route::get('/admin/export', ['as'=>'export','uses'=>'Auth\AdminController@export']);
 Route::get('/admin/export_excel', 'Auth\AdminController@export_excel');

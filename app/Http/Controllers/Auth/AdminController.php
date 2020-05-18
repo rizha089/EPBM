@@ -7,6 +7,7 @@ use App\Admin;
 use App\Siswa;
 use App\Guru;
 use App\MataPelajaran;
+use App\RatePertanyaan;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -77,7 +78,7 @@ class AdminController extends Controller
     public function siswaDelete($id){
         $siswa = Siswa::find($id);
         $siswa -> delete();
-        
+
         return back();
     }
 
@@ -91,7 +92,7 @@ class AdminController extends Controller
     public function guruDelete($id){
         $guru = Guru::find($id);
         $guru -> delete();
-        
+
         return back();
     }
 
@@ -105,13 +106,18 @@ class AdminController extends Controller
     public function matpelDelete($id){
         $matpel = MataPelajaran::find($id);
         $matpel -> delete();
-        
+
         return back();
     }
 
     public function export_excel()
 	{
 		return Excel::download(new RateExport, 'Hasil Penilaian.xlsx');
+    }
+
+    public function export(){
+        $rating = RatePertanyaan::all();
+		return view('layouts/dashboard/export', ['rating'=>$rating]);
     }
 
 }
