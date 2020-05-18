@@ -65,3 +65,7 @@ Route::get('/admin/matpel/hapus/{id}', 'Auth\AdminController@matpelDelete');
 
 Route::get('/test', 'MatpelUser@index');
 Route::post('/test', 'MatpelUser@tambah');
+
+// route excel
+
+Route::get('/admin/export_excel', 'Auth\AdminController@export_excel');

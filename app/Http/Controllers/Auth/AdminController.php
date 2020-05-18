@@ -10,6 +10,10 @@ use App\MataPelajaran;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use App\Exports\RateExport;
+use Maatwebsite\Excel\Facades\Excel;
+
+
 
 class AdminController extends Controller
 {
@@ -103,6 +107,11 @@ class AdminController extends Controller
         $matpel -> delete();
         
         return back();
+    }
+
+    public function export_excel()
+	{
+		return Excel::download(new RateExport, 'Hasil Penilaian.xlsx');
     }
 
 }

@@ -27,7 +27,7 @@ span{
 
     <div class="panel">
             <div class="block-title" style="padding: 0px 50px 0px 50px">
-                <h2> Data Siswa</h2>
+                <h2>Data Siswa</h2>
                 <div class="table-responsive" style="margin-bottom:310px">
                     <table>
                         <tbody>
