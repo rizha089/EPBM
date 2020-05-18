@@ -22,7 +22,7 @@ span{
   border-radius: 5px;
   background: #ffc107;
   padding: 15px;
-  width: 1150px;
+  width: initial;
   height: 95px;
 }
 
@@ -31,7 +31,7 @@ span{
   border-radius: 5px;
   background: #28a745;
   padding: 15px;
-  width: 1150px;
+  width: initial;
   height: 95px;
 }
 
@@ -59,7 +59,7 @@ span{
 
                 @foreach ($mata_pelajaran_unfilled as $i) {{-- Ini untuk belum keisi --}}
                     <div class="row-md-3">
-                        <a href="/epbm/isi/{{$i->id}}" style="color: black">
+                        <a href="/epbmOnline/EPBM/isi/{{$i->id}}" style="color: black">
                                 <p id="belumterisi">
                                 <span style="font-size: 90%"> <font color="black"> Mata Pelajaran </font> </span>
                                 <br><span style="font-size: 230%">{{$i -> nama_matpel}}</span></br>

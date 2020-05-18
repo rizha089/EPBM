@@ -3289,8 +3289,8 @@ input[type=radio] {
     margin: 4px 0 0;
     margin-top: 1px\9;
     line-height: normal;
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
 }
 
 input[type=file] {
@@ -4008,7 +4008,11 @@ fieldset[disabled] .btn-default:hover {
 .open>.dropdown-toggle.btn-primary {
     color: #fff;
     background-color: #286090;
-    border-color: #204d74
+    border-color: #204d74;
+    margin-top: 50px;
+    border-radius: 4px;
+    position: absolute;
+    right: 100px;
 }
 
 .btn-primary.active.focus,

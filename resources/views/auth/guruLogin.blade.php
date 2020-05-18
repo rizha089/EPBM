@@ -11,30 +11,30 @@
 
     <title>SMP CENDEKIA BAZNAS</title>
   </head>
-  <body> 
+  <body>
   <div class="container">
-  <div class="mt-5">
-  
+  <div class="mt-log">
+
     <div class="card mb-8" >
   <div class="row no-gutters">
     <div class="col-md-6">
-    
-                     <img src="/klorofil/img/lOGIN.jpg" alt="Logo" 
+
+                     <img src="/klorofil/img/lOGIN.jpg" alt="Logo"
                              class="img-responsive logo">
-       
+
     </div>
     <div class="col-md-6">
       <div class="card-body">
       <div class="mt-5">
-        <h5 class="card-title">LOGIN GURU</h5>
+        <h5 class="card-title" style="color:red;">MASUK SEBAGAI GURU</h5>
         <p class="card-text"><div class="panel panel-default">
-                
+
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('guru-login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="email" class="col-md-4 control-label">Email Address</label>
 
                             <div class="col-md-10">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
@@ -59,6 +59,7 @@
                                     </span>
                                 @endif
                             </div>
+                            <a class="btn btn-link" href="{{ route('login') }}" style="padding: 0px 0px 0px 300px;font-size:12px;">Masuk sebagai siswa</a>
                         </div>
 
                         <div class="form-group">
@@ -74,24 +75,27 @@
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Login
+                                    Masuk
                                 </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
+                                <a class="btn btn-link" href="{{ route('guru.register') }}">Daftar Baru</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                            <a class="btn btn-link" href="{{ route('password.request') }}">Forgot Your Password?</a>
+                            </div>
                             </div>
                         </div>
                     </form>
                 </div>
             </div></p>
-      
+
       </div>
     </div>
   </div>
 </div>
-            </div>       
-            </div>        
+            </div>
+            </div>
             </div>
     </div>
 </div>
