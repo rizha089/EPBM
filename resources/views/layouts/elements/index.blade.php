@@ -22,7 +22,7 @@ span{
   border-radius: 5px;
   background: #ffc107;
   padding: 15px;
-  width: 1150px;
+  width: initial;
   height: 95px;
 }
 
@@ -31,7 +31,7 @@ span{
   border-radius: 5px;
   background: #28a745;
   padding: 15px;
-  width: 1150px;
+  width: initial;
   height: 95px;
 }
 

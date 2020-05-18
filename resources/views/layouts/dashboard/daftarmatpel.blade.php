@@ -64,7 +64,7 @@
                 </div>    
 
                 <body>
-        <div class="container">
+        <div class="container-fluid">
             <div class="card mt-5">
                 <div class="card-body">
                     <!-- <a href="/pegawai/tambah" class="btn btn-primary">Input Guru</a> -->
