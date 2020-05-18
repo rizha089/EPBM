@@ -18,7 +18,7 @@ Route::post('/tambahMatpel', 'DashboardController@tambahMatpel');
 Auth::routes();
 
 Route::group(['middleware'=>'auth'],function(){
-	Route::get('/epbm', ['as'=>'elements','uses'=>'ElementController@index']);
+	Route::get('/epbmOnline/EPBM', 'ElementController@index')->name('epbmOnline.EPBM');
 	Route::get('/charts', ['as'=>'charts','uses'=>'ChartsController@index']);
 	Route::get('/panels', ['as'=>'panels','uses'=>'PanelsController@index']);
 	Route::get('/profile', ['as'=>'profile','uses'=>'ProfileController@index']);
@@ -26,7 +26,8 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/tables', ['as'=>'tables','uses'=>'TablesController@index']);
 	Route::get('/typography', ['as'=>'typography','uses'=>'TypographyController@index']);
 	Route::get('/icons', ['as'=>'icons','uses'=>'IconsController@index']);
-	Route::get('/epbm/isi/{id}', 'EpbmController@isiEPBM');
+    Route::get('/epbmOnline/EPBM/isi/{id}', 'EpbmController@isiEPBM');
+    Route::get('/epbmOnline', ['as'=>'elements','uses'=>'AnnouncementEpbmController@index']);
 });
 
 
