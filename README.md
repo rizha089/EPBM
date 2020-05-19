@@ -1,12 +1,12 @@
-# Ilkomerz Juara
+# Sistem EPBM Sekolah Cendekia BAZNAS
 
 <p align="center">
   <img width=500 src="readme-images/ilkomerz-juara-logo2.png" />
 </p>
 
-## About Ilkomerz Juara
+## Sistem EPBM Sekolah Cendekia BAZNAS
 
-<p style="text-align: justify">Ilkomerz Juara adalah platform untuk menyalurkan kontribusi mahasiswa aktif ilmu komputer IPB lewat title juara, partisipasi dalam acara kompetitif baik internal maupun eksternal, dan komunitas yang ada di Ilkom IPB.</p>
+<p style="text-align: justify">Sistem EPBM Sekolah Cendekia BAZNAS adalah platform untuk menyalurkan kontribusi mahasiswa aktif ilmu komputer IPB lewat title juara, partisipasi dalam acara kompetitif baik internal maupun eksternal, dan komunitas yang ada di Ilkom IPB.</p>
 
 <p style="text-align: justify">Kontribusi ini digambarkan dengan sistem points yang didapatkan dari bukti partisipasi dari mahasiswa. Points ini didapatkan dari absen kegiatan komunitas, mengikuti kegiatan ilkom seperti workshop, pelatihan, dan konfirmasi sertifikat juara.</p>
 
@@ -56,7 +56,7 @@ Framework:
 - **Laravel Framework v5.7.16** yang dapat dilihat di [sini][laravel].
 - **Admin LTE** yang dapat dilihat di [sini][adminlte].
 
-Ilkomerz Juara menargetkan pengguna dengan sistem operasi:
+Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 - iOS atau Android untuk Mahasiswa yang bisa diakses menggunakan akun IPB.
 - Windows, macOS, atau Linux untuk Admin yang bisa diakses menggunakan akun admin. 
 
@@ -195,12 +195,19 @@ Menuliskan function atau class pada suatu program tanpa tujuan yang jelas. Istil
 Aplikasi Ilkomerz Juara telah dikembangkan sejak mata kuliah SI hingga mata kuliah PSBO.
 
 ### Client
-- Auzi Asfarian, S.Komp, M.Kom
+- Sekolah Cendekia Badan Amil Zakat Nasional
 
-### Developer
-- Rendi Yuda Perkasa (G64160011)
-- Iyang Aneka Wibowo (G64160030)
-- Zaki Geyan (G64160046)
-
-### Former
-- Faldi Sulistiawan (G64160068)
+### Project Manager
+Muhammad Farhan Dirhami  G64170099
+### Front-end Developer
+Aslam Alfathan           G64170076
+Jimmi Alfriando          G64170005
+Rizha Al-Fajri           G64170003
+### Back-end Developer
+Irfan Alghani Khalid     G64170054
+Julius Christopher       G64170097
+Lanang Satia Aji         G64170095
+M Rizqi Sinatrya         G64170064
+### Design UI/UX
+Ari Corvin               G64170024
+Muhammad Alpha Thoriq    G64170002
