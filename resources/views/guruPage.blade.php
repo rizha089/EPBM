@@ -27,21 +27,7 @@
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- SIDEBAR -->
-        <div class="sidebar">
-            <div class="brand">
-                <a href="/"><img src="/klorofil/img/logoSCB.png" alt="Logo" class="img-responsive logo"></a>
-            </div>
-            <div class="sidebar-scroll">
-                <nav>
-                    <ul class="nav">
-                        <li><a href="{{route('dashboard')}}" {{Route::is('dashboard')?'class=active':''}}><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-                        <li><a href="{{route('elements')}}" {{Route::is('elements')?'class=active':''}}><i class="lnr lnr-code"></i> <span>EPBM</span></a></li>
-                        <li><a href="{{route('profile')}}" {{Route::is('profile')?'class=active':''}}><i class="lnr lnr-user"></i> <span>Profile</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-</div>
-
+        @include("layouts/partials/sidebar")
         <!-- END SIDEBAR -->
         <!-- MAIN -->
         <div class="main">
@@ -67,6 +53,47 @@
                         </ul>
                     </div>
                 </div>
+                <div class="panel panel-headline">
+                    @for ($i = 0; $i < 1; $i++)
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Hasil Evaluasi Untuk Mata Pelajaran:</h3>
+                        <h3 class="panel-title"><b>{{$matpel[$i]}}</b></h3>
+                    </div>
+                        @for($j = 0; $j < count($pertanyaan); $j++)
+                            <div class="panel-body">
+                                <div class="col">
+                                    <p class="h3" style="font-size: 30px;">{{ $pertanyaan[$j] }}</p>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <td><p class="h3"><b>Nilai</b></p></td>
+                                                <th scope="col"><p class="h3"><b>Sangat Kurang Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Kurang Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Cukup Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Sangat Baik</b></p></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><p class="h3"><b>Jumlah</b></p></td>
+                                                @for($k = 0; $k < 5; $k++)
+                                                <td><p class="h3">{{$nilai[$i][$j][0][$k]}}</p></td>
+                                                @endfor
+                                            </tr>
+                                            <tr>
+                                                <td><p class="h3"><b>Rata-Rata</b></p></td>
+                                                <td style="padding-left: 8px"><p class="h3">{{ ((1 * $nilai[$i][$j][0][0]) + (2 * $nilai[$i][$j][0][1]) + (3 * $nilai[$i][$j][0][2]) + (4 * $nilai[$i][$j][0][3]) + (5 * $nilai[$i][$j][0][4])) / (100) }}</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        @endfor
+                    @endfor
+                </div>
+            </div>
+
 
             </div>
             <!-- END MAIN CONTENT -->
