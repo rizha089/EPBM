@@ -60,7 +60,6 @@
                 <!-- OVERVIEW -->
                 <div class="panel panel-headline">
                     <div class="panel-heading">
-<<<<<<< HEAD
                         <h3 class="panel-title">DAFTAR SISWA</h3>
 
                 </div>
@@ -106,33 +105,6 @@
                           @endforeach
                         </tbody>
                     </table>
-=======
-                        <h3 class="panel-title">Selamat Datang,</h3>
-                    <h3 class="panel-title"><b> {{Auth::user()->nama}} </b></h3>
-                    </div>
-                   <h3 class="panel-heading"><b>Tambah Mata Pelajaran</b></h3>
-
-                   <div class="panel-body">
-
-
-                    <form class="form-horizontal" role="form" method="POST" action="/tambahMatpel">
-                        {{ csrf_field() }}
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                            <select name="tambahMatpel" class="form control">
-                                <option value="">Tambah Mata Pelajaran</option>
-                                @foreach ($mata_pelajaran as $matpel)
-                                    <option value="{{$matpel-> id}}">{{$matpel-> nama_matpel}}</option>
-                                @endforeach
-                            </select>
-                            </div>
-
-                            <input class="btn btn-primary" type="submit" value="Tambahkan" name="submit" type="Submit">
-                        </div>
-                    </form>
-                   </div>
->>>>>>> 974e6787254a9d6667ec1575fb1d7ab6b0ca413e
                 </div>
             </div>
         </div>
