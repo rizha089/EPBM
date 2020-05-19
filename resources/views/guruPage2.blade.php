@@ -83,13 +83,25 @@
                         @for($j = 0; $j < count($pertanyaan); $j++)
                             <div class="panel-body">
                                 <div class="col">
-                                    <div class="col-md-3">
-                                        <div class="metric">
-                                            <p>Pertanyaan: {{ $pertanyaan[$j] }}</p>
-
-
-                                        </div>
-                                    </div>
+                                    <p class="h3"><b>{{ $pertanyaan[$j] }}</b></p>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <td><p class="h3"><b>Nilai</b></p></td>
+                                                @for($k = 0; $k < 5; $k++)
+                                                <th scope="col"><p class="h3">{{$k+1}}</p></th>
+                                                @endfor
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><p class="h3"><b>Jumlah</b></p></td>
+                                                @for($k = 0; $k < 5; $k++)
+                                                <td><p class="h3">{{$nilai[$i][$j][0][$k]}}</p></td>
+                                                @endfor
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         @endfor

@@ -54,7 +54,7 @@ class GuruController extends Controller
             }
         }
 
-        // return json_encode($nilai[0][0]);
+        // return json_encode($nilai[0][1][0][0]);
         return view('guruPage2', ['pertanyaan' => $pertanyaan, 'matpel' => $matpel, 'nilai' => $nilai]);
     }
 }
