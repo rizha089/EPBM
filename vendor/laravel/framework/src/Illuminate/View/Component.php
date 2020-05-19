@@ -33,6 +33,13 @@ abstract class Component
     protected $except = [];
 
     /**
+     * The component alias name.
+     *
+     * @var string
+     */
+    public $componentName;
+
+    /**
      * The component attributes.
      *
      * @var \Illuminate\View\ComponentAttributeBag
@@ -175,8 +182,21 @@ abstract class Component
     protected function createVariableFromMethod(ReflectionMethod $method)
     {
         return $method->getNumberOfParameters() === 0
-                        ? $this->{$method->getName()}()
+                        ? $this->createInvokableVariable($method->getName())
                         : Closure::fromCallable([$this, $method->getName()]);
+    }
+
+    /**
+     * Create an invokable, toStringable variable for the given component method.
+     *
+     * @param  string  $method
+     * @return \Illuminate\View\InvokableComponentVariable
+     */
+    protected function createInvokableVariable(string $method)
+    {
+        return new InvokableComponentVariable(function () use ($method) {
+            return $this->{$method}();
+        });
     }
 
     /**
@@ -204,8 +224,22 @@ abstract class Component
             'resolveView',
             'shouldRender',
             'view',
+            'withName',
             'withAttributes',
         ], $this->except);
+    }
+
+    /**
+     * Set the component alias name.
+     *
+     * @param  string  $name
+     * @return $this
+     */
+    public function withName($name)
+    {
+        $this->componentName = $name;
+
+        return $this;
     }
 
     /**

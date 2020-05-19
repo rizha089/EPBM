@@ -9,13 +9,6 @@
 @endsection
 
 @section('content')
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-span{
-    font-family: 'Montserrat', sans-serif;
-}
-
-</style>
 
 <div class="container-fluid">
     <!-- OVERVIEW -->

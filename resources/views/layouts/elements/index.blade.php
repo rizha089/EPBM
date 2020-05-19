@@ -11,12 +11,6 @@
 @section('content')
 <style>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-span{
-    font-family: 'Montserrat', sans-serif;
-}
-
 #belumterisi {
   border: 1px solid gray;
   border-radius: 5px;
