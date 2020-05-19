@@ -1,4 +1,4 @@
-# Sistem EPBM Sekolah Cendekia BAZNAS
+# 🇮🇩 Sistem EPBM Sekolah Cendekia BAZNAS
 
 <p align="center">
   <img width=300 src="readme_gambar/logoDoang.png" />
@@ -20,7 +20,7 @@
 - **Laravel Framework v5.7.16** untuk pengembangan back-end sisi Mobile Apps maupun Web Development, ini bertujuan untuk Integrasi Data yang ada pada sisi admin dan sisi user (Mahasiswa).
 
 
-## Contents
+##📋 Contents
 
 - [Requirements](#-requirements)
 - [Diagrams](#-diagrams)
@@ -28,7 +28,7 @@
 - [Object-oriented programming](#-object-oriented-programming)
 - [Design-Patterns](#-design-pattern)
 
-## 📋 Requirements
+##💬 Requirements
 
 Framework:
 - **Laravel Framework 7.11.0** yang dapat dilihat di [sini][laravel].
@@ -39,7 +39,7 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 [laravel]: https://laravel.com/docs/7.x/installation
 
 
-## 📖 Diagrams
+## 📈 Diagrams
 
 ### Use Case Diagram
 
@@ -80,7 +80,7 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 - Export Hasil Penilaian ke bentuk Excel
 
 
-## 🚀 Object-oriented programming
+## 📦 Object-oriented programming
 
 Berikut class diagram dari Sistem EPBM.
 
@@ -88,7 +88,7 @@ Berikut class diagram dari Sistem EPBM.
   <img width=500 src="readme_gambar/Class diagram.png" />
 </p>
 
-### Encapsulation
+###  Encapsulation
 
 ```php
 ...
