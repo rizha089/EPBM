@@ -18,35 +18,30 @@ th, td {
 	<div class="form-group">
 		<table class="table table-bordered table-hover table-striped">
 			<thead>
-				<tr>
-					<th>Kelas</th>
-					<th>Mata Pelajaran</th>
-					{{-- <th>OPSI</th> --}}
-				</tr>
+				<th>Nama</th>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>4</th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>avg</th>
 			</thead>
 			<tbody>
-				@foreach ($kelas as $class)
-				<form class="form-horizontal" role="form" method="POST" action="/test" id="tambah">
-				{{ csrf_field() }}
-					<tr>
-						<td>
-							<input type="hidden" name="kelas" value={{ $class->kelas }}>
-							{{ $class->kelas }}
-						</td>
-						<td>
-							<select name="tambahMatpel" class="form control">
-								<option value="">Tambah Mata Pelajaran</option>
-								@foreach ($mata_pelajaran as $matpel)
-									<option value=" {{$matpel->id}} ">{{$matpel-> nama_matpel}}</option>
-								@endforeach
-							</select>
-						</td>
-						<td>
-							<input class="btn btn-primary" type="submit" value="Tambahkan" name="submit" type="Submit">
-						</td>
-					</tr>
-				</form>
-				@endforeach
+				
+				<tr>
+					<td> {{ $rate->guru->nama }} </td>
+					<td> {{ $rate->avg('pertanyaan1') }} </td>
+					<td> {{ $rate->avg('pertanyaan2') }} </td>
+					<td> {{ $rate->avg('pertanyaan3') }} </td>
+					<td> {{ $rate->avg('pertanyaan4') }} </td>
+					<td> {{ $rate->avg('pertanyaan5') }} </td>
+					<td> {{ $rate->avg('pertanyaan6') }} </td>
+					<td> {{ $rate->avg('pertanyaan7') }} </td>
+					<td> {{ $rate->avg('averageRate') }} </td>
+				</tr>
+				
 			</tbody>
 		</table>
 	</div>

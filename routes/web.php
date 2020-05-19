@@ -60,6 +60,7 @@ Route::get('/admin/daftarmatpel', ['as'=>'daftarmatpel','uses'=>'Auth\AdminContr
 Route::get('/admin/matpel/hapus/{id}', 'Auth\AdminController@matpelDelete');
 
 Route::get('/admin/tambahMatpel', ['as'=>'tambahMatpel','uses'=>'Auth\AdminController@tambahMatpel']);
+Route::post('/admin/tambah', 'Auth\AdminController@tambah');
 
 Route::get('/test', 'MatpelUser@index');
 Route::post('/test', 'MatpelUser@tambah');
@@ -71,4 +72,4 @@ Route::get('/admin/export_excel', 'RatingController@export_excel');
 
 // route excel
 Route::get('/admin/export', ['as'=>'export','uses'=>'Auth\AdminController@export']);
-Route::get('/admin/export/{id}', 'Auth\AdminController@cari');
+Route::get('/admin/export/cari', 'Auth\AdminController@cari');
