@@ -99,6 +99,13 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 
 ## 📦 Object-Oriented Programming
 
+### Konsep OOP yang digunakan :
+- Class
+- Object
+- Abstraction
+- Encapsulation
+- Inheritance
+
 Berikut class diagram dari Sistem EPBM.
 
 <p align="center">
