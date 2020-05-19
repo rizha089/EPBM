@@ -45,7 +45,7 @@
 - [Diagrams](#-diagrams)
 - [Features](#-features)
 - [Object-oriented concept](#-object-oriented-concept)
-- [Anti-patterns](#-anti-patterns)
+- [Design Patterns](#-Design Pattern)
 - [Suggestion](#-suggestion)
 - [Credit](#-credit)
 
@@ -104,7 +104,7 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 Berikut class diagram dari Sistem EPBM.
 
 <p align="center">
-  <img width=500 src="readme-images/class.png" />
+  <img width=500 src="readme_gambar/Class diagram.png" />
 </p>
 
 ### Encapsulation
