@@ -26,6 +26,7 @@
 - [Features](#-features)
 - [Object-oriented programming](#-object-oriented-programming)
 - [Design-Patterns](#-design-pattern)
+- [Rational Unified Process Role](#-rational-unified-process-role)
 
 ## Scope of Development
 
