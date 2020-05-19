@@ -210,11 +210,12 @@ class EpbmController extends Controller
 <p style="text-align: justify">Pola desain MVC membagi aplikasi yang terdiri dari model data, presentasi informasi, dan informasi kontrol. Pola tersebut memisahkan ketiganya menjadi objek yang berbeda. Desain MVC membuat tiga objek yaitu Model, View dan Controller. Model hanya berisi data murni yang tidak mengandung logika untuk disajikan kepada pengguna. View menyajikan data model yang sudah diolah kepada pengguna, view mengerti cara mengakses model namun tidak mengerti maksud dari data tersebut. Controller ada diantara View dan Model, Controller mendengar apa yang diinginkan View kemudian memberikan reaksi yang sesuai dengan yang diinginkan. Pada kasus ini reaksi tersebut adalah mengakses Model kemudian diteruskan kepada View untuk menampilkan data kepada pengguna.</p>
 
 
-### Client
-- Sekolah Cendekia Badan Amil Zakat Nasional
+
 
 ## 👥 Rational Unified Process Role
 
+### Product Owner, Decision Maker, Person In Charge
+- Ustadz Mudzakir, Sekolah Cendekia Badan Amil Zakat Nasional
 ### Project Manager, Deployment Manager, Requirements Reviewer, Architecture Reviewer, Configuration Manager, Change Control Manager
 - Muhammad Farhan Dirhami  G64170099
 ### Administrative Assistant, Responsible for Assisting the Project Manager in Maintaining, Scheduling, and Planning Who May also provide assistance to other roles as necessary.
