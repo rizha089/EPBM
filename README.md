@@ -194,7 +194,7 @@ class EpbmController extends Controller
 ```
 
 
-## 👏 Design Pattern
+## ♨️ Design Pattern
 
 ### Model View Controller (MVC)
 
