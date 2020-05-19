@@ -40,7 +40,7 @@ class CreateSiswasTable extends Migration
             $table->string('tanggal_gabung');
             $table->string('asal_sekolah');
             $table->rememberToken();
-            $table->timestamps();
+
         });
     }
 

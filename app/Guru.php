@@ -10,6 +10,7 @@ class Guru extends Authenticatable
 {
     use Notifiable;
     protected $table = "guru";
+    public $timestamps = false;
 
     protected $fillable = [
         'nama',

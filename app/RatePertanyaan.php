@@ -8,6 +8,7 @@ class RatePertanyaan extends Model
 {
     //
     protected $table = 'rate_pertanyaan';
+    public $timestamps = false;
     protected $fillable = [
         'id_siswa',
         'id_guru',

@@ -15,10 +15,10 @@ class CreateMatpelGurusTable extends Migration
     {
         Schema::create('matpel_guru', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('kode');
             $table->unsignedBigInteger('id_guru');
             $table->unsignedBigInteger('id_matpel');
             $table->Integer('filled')->default(0);
-            $table->timestamps();
 
             $table->foreign('id_guru')->references('id')->on('guru')->onDelete('cascade');
             $table->foreign('id_matpel')->references('id')->on('mata_pelajaran')->onDelete('cascade');

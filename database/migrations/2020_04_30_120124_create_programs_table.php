@@ -19,7 +19,6 @@ class CreateProgramsTable extends Migration
             $table->unsignedBigInteger('id_matpel');
             $table->unsignedBigInteger('id_siswa');
             $table->Integer('filled')->default(0);
-            $table->timestamps();
 
             $table->foreign('id_guru')->references('id')->on('guru')->onDelete('cascade');
             $table->foreign('id_matpel')->references('id')->on('mata_pelajaran')->onDelete('cascade');

@@ -18,9 +18,6 @@ class CreateMataPelajaransTable extends Migration
             // $table->unsignedBigInteger('user_id');
             $table->string('kode_matpel')->unique();
             $table->string('nama_matpel');
-            $table->timestamps();
-
-            // $table->foreign('user_id')->references('id')->on('user'); 
         });
     }
 

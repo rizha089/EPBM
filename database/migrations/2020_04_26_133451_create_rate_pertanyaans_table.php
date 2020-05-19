@@ -28,7 +28,6 @@ class CreateRatePertanyaansTable extends Migration
             $table->string('pertanyaan8')->nullable();
             $table->string('pertanyaan9')->nullable();
             $table->double('averageRate');
-            $table->timestamps();
 
             $table->foreign('id_guru')->references('id')->on('guru')->onDelete('cascade');
             $table->foreign('id_siswa')->references('id')->on('siswa')->onDelete('cascade');

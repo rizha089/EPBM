@@ -8,6 +8,7 @@ class Programs extends Model
 {
     //
 	protected $table = 'programs';
+	public $timestamps = false;
 
 	protected $fillable = [
 		'id_guru',

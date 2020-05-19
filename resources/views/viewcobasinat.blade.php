@@ -19,6 +19,7 @@ th, td {
 		<table class="table table-bordered table-hover table-striped">
 			<thead>
 				<th>Nama</th>
+				<th>Nama matpel</th>
 				<th>1</th>
 				<th>2</th>
 				<th>3</th>
@@ -29,10 +30,11 @@ th, td {
 				<th>avg</th>
 			</thead>
 			<tbody>
-				
+				@foreach($rate as $rate)
 				<tr>
 					<td> {{ $rate->guru->nama }} </td>
-					<td> {{ $rate->avg('pertanyaan1') }} </td>
+					<td> {{ $rate->mata_pelajaran->nama_matpel }} </td>
+					<td> {{ $rate->pertanyaan1 }} </td>
 					<td> {{ $rate->avg('pertanyaan2') }} </td>
 					<td> {{ $rate->avg('pertanyaan3') }} </td>
 					<td> {{ $rate->avg('pertanyaan4') }} </td>
@@ -41,7 +43,7 @@ th, td {
 					<td> {{ $rate->avg('pertanyaan7') }} </td>
 					<td> {{ $rate->avg('averageRate') }} </td>
 				</tr>
-				
+				@endforeach
 			</tbody>
 		</table>
 	</div>

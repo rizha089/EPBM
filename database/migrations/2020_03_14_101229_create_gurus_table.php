@@ -20,7 +20,6 @@ class CreateGurusTable extends Migration
             $table->string('nama');
             $table->string('password');
             $table->rememberToken();
-            $table->timestamps();
         });
     }
 

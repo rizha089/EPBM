@@ -10,6 +10,7 @@ class Siswa extends Authenticatable
 {
     use Notifiable;
     protected $table = "siswa";
+    public $timestamps = false;
 
     protected $fillable = [
         'nis',
