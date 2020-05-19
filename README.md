@@ -11,14 +11,13 @@
 <p style="text-align: justify">Kontribusi ini digambarkan dengan sistem points yang didapatkan dari bukti partisipasi dari mahasiswa. Points ini didapatkan dari absen kegiatan komunitas, mengikuti kegiatan ilkom seperti workshop, pelatihan, dan konfirmasi sertifikat juara.</p>
 
 - **Simple.** Tampilan yang sederhana.
-- **IPB Account.** Login menggunakan akun IPB.
+- **SCB Account.** Login menggunakan akun IPB.
 - **Certificate.** Unggah sertifikat prestasi akademik maupun non-akademik.
-- **QR Code.** Absensi kegiatan komunitas menggunakan QR Code.
 - **Dashboard.** Menampilkan informasi terkini seputar Ilkom IPB.
 - **Leaderboard.** Menampilkan peringkat mahasiswa berdasarkan kontribusi di Ilkom IPB.
-- **Object-oriented.** Ilkomerz Juara dikembangkan berbasis object-oriented.
+- **Object-oriented.** Sistem EPBM SCB dikembangkan berbasis object-oriented.
 
-<p style="text-align: justify">Ilkomerz Juara dikembangkan menggunakan beberapa framework, diantaranya Ionic sebagai front-end Mobile Apps, Laravel sebagai back-end, dan Admin LTE sebagai front-end Web Development.</p>
+<p style="text-align: justify">Sistem EPBM SCB dikembangkan menggunakan beberapa framework, diantaranya Ionic sebagai front-end Mobile Apps, Laravel sebagai back-end, dan Admin LTE sebagai front-end Web Development.</p>
 
 - **Ionic Framework v4.12.0** untuk pengembangan front-end Mobile Apps yang ditujukan untuk Mahasiswa Ilmu Komputer IPB.
 
@@ -192,7 +191,14 @@ Menuliskan function atau class pada suatu program tanpa tujuan yang jelas. Istil
 [sm]: https://sourcemaking.com/antipatterns/poltergeists
 
 ## Suggestion
+Framework:
+- **Ionic Framework v4.12.0** yang dapat dilihat di [sini][ionic].
+- **Laravel Framework v5.7.16** yang dapat dilihat di [sini][laravel].
+- **Admin LTE** yang dapat dilihat di [sini][adminlte].
 
+Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
+- iOS atau Android untuk Mahasiswa yang bisa diakses menggunakan akun IPB.
+- Windows, macOS, atau Linux untuk Admin yang bisa diakses menggunakan akun admin. 
 
 ## 📄 Credit
 
