@@ -33,7 +33,7 @@ class GuruController extends Controller
 
         $nilai= array(array(array()));
         // Per Matpel
-        for($i = 0; $i < 1; $i++) {
+        for($i = 0; $i < count($matpel); $i++) {
             // Per Pertanyaan
             for($j = 0; $j < 7; $j++){
                 $temp = DB::table('rekap')
@@ -54,7 +54,20 @@ class GuruController extends Controller
             }
         }
 
+        // Get rata-rata per matpel
+        $rata_db = DB::table('rate_pertanyaan')
+                    -> where('id_guru', auth()->user()->id)
+                    -> select('id_matpel', DB::raw('avg(averageRate) as avg_rate'))
+                    -> groupBy('id_guru', 'id_matpel')
+                    -> get();
+
+        $rata = [];
+        foreach($rata_db as $r) {
+            array_push($rata, $r->avg_rate);
+        }
+
+        // return $rata;
         // return json_encode($nilai[0][1][0][0]);
-        return view('guruPage', ['pertanyaan' => $pertanyaan, 'matpel' => $matpel, 'nilai' => $nilai]);
+        return view('guruPage', ['pertanyaan' => $pertanyaan, 'matpel' => $matpel, 'nilai' => $nilai, 'rata'=>$rata]);
     }
 }
