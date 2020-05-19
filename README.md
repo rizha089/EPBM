@@ -11,43 +11,24 @@
 <p style="text-align: justify">Kontribusi ini digambarkan dengan sistem points yang didapatkan dari bukti partisipasi dari mahasiswa. Points ini didapatkan dari absen kegiatan komunitas, mengikuti kegiatan ilkom seperti workshop, pelatihan, dan konfirmasi sertifikat juara.</p>
 
 - **Simple.** Tampilan yang sederhana.
-- **SCB Account.** Login menggunakan akun IPB.
-- **Certificate.** Unggah sertifikat prestasi akademik maupun non-akademik.
-- **Dashboard.** Menampilkan informasi terkini seputar Ilkom IPB.
-- **Leaderboard.** Menampilkan peringkat mahasiswa berdasarkan kontribusi di Ilkom IPB.
+- **SCB Account.** Login menggunakan akun SCB.
+- **Dashboard.** Menampilkan informasi pada halaman user.
 - **Object-oriented.** Sistem EPBM SCB dikembangkan berbasis object-oriented.
 
-<p style="text-align: justify">Sistem EPBM SCB dikembangkan menggunakan beberapa framework, diantaranya Ionic sebagai front-end Mobile Apps, Laravel sebagai back-end, dan Admin LTE sebagai front-end Web Development.</p>
-
-- **Ionic Framework v4.12.0** untuk pengembangan front-end Mobile Apps yang ditujukan untuk Mahasiswa Ilmu Komputer IPB.
-
-<p align="center">
-  <img height="100" src="readme-images/ionic-logo.png">
-</p>
-
-- **Laravel Framework v5.7.16** untuk pengembangan back-end sisi Mobile Apps maupun Web Development, ini bertujuan untuk Integrasi Data yang ada pada sisi admin dan sisi user (Mahasiswa).
-
-<p align="center">
-  <img height="150" src="readme-images/laravel-logo.png">
-</p>
+<p style="text-align: justify">Sistem EPBM SCB dikembangkan menggunakan Framework Laravel sebagai back-end.</p>
 
 
-- **Admin LTE berbasis Bootstrap 3 Framework** untuk pengembangan front-end Web Development yang ditujukan untuk Admin Ilmu Komputer IPB. 
+- **Laravel Framework v7.11.0** untuk pengembangan back-end Web Development,Bertujuan untuk Integrasi Data yang ada pada sisi admin dan sisi user.
 
-<p align="center">
-  <img height="200" src="readme-images/adminlte-logo.png">
-</p>
 
 
 ## Contents
 
 - [Requirements](#-requirements)
-- [Diagrams](#-diagrams)
 - [Features](#-features)
 - [Object-oriented concept](#-object-oriented-concept)
-- [Anti-patterns](#-anti-patterns)
+- [Patterns](#-patterns)
 - [Suggestion](#-suggestion)
-- [Credit](#-credit)
 
 ## 📋 Requirements
 
@@ -93,13 +74,11 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 ## 🎉 Features
 
 - Login
-- Dashboard (Timeline)
-- Leaderboard
-- Komunitas
-- Profile
-- Upload Certificate
-- Absensi via QR Code
-- Trade Points
+- Register
+- Admin
+- Tambah Mata Pelajaran per Kelas
+- Penilaian EPBM Guru
+- Dashboard Hasil Penilaian EPBM
 
 ## 🚀 Object-oriented concept
 
@@ -216,27 +195,19 @@ class EpbmController extends Controller
 ```
 
 
-## 👏 Design Pattern
+## 👏 Patterns
 
-### Model View Controller (MVC)
+### Model View Controller
 
-<p align="center">
-  <img width=500 src="readme_gambar/design pattern.png" />
-</p>
-
-<p style="text-align: justify">Pola desain MVC membagi aplikasi yang terdiri dari model data, presentasi informasi, dan informasi kontrol. Pola tersebut memisahkan ketiganya menjadi objek yang berbeda.
-    Desain MVC membuat tiga objek yaitu Model, View dan Controller. Model hanya berisi data murni yang tidak mengandung logika untuk disajikan kepada pengguna. View menyajikan data model yang sudah diolah kepada pengguna, view mengerti cara mengakses model namun tidak mengerti maksud dari data tersebut. Controller ada diantara View dan Model, Controller mendengar apa yang diinginkan View kemudian memberikan reaksi yang sesuai dengan yang diinginkan. Pada kasus ini reaksi tersebut adalah mengakses Model kemudian diteruskan kepada View untuk menampilkan data kepada pengguna.</p>
+<p style="text-align: justify">Model View Controller merupakan pattern yang memecah aplikasi menjadi 3 bagian, yaitu Model yang berhubungan dengan basis data, View yang berurusan dengan tampilan, dan Kontroler yang mengatur alur jalannya aplikasi. Dengan Laravel, konsep MVC sangat dimudahkan karena terdapat fungsi-fungsi khusus yang memperpendek baris kode kita. </p>
 
 
 ## Suggestion
 Framework:
-- **Ionic Framework v4.12.0** yang dapat dilihat di [sini][ionic].
-- **Laravel Framework v5.7.16** yang dapat dilihat di [sini][laravel].
-- **Admin LTE** yang dapat dilihat di [sini][adminlte].
+- **Laravel Framework v7.11.0** yang dapat dilihat di [sini][laravel].
 
 Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
-- iOS atau Android untuk siswa yang bisa diakses menggunakan akun Simak EPBM
-- Windows, macOS, atau Linux untuk Admin yang bisa diakses menggunakan akun admin. 
+- Windows, macOS, atau Linux untuk Admin, Siswa dan Guru yang bisa diakses menggunakan akun masing- masing. 
 
 
 ### Client
