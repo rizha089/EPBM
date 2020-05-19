@@ -44,34 +44,13 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Selamat Datang,</h3>
                         <h3 class="panel-title"><b> {{Auth::user()->nama}} </b></h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="col">
-                            <div class="col-md-3">
-                                <div class="metric">
-                                    <p>
-                                        <span class="number"> <font color="black"> ID Guru </font> </span>
-                                        <span class="title"> <font color="black"> {{ Auth::user()->id }} </font> </span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="metric">
-                                    <p>
-                                        <span class="number"> <font color="black">Mata Pelajaran Yang Diampu</font> </span>
-                                    <span class="title"><font color="black">{{ count($matpel) }}</font> </span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="metric">
-                                    <p>
-                                        <span class="number"> <font color="black"> Jumlah Pertanyaan </font> </span>
-                                        <span class="title"> <font color="black"> {{ count($pertanyaan) }} </font> </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <br>
+                        <p class="h4"><b>Mata Pelajaran Yang Diampu:</b></p>
+                        <ul>
+                            @foreach ($matpel as $m)
+                                <li><h4>{{$m}}</h4></li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
                 <div class="panel panel-headline">
@@ -83,77 +62,31 @@
                         @for($j = 0; $j < count($pertanyaan); $j++)
                             <div class="panel-body">
                                 <div class="col">
-                                    <div class="col-md-3">
-                                        <div class="metric">
-                                            <p>Pertanyaan: {{ $pertanyaan[$j] }}</p>
-                                            <svg></svg>
-                                            <script src="https://d3js.org/d3.v4.min.js"></script>
-                                            <script>
-                                                const margin = 60;
-                                                const width = 300 - 2 * margin;
-                                                const height = 200 - 2 * margin;
-                                                // var svgWidth = 500;
-                                                // var svgHeight = 300;
-
-                                                var svg = d3.select('svg')
-                                                    .attr("width", 300)
-                                                    .attr("height", 200)
-                                                    // .attr("class", "bar-chart");
-
-                                                const chart = svg.append('g')
-                                                    .attr('transform', `translate(${margin}, ${margin})`);
-
-                                                const yScale = d3.scaleLinear()
-                                                    .range([height, 0])
-                                                    .domain([0, 100])
-
-                                                const xScale = d3.scaleBand()
-                                                    .range([0, width])
-                                                    .domain(['N1', 'N2', 'N3', 'N4', 'N5'])
-                                                    .padding(0.2)
-
-                                                var list = <?php echo json_encode($nilai[$i][$j][0]) ?>;
-
-                                                var pertanyaans = [
-                                                    { nilai: "N1", jumlah: list[0]},
-                                                    { nilai: "N2", jumlah: list[1]},
-                                                    { nilai: "N3", jumlah: list[2]},
-                                                    { nilai: "N4", jumlah: list[3]},
-                                                    { nilai: "N5", jumlah: list[4]},
-                                                ];
-
-                                                chart.append('g')
-                                                    .call(d3.axisLeft(yScale));
-
-                                                chart.append('g')
-                                                    .attr('transform', `translate(0, ${height})`)
-                                                    .call(d3.axisBottom(xScale));
-
-                                                chart.selectAll()
-                                                    .data(pertanyaans)
-                                                    .enter()
-                                                    .append("rect")
-                                                    .attr("x", (s) => xScale(s.nilai))
-                                                    .attr("y", (s) => yScale(s.jumlah))
-                                                    .attr('height', (s) => height - yScale(s.jumlah))
-                                                    .attr('width', xScale.bandwidth())
-                                                    .style('fill', '#045c3c')
-
-                                                svg.append('text')
-                                                    .attr('x', -(height / 2) - margin)
-                                                    .attr('y', margin / 2.4)
-                                                    .attr('transform', 'rotate(-90)')
-                                                    .attr('text-anchor', 'middle')
-                                                    .text('Jumlah')
-
-                                                svg.append('text')
-                                                    .attr('x', width / 2 + margin)
-                                                    .attr('y', 40)
-                                                    .attr('text-anchor', 'middle')
-                                                    .text('Nilai yang didapatkan')
-                                            </script>
-                                        </div>
-                                    </div>
+                                    <p class="h3" style="font-size: 30px;">{{ $pertanyaan[$j] }}</p>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <td><p class="h3"><b>Nilai</b></p></td>
+                                                <th scope="col"><p class="h3"><b>Sangat Kurang Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Kurang Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Cukup Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Sangat Baik</b></p></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><p class="h3"><b>Jumlah</b></p></td>
+                                                @for($k = 0; $k < 5; $k++)
+                                                <td><p class="h3">{{$nilai[$i][$j][0][$k]}}</p></td>
+                                                @endfor
+                                            </tr>
+                                            <tr>
+                                                <td><p class="h3"><b>Rata-Rata</b></p></td>
+                                                <td style="padding-left: 8px"><p class="h3">{{ ((1 * $nilai[$i][$j][0][0]) + (2 * $nilai[$i][$j][0][1]) + (3 * $nilai[$i][$j][0][2]) + (4 * $nilai[$i][$j][0][3]) + (5 * $nilai[$i][$j][0][4])) / (100) }}</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         @endfor

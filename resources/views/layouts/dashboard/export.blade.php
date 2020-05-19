@@ -75,19 +75,21 @@
                     <table class='table table-striped table-bordered'>
 			<thead>
                 <tr>
-                    <div class="row">
-                        <div class="col-xs-2 col-sm-2">
-                            <select name="guru_id", id="guru_id">
-                                <option value="">Pilih Guru</option>
-                                @foreach(App\guru::all() as $g)
-                                <option class="option" value="{{$g->id}}">{{$g->nama}}</option>
-                                @endforeach
-                            </select>
+                    <form action="/admin/export/cari" method="GET">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2">
+                                <select name="guru_id", id="guru_id">
+                                    <option value="">Pilih Guru</option>
+                                    @foreach(App\guru::all() as $g)
+                                        <option class="option" value="{{$g->id}}">{{$g->nama}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-xs-2 col-sm-2">
+                                <input type="submit" value="cari">
+                            </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2">
-                            <a href='/admin/export/{id}'>Cari</a>
-                        </div>
-                    </div>
+                    </form>
                 </tr>
 				<tr>
 					<th>No</th>

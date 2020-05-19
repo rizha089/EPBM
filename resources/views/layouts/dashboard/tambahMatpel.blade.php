@@ -68,7 +68,6 @@
         <div class="container-fluid">
             <div class="card mt-5">
                 <div class="card-body">
-                    <!-- <a href="/pegawai/tambah" class="btn btn-primary">Input Siswa</a> -->
                     <br/>
                     <br/>
                     <table class="table table-bordered table-hover table-striped">
@@ -77,34 +76,34 @@
                             <th>Kelas</th>
                             <th>Mata Pelajaran</th>
                             <th>Opsi</th>
-                            {{-- <th>OPSI</th> --}}
                           </tr>
                         </thead>
                         <tbody>
                           @foreach ($kelas as $class)
-                          <form class="form-horizontal" role="form" method="POST" action="/test" id="tambah">
-                          {{ csrf_field() }}
-                            <tr>
-                              <td>
-                                <input type="hidden" name="kelas" value={{ $class->kelas }}>
-                                {{ $class->kelas }}
-                              </td>
-                              <td>
-                                <select name="tambahMatpel" class="form control">
-                                  <option value="">Tambah Mata Pelajaran</option>
-                                  @foreach ($mata_pelajaran as $matpel)
-                                    <option value=" {{$matpel->id}} ">{{$matpel-> nama_matpel}}</option>
-                                  @endforeach
-                                </select>
-                              </td>
-                              <td>
-                                <input class="btn btn-primary" type="submit" value="Tambahkan" name="submit" type="Submit">
-                              </td>
-                            </tr>
+                          <form class="form-horizontal" role="form" method="POST" action="/admin/tambah" id="tambah">
+                              {{ csrf_field() }}
+                                <tr>
+                                  <td>
+                                    <input type="hidden" name="kelas" value={{ $class->kelas }}>
+                                    {{ $class->kelas }}
+                                  </td>
+                                  <td>
+                                    <select name="tambahMatpel" class="form control">
+                                      <option value="">Tambah Mata Pelajaran</option>
+                                      @foreach ($mata_pelajaran as $matpel)
+                                        <option value=" {{$matpel->id}} ">{{$matpel-> nama_matpel}}</option>
+                                      @endforeach
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <input class="btn btn-success my-3" type="submit" value="Tambahkan" name="submit" type="Submit">
+                                  </td>
+                                </tr>
                           </form>
                           @endforeach
                         </tbody>
                     </table>
+
                 </div>
             </div>
         </div>
