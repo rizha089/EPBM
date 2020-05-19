@@ -80,35 +80,19 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 
 ### Activity Diagram
 
-- Absensi
+- Aktivity diagram mengisi biodata guru dan murid 
 
 <p align="center">
-  <img width=300 src="readme-images/activity-diagram-absensi.jpg" />
+  <img width=300 src="readme_gambar/aktivity diagram.png" />
 </p>
 
-- Leaderboard
+- Aktivity diagram mengisi EPBM 
 
 <p align="center">
-  <img width=300 src="readme-images/activity-diagram-leaderboard.jpg" />
+  <img width=300 src="readm_gambar/activity diagram mengisi epbm.png" />
 </p>
 
-- Points
 
-<p align="center">
-  <img width=300 src="readme-images/activity-diagram-points.jpg" />
-</p>
-
-- Post in Timeline
-
-<p align="center">
-  <img width=300 src="readme-images/activity-diagram-post-in-timeline.jpg" />
-</p>
-
-- Sertifikat
-
-<p align="center">
-  <img width=300 src="readme-images/activity-diagram-sertifikat.jpg" />
-</p>
 
 ## 🎉 Features
 
