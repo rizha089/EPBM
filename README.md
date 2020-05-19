@@ -52,17 +52,13 @@
 ## 📋 Requirements
 
 Framework:
-- **Ionic Framework v4.12.0** yang dapat dilihat di [sini][ionic].
-- **Laravel Framework v5.7.16** yang dapat dilihat di [sini][laravel].
-- **Admin LTE** yang dapat dilihat di [sini][adminlte].
+- **Laravel Framework 7.11.0** yang dapat dilihat di [sini][laravel].
 
 Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
-- iOS atau Android untuk Mahasiswa yang bisa diakses menggunakan akun IPB.
-- Windows, macOS, atau Linux untuk Admin yang bisa diakses menggunakan akun admin. 
+- Windows, macOS, atau Linux untuk Siswa, Guru dan Admin yang bisa diakses menggunakan akun masing masing. 
 
-[ionic]: https://ionicframework.com/docs/installation/cli
-[laravel]: https://laravel.com/docs/5.8/installation
-[adminlte]: https://adminlte.io/docs/2.4/installation
+[laravel]: https://laravel.com/docs/7.x/installation
+
 
 ## 📖 Diagrams
 
@@ -94,17 +90,20 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 
 
 
-## 🎉 Features 
+## 🎉 Features
 
-- Login / Logout
-- Edit pertanyaan EPBM
-- Input jawaban terbuka dan tertutup
-- Export file ke Exel hasil rating
-- Cek nilai EPBM Guru
+- Login
+- Dashboard (Timeline)
+- Leaderboard
+- Komunitas
+- Profile
+- Upload Certificate
+- Absensi via QR Code
+- Trade Points
 
 ## 🚀 Object-oriented concept
 
-Berikut class diagram dari Ilkomerz Juara.
+Berikut class diagram dari Sistem EPBM.
 
 <p align="center">
   <img width=500 src="readme-images/class.png" />
@@ -114,50 +113,108 @@ Berikut class diagram dari Ilkomerz Juara.
 
 ```php
 ...
-class komunitasController extends Controller
+class GuruController extends Controller
 {
+    //
+    public function index() {
+        // Buat Dapetin Pertanyaan
+        $pertanyaans_db = DB::table('pertanyaan')->select('list_pertanyaan')->get();
+        $pertanyaan = [];
+        foreach($pertanyaans_db as $p) {
+            array_push($pertanyaan, $p->list_pertanyaan);
+        }
+
+        $matpel_db = DB::table('matpel_guru')
+                        -> join('mata_pelajaran', 'matpel_guru.id_matpel', '=', 'mata_pelajaran.id')
+                        -> select('mata_pelajaran.nama_matpel')
+                        -> where('matpel_guru.id_guru', auth()->user()->id)
+                        -> get();
+        $matpel = [];
+        foreach($matpel_db as $m) {
+            array_push($matpel, $m->nama_matpel);
+        }
+
+        $nilai= array(array(array()));
+        // Per Matpel
+        for($i = 0; $i < count($matpel); $i++) {
+            // Per Pertanyaan
+            for($j = 0; $j < 7; $j++){
+                $temp = DB::table('rekap')
+                            -> join('guru', 'rekap.id_guru', '=', 'guru.id')
+                            -> join('mata_pelajaran', 'rekap.id_matpel', '=', 'mata_pelajaran.id')
+                            -> join('pertanyaan', 'rekap.id_pertanyaan', '=', 'pertanyaan.id')
+                            -> where('rekap.id_guru', auth()->user()->id)
+                            -> groupBy('guru.nama', 'mata_pelajaran.nama_matpel', 'pertanyaan.list_pertanyaan', 'nilai')
+                            -> select(DB::raw('count(nilai) as count_nilai'))
+                            -> where('rekap.id_pertanyaan', $j+1)
+                            -> get();
+
+                $temp_nilai = [];
+                foreach($temp as $t) {
+                    array_push($temp_nilai, $t->count_nilai);
+                }
+                $nilai[$i][$j][] = $temp_nilai;
+            }
+        }
+
+        // Get rata-rata per matpel
+        $rata_db = DB::table('rate_pertanyaan')
+                    -> where('id_guru', auth()->user()->id)
+                    -> select('id_matpel', DB::raw('avg(averageRate) as avg_rate'))
+                    -> groupBy('id_guru', 'id_matpel')
+                    -> get();
+
+        $rata = [];
+        foreach($rata_db as $r) {
+            array_push($rata, $r->avg_rate);
+        }
+
+        // return $rata;
+        // return json_encode($nilai[0][1][0][0]);
+        return view('guruPage', ['pertanyaan' => $pertanyaan, 'matpel' => $matpel, 'nilai' => $nilai, 'rata'=>$rata]);
+    }
+}
+
+
+class EpbmController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        $komunitas = komunitas:all();
-        $date = new DateTime();
-        $stamp = $date->getTimeStamp();
-        $zval = strval(intval($stamp / 86400) ** 2 % 1000000);
-        $url = 'http://192.168.43.195/api/absen/';
-
-        $i = 0;
-        $encrypted = '';
-        foreach(str_split($url) as $char)
-        {
-            $encrypted .= chr(ord($char) ^ ord($zval{$i++ % strlen($zval)}));
-        }
-        $secret = base64_encode($encrypted);
-        return view('komunitas', compact('komunitas', 'secret'));
+        $guru = Guru::all();
+        return view('layouts/elements/epbm', ['guru' => $guru]);
     }
+
+    public function isiEPBM(Request $request, $id)
+    {
+        // $matpel_guru = MatpelGuru::where('id_matpel', $id)->where('filled', 0)->get();
+
+        $id_siswa = Auth::id();
+        $matpel_guru = Programs::where('id_matpel', $id)->where('id_siswa', $id_siswa)->where('filled', 0)->get();
+
+        // dd($matpel_guru);
+        // print(count($matpel_guru));
+
+        if(count($matpel_guru) == 0){
+            $matpel = MatpelSiswa::where('siswa_id', $id_siswa)->where('mata_pelajaran_id', $id)->update(
+                ['filled' => 1]
+            );
+            return redirect()->action('ElementController@index');
+        }
+        else{
+            $tanya = Pertanyaan::all();
+            return view('layouts/elements/epbm', compact('matpel_guru','tanya'));
+        }
+
+    }
+}
 ...
 ```
 
-### Inheritance
-
-```php
-...
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-
-class Admin extends user
-{
-    use Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-...
-```
 
 ## 👏 Anti-patterns
 
