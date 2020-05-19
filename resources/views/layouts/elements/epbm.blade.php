@@ -64,32 +64,49 @@
                                     <tr>
                                         <td>{{$t->list_pertanyaan}}</td>
                                         <td>
-                                            <div class="form-check">
+                                            <div class="form-check" style='text-align:center'>
                                                 <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="1" aria-label="..." required>
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="form-check">
+                                            <div class="form-check" style='text-align:center'>
                                                 <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="2" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="form-check">
+                                            <div class="form-check" style='text-align:center'>
                                                 <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="3" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="form-check">
+                                            <div class="form-check" style='text-align:center'>
                                                 <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="4" aria-label="...">
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="form-check">
+                                            <div class="form-check" style='text-align:center'>
                                                 <input class="form-check-input position-static" type="radio" name="pertanyaan{{$t->id}}" id="{{$t->id}}" value="5" aria-label="...">
                                             </div>
                                         </td>
                                     </tr>
                                     @endforeach
+
+                                    <tr>
+                                        <td>
+                                            Hal apakah yang menjadi kelebihan dari pengajar tersebut?
+                                        </td>
+                                        <td colspan="5">
+                                            <textarea type="text" name="pertanyaan8" placeholder="Isi Jawaban Anda Disini" style="width:100%; height:150px;border-radius: 4px;resize:none;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Hal apakah yang perlu ditingkatkan dari pengajar tersebut?
+                                        </td>
+                                        <td colspan="5">
+                                            <textarea type="text" name="pertanyaan9" placeholder="Isi Jawaban Anda Disini" style="width:100%; height:150px;border-radius: 4px;resize:none;"></textarea>
+                                        </td>
+                                    </tr>
 
                                     <tr>
                                         <td colspan="6">

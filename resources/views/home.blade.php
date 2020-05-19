@@ -33,11 +33,11 @@
   height: 120px;
 }
 
-span {
-    font-family: montserrat;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+span{
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
-
 </style>
 <head>
     <title>Dashboard | SCB - @yield('title')</title>

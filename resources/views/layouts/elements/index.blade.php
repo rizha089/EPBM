@@ -10,27 +10,31 @@
 
 @section('content')
 <style>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+span{
+    font-family: 'Montserrat', sans-serif;
+}
+
 #belumterisi {
   border: 1px solid gray;
   border-radius: 5px;
-  background: #F62525;
+  background: #ffc107;
   padding: 15px;
-  width: 1150px;
+  width: initial;
   height: 95px;
 }
 
 #terisi {
   border: 1px solid gray;
   border-radius: 5px;
-  background: #7FF779;
+  background: #28a745;
   padding: 15px;
-  width: 1150px;
+  width: initial;
   height: 95px;
 }
 
-span {
-    font-family: montserrat;
-}
 </style>
 
 <div class="container-fluid">
@@ -55,7 +59,7 @@ span {
 
                 @foreach ($mata_pelajaran_unfilled as $i) {{-- Ini untuk belum keisi --}}
                     <div class="row-md-3">
-                        <a href="/epbm/isi/{{$i->id}}" style="color: black">
+                        <a href="/epbmOnline/EPBM/isi/{{$i->id}}" style="color: black">
                                 <p id="belumterisi">
                                 <span style="font-size: 90%"> <font color="black"> Mata Pelajaran </font> </span>
                                 <br><span style="font-size: 230%">{{$i -> nama_matpel}}</span></br>
