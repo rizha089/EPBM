@@ -27,6 +27,9 @@
 - [Object-oriented programming](#-object-oriented-programming)
 - [Design-Patterns](#-design-pattern)
 
+## Scope of Development
+
+The scope of development is 
 ## 💬 Requirements
 
 Framework:
@@ -79,7 +82,7 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 - Export Hasil Penilaian ke bentuk Excel
 
 
-## 📦 Object-oriented programming
+## 📦 Object-Oriented Programming
 
 Berikut class diagram dari Sistem EPBM.
 
@@ -209,7 +212,7 @@ class EpbmController extends Controller
 ### Client
 - Sekolah Cendekia Badan Amil Zakat Nasional
 
-### Project Manager
+### Project Manager (Deployment Manager, Requirements Reviewer, Architecture Reviewer, Configuration Manager, Change Control Manager)
 - Muhammad Farhan Dirhami  G64170099
 ### Front-end Developer
 - Rizha Al-Fajri           G64170003
