@@ -198,16 +198,16 @@ Aplikasi Ilkomerz Juara telah dikembangkan sejak mata kuliah SI hingga mata kuli
 - Sekolah Cendekia Badan Amil Zakat Nasional
 
 ### Project Manager
-Muhammad Farhan Dirhami  G64170099
+- Muhammad Farhan Dirhami  G64170099
 ### Front-end Developer
-Aslam Alfathan           G64170076
-Jimmi Alfriando          G64170005
-Rizha Al-Fajri           G64170003
+- Aslam Alfathan           G64170076
+- Jimmi Alfriando          G64170005
+- Rizha Al-Fajri           G64170003
 ### Back-end Developer
-Irfan Alghani Khalid     G64170054
-Julius Christopher       G64170097
-Lanang Satia Aji         G64170095
-M Rizqi Sinatrya         G64170064
+- Irfan Alghani Khalid     G64170054
+- Julius Christopher       G64170097
+- Lanang Satia Aji         G64170095
+- M Rizqi Sinatrya         G64170064
 ### Design UI/UX
-Ari Corvin               G64170024
-Muhammad Alpha Thoriq    G64170002
+- Ari Corvin               G64170024
+- Muhammad Alpha Thoriq    G64170002
