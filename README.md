@@ -11,32 +11,13 @@
 <p style="text-align: justify">Kontribusi ini digambarkan dengan sistem points yang didapatkan dari bukti partisipasi dari mahasiswa. Points ini didapatkan dari absen kegiatan komunitas, mengikuti kegiatan ilkom seperti workshop, pelatihan, dan konfirmasi sertifikat juara.</p>
 
 - **Simple.** Tampilan yang sederhana.
-- **SCB Account.** Login menggunakan akun IPB.
-- **Certificate.** Unggah sertifikat prestasi akademik maupun non-akademik.
-- **Dashboard.** Menampilkan informasi terkini seputar Ilkom IPB.
-- **Leaderboard.** Menampilkan peringkat mahasiswa berdasarkan kontribusi di Ilkom IPB.
+- **SCB Account.** Login menggunakan akun SCB.
+- **Dashboard.** Menampilkan informasi user.
 - **Object-oriented.** Sistem EPBM SCB dikembangkan berbasis object-oriented.
 
-<p style="text-align: justify">Sistem EPBM SCB dikembangkan menggunakan beberapa framework, diantaranya Ionic sebagai front-end Mobile Apps, Laravel sebagai back-end, dan Admin LTE sebagai front-end Web Development.</p>
-
-- **Ionic Framework v4.12.0** untuk pengembangan front-end Mobile Apps yang ditujukan untuk Mahasiswa Ilmu Komputer IPB.
-
-<p align="center">
-  <img height="100" src="readme-images/ionic-logo.png">
-</p>
+<p style="text-align: justify">Sistem EPBM SCB dikembangkan menggunakan framework laravel sebagai back-end Web Development.</p>
 
 - **Laravel Framework v5.7.16** untuk pengembangan back-end sisi Mobile Apps maupun Web Development, ini bertujuan untuk Integrasi Data yang ada pada sisi admin dan sisi user (Mahasiswa).
-
-<p align="center">
-  <img height="150" src="readme-images/laravel-logo.png">
-</p>
-
-
-- **Admin LTE berbasis Bootstrap 3 Framework** untuk pengembangan front-end Web Development yang ditujukan untuk Admin Ilmu Komputer IPB. 
-
-<p align="center">
-  <img height="200" src="readme-images/adminlte-logo.png">
-</p>
 
 
 ## Contents
@@ -44,10 +25,9 @@
 - [Requirements](#-requirements)
 - [Diagrams](#-diagrams)
 - [Features](#-features)
-- [Object-oriented concept](#-object-oriented-concept)
+- [Object-oriented programming](#-object-oriented-programming)
 - [Design Patterns](#-Design Pattern)
 - [Suggestion](#-suggestion)
-- [Credit](#-credit)
 
 ## 📋 Requirements
 
@@ -93,10 +73,12 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 ## 🎉 Features
 
 - Login / Logout
-- Edit pertanyaan EPBM
-- Input jawaban terbuka dan tertutup
-- Export file ke Exel hasil rating
-- Cek Nilai EPBM Guru
+- Register
+- Admin
+- Penilaian EPBM Guru
+- Tambah Mata Pelajaran per Kelas
+- Dashboard Tampilan Hasil Penilaian Guru
+- Export Hasil Penilaian ke bentuk Excel
 
 
 ## 🚀 Object-oriented concept
@@ -228,13 +210,10 @@ class EpbmController extends Controller
 
 ## Suggestion
 Framework:
-- **Ionic Framework v4.12.0** yang dapat dilihat di [sini][ionic].
-- **Laravel Framework v5.7.16** yang dapat dilihat di [sini][laravel].
-- **Admin LTE** yang dapat dilihat di [sini][adminlte].
+- **Laravel Framework v7.11.0** yang dapat dilihat di [sini][laravel].
 
 Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
-- iOS atau Android untuk siswa yang bisa diakses menggunakan akun Simak EPBM
-- Windows, macOS, atau Linux untuk Admin yang bisa diakses menggunakan akun admin. 
+- Windows, macOS, atau Linux untuk Admin, Siswa dan Guru yang bisa diakses menggunakan akun SCB. 
 
 
 ### Client
