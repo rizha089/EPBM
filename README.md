@@ -89,7 +89,7 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 - Aktivity diagram mengisi EPBM 
 
 <p align="center">
-  <img width=300 src="readm_gambar/activity diagram mengisi epbm.png" />
+  <img width=300 src="readme_gambar/activity diagram mengisi epbm.png" />
 </p>
 
 
