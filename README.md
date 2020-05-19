@@ -68,7 +68,7 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 
 
 
-## 🎉 Features
+## 🤹🏻‍ Features
 
 - Login / Logout
 - Register
