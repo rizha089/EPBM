@@ -1,7 +1,7 @@
 # Sistem EPBM Sekolah Cendekia BAZNAS
 
 <p align="center">
-  <img width=500 src="/readme_images/logo epbm.png" />
+  <img width=500 src="EPBM/readme_gambar/logo epbm.png" />
 </p>
 
 ## Sistem EPBM Sekolah Cendekia BAZNAS
