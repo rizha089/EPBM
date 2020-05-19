@@ -33,6 +33,18 @@
 
 <p style="text-align: justify">Project ini bertujuan untuk pembuatan dan pengembangan system Evaluasi Proses Belajar Mengajar untuk Sekolah Cendekia BAZNAS. Sistem dikembangkan pada platform aplikasi website yang dapat diakses pada Windows, macOS, atau Linux untuk siswa, guru, dan admin. Desain tatap muka sebagai bagian dari proyek akan menggambarkan kemungkinan implementasi, manajemen risiko, dan audit. Pengguna aplikasi dapat melakukan mendaftar akun, login dan logout akun, melihat informasi pada tampilan dashboard, dan sistem admin yang dapat mengunduh penilaian hasil ke format Excel serta menambah mata pelajaran per kelas. Aplikasi ini harus memiliki panduan pengoperasian untuk memudahkan penggunaannya.</p>
 
+### Software
+- Visual Studio Code
+- PHPMyAdmin
+
+### Hardware
+- Intel Core i5
+- RAM 8GB
+### Tech Stack
+- Laravel + Bootstrap (Front-end)
+- PHP + JS (Back-end)
+- MySQL (DBMS)
+
 ## 💬 Requirements
 
 Framework:
