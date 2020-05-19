@@ -218,7 +218,7 @@ class EpbmController extends Controller
 - Muhammad Farhan Dirhami  G64170099
 ### Administrative Assistant, Responsible for Assisting the Project Manager in Maintaining, Scheduling, and Planning Who May also provide assistance to other roles as necessary.
 - Ari Corvin               G64170024
-### Front-end Developer, System Analyst Requirements Specifier, Test Manager, Test Analyst, Technical Writer
+### Front-end Developer, System Analyst, Requirements Specifier, Test Manager, Test Analyst, Technical Writer
 - Rizha Al-Fajri           G64170003
 - Jimmi Alfriando          G64170005
 - Aslam Alfathan           G64170076
