@@ -120,7 +120,6 @@ class AdminController extends Controller
 		return view('layouts/dashboard/export', ['rating' => $rating]);
     }
 
-<<<<<<< HEAD
     public function tambahMatpel(){
         $mata_pelajaran = \App\MataPelajaran::all();
         
@@ -138,7 +137,7 @@ class AdminController extends Controller
         $guru = \App\MatpelGuru::where('id_matpel', $id_matpel)->get();
 
         for ($i=0; $i < count($siswa); $i++) { 
-            $tambahMatpel = MatpelSiswa::firstOrCreate([        
+            $tambahMatpel = \App\MatpelSiswa::firstOrCreate([        
                 'mata_pelajaran_id' => $id_matpel,
                 'siswa_id' => $siswa[$i]->id,
             ]); 
@@ -146,7 +145,7 @@ class AdminController extends Controller
         
         for ($i=0; $i < count($siswa); $i++) { 
             for ($j=0; $j < count($guru); $j++) { 
-                $program = Programs::FirstOrCreate([
+                $program = \App\Programs::FirstOrCreate([
                     'id_guru' => $guru[$j]->guru->id,
                     'id_matpel' => $id_matpel,
                     'id_siswa' => $siswa[$i]->id
@@ -156,13 +155,16 @@ class AdminController extends Controller
         
         return back();
     }
-=======
+
     public function cari(Request $request){
         $guru_id = $request->input('guru_id');
-        $rating = RatePertanyaan::where('id_guru', $guru_id)->get();
-        return view('layouts/dashboard/export',compact('rating'));
-        //return back();
-        }
 
->>>>>>> 974e6787254a9d6667ec1575fb1d7ab6b0ca413e
+        if(is_null($guru_id))
+            $rating = RatePertanyaan::paginate(10);
+        else
+            $rating = RatePertanyaan::where('id_guru', $guru_id)->paginate(10);
+
+        return view('layouts/dashboard/export', ['rating' => $rating]);
+    }
+
 }
