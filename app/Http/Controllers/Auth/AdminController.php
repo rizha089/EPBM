@@ -117,7 +117,42 @@ class AdminController extends Controller
 
     public function export(){
         $rating = RatePertanyaan::paginate(10);
-		return view('layouts/dashboard/export', ['rating'=>$rating]);
+		return view('layouts/dashboard/export', ['rating' => $rating]);
     }
 
+    public function tambahMatpel(){
+        $mata_pelajaran = \App\MataPelajaran::all();
+        
+        $kelas = \App\Siswa::select('kelas')->distinct()->get();
+        return view('layouts/dashboard/tambahMatpel', compact('mata_pelajaran', 'kelas'));
+    }
+
+    public function tambah(Request $request){
+        // tambah matpel ke tabel mata pelajaran siswa
+        $id_matpel = $request->input('tambahMatpel');
+
+        // dd($id_matpel);
+        $kelas = $request->input('kelas');
+        $siswa = \App\Siswa::where('kelas', $kelas)->get();
+        $guru = \App\MatpelGuru::where('id_matpel', $id_matpel)->get();
+
+        for ($i=0; $i < count($siswa); $i++) { 
+            $tambahMatpel = MatpelSiswa::firstOrCreate([        
+                'mata_pelajaran_id' => $id_matpel,
+                'siswa_id' => $siswa[$i]->id,
+            ]); 
+        }
+        
+        for ($i=0; $i < count($siswa); $i++) { 
+            for ($j=0; $j < count($guru); $j++) { 
+                $program = Programs::FirstOrCreate([
+                    'id_guru' => $guru[$j]->guru->id,
+                    'id_matpel' => $id_matpel,
+                    'id_siswa' => $siswa[$i]->id
+                ]);
+            }
+        }
+        
+        return back();
+    }
 }

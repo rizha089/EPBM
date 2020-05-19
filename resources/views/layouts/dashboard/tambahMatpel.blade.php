@@ -1,44 +1,6 @@
 <!doctype html>
 <html lang="en">
-<style>
-#rcorners1 {
-  border-radius: 5px 30px;
-  background: #228B22;
-  padding: 15px;
-  width: 230px;
-  height: 120px;
-}
 
-#rcorners2 {
-  border-radius: 5px 30px;
-  background: #BB0000;
-  padding: 15px;
-  width: 230px;
-  height: 120px;
-}
-
-#rcorners3 {
-  border-radius: 5px 30px;
-  background: #ffbf00;
-  padding: 15px;
-  width: 230px;
-  height: 120px;
-}
-
-#rcorners4 {
-  border-radius: 5px 30px;
-  background: #157BCE;
-  padding: 15px;
-  width: 230px;
-  height: 120px;
-}
-
-span {
-    font-family: montserrat;
-    font-weight: bold;
-}
-
-</style>
 <head>
     <title>Dashboard | SCB - @yield('title')</title>
     <meta charset="utf-8">
@@ -65,12 +27,30 @@ span {
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- SIDEBAR -->
-        @include("layouts/partials/sidebar")
+        <div class="sidebar">
+            <div class="brand">
+                <a href="/admin"><img src="/klorofil/img/logoSCB.png" alt="Logo" class="img-responsive logo"></a>
+            </div>
+            <div class="sidebar-scroll">
+                <nav>
+                    <ul class="nav">
+
+                        <li><a href="{{route('admin')}}" {{Route::is('admin')?'class=active':''}}><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                        <li><a href="{{route('daftarsiswa')}}" {{Route::is('daftarsiswa')?'class=active':''}}><i class="lnr lnr-code"></i> <span>Daftar Siswa</span></a></li>
+                        <li><a href="{{route('daftarguru')}}" {{Route::is('daftarguru')?'class=active':''}}><i class="lnr lnr-user"></i> <span>Daftar Guru</span></a></li>
+                        <li><a href="{{route('daftarmatpel')}}" {{Route::is('daftarmatpel')?'class=active':''}}><i class="lnr lnr-user"></i> <span>Daftar Mata Pelajaran</span></a></li>
+                        <li><a href="{{route('export')}}" {{Route::is('export')?'class=active':''}}><i class="lnr lnr-user"></i> <span>Export Excel</span></a></li>
+                        <li><a href="{{route('tambahMatpel')}}" {{Route::is('tambahMatpel')?'class=active':''}}><i class="lnr lnr-code"></i> <span>Tambah Matpel</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
         <!-- END SIDEBAR -->
         <!-- MAIN -->
         <div class="main">
             <!-- NAVBAR -->
-            @include('layouts/partials/header')
+
             <!-- END NAVBAR -->
             <!-- MAIN CONTENT -->
             <div class="main-content">
@@ -80,34 +60,57 @@ span {
                 <!-- OVERVIEW -->
                 <div class="panel panel-headline">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Selamat Datang,</h3>
-                    <h3 class="panel-title"><b> {{Auth::user()->nama}} </b></h3>
-                    </div>
-                   <h3 class="panel-heading"><b>Tambah Mata Pelajaran</b></h3>
+                        <h3 class="panel-title">DAFTAR SISWA</h3>
 
-                   <div class="panel-body">
+                </div>
 
-
-                    <form class="form-horizontal" role="form" method="POST" action="/tambahMatpel">
-                        {{ csrf_field() }}
-                    
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                            <select name="tambahMatpel" class="form control">
-                                <option value="">Tambah Mata Pelajaran</option>
-                                @foreach ($mata_pelajaran as $matpel)
-                                    <option value="{{$matpel-> id}}">{{$matpel-> nama_matpel}}</option>
-                                @endforeach
-                            </select>
-                            </div>
-
-                            <input class="btn btn-primary" type="submit" value="Tambahkan" name="submit" type="Submit">
-                        </div>
-                    </form>
-                   </div>
+                <body>
+        <div class="container-fluid">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <!-- <a href="/pegawai/tambah" class="btn btn-primary">Input Siswa</a> -->
+                    <br/>
+                    <br/>
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                          <tr>
+                            <th>Kelas</th>
+                            <th>Mata Pelajaran</th>
+                            <th>Opsi</th>
+                            {{-- <th>OPSI</th> --}}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          @foreach ($kelas as $class)
+                          <form class="form-horizontal" role="form" method="POST" action="/test" id="tambah">
+                          {{ csrf_field() }}
+                            <tr>
+                              <td>
+                                <input type="hidden" name="kelas" value={{ $class->kelas }}>
+                                {{ $class->kelas }}
+                              </td>
+                              <td>
+                                <select name="tambahMatpel" class="form control">
+                                  <option value="">Tambah Mata Pelajaran</option>
+                                  @foreach ($mata_pelajaran as $matpel)
+                                    <option value=" {{$matpel->id}} ">{{$matpel-> nama_matpel}}</option>
+                                  @endforeach
+                                </select>
+                              </td>
+                              <td>
+                                <input class="btn btn-primary" type="submit" value="Tambahkan" name="submit" type="Submit">
+                              </td>
+                            </tr>
+                          </form>
+                          @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
+    </body>
 
+            </div>
 
             </div>
             <!-- END MAIN CONTENT -->

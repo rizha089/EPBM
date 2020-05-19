@@ -25,8 +25,8 @@ class CreateRatePertanyaansTable extends Migration
             $table->double('pertanyaan5');
             $table->double('pertanyaan6');
             $table->double('pertanyaan7');
-            $table->string('pertanyaan8');
-            $table->string('pertanyaan9');
+            $table->string('pertanyaan8')->nullable();
+            $table->string('pertanyaan9')->nullable();
             $table->double('averageRate');
             $table->timestamps();
 
