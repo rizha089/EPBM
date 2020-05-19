@@ -212,17 +212,20 @@ class EpbmController extends Controller
 ### Client
 - Sekolah Cendekia Badan Amil Zakat Nasional
 
-### Project Manager (Deployment Manager, Requirements Reviewer, Architecture Reviewer, Configuration Manager, Change Control Manager)
+## ♨️ Rational Unified Process Role
+
+### Project Manager, Deployment Manager, Requirements Reviewer, Architecture Reviewer, Configuration Manager, Change Control Manager
 - Muhammad Farhan Dirhami  G64170099
-### Front-end Developer
+### Administrative Assistant, Responsible for Assisting the Project Manager in Maintaining, Scheduling, and Planning Who May also provide assistance to other roles as necessary.
+- Ari Corvin               G64170024
+### Front-end Developer, System Analyst Requirements Specifier, Test Manager, Test Analyst, Technical Writer
 - Rizha Al-Fajri           G64170003
 - Jimmi Alfriando          G64170005
 - Aslam Alfathan           G64170076
-### Back-end Developer
+### Back-end Developer, Implementer, Code Reviewer, Integrator, Tester, Technical Writer
 - Irfan Alghani Khalid     G64170054
 - Julius Christopher       G64170097
 - Lanang Satia Aji         G64170095
 - M Rizqi Sinatrya         G64170064
-### Design UI/UX
-- Ari Corvin               G64170024
+### User Interface Designer, User Experience Optimizer
 - Muhammad Alpha Thoriq    G64170002
