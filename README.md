@@ -25,7 +25,7 @@
 - [Requirements](#-requirements)
 - [Diagrams](#-diagrams)
 - [Features](#-features)
-- [Object-oriented programming](#-object-oriented-programming)
+- [Object-Oriented Programming](#-object-oriented-programming)
 - [Design-Patterns](#-design-pattern)
 - [Rational Unified Process Role](#-rational-unified-process-role)
 
