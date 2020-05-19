@@ -212,7 +212,7 @@ class EpbmController extends Controller
 ### Client
 - Sekolah Cendekia Badan Amil Zakat Nasional
 
-## ♨️ Rational Unified Process Role
+## 👥 Rational Unified Process Role
 
 ### Project Manager, Deployment Manager, Requirements Reviewer, Architecture Reviewer, Configuration Manager, Change Control Manager
 - Muhammad Farhan Dirhami  G64170099
