@@ -78,7 +78,6 @@ return array(
     'Collective\\Html\\' => array($vendorDir . '/laravelcollective/html/src'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
-    'Balping\\JsonRaw\\' => array($vendorDir . '/balping/json-raw-encoder/src'),
     'Asm89\\Stack\\' => array($vendorDir . '/asm89/stack-cors/src/Asm89/Stack'),
     'App\\' => array($baseDir . '/app'),
 );
