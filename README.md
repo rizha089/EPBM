@@ -21,6 +21,7 @@
 
 ## 🗒️ Contents
 
+- [Scope of Development](#-scope-of-development)
 - [Requirements](#-requirements)
 - [Diagrams](#-diagrams)
 - [Features](#-features)
