@@ -208,14 +208,6 @@ class EpbmController extends Controller
     Desain MVC membuat tiga objek yaitu Model, View dan Controller. Model hanya berisi data murni yang tidak mengandung logika untuk disajikan kepada pengguna. View menyajikan data model yang sudah diolah kepada pengguna, view mengerti cara mengakses model namun tidak mengerti maksud dari data tersebut. Controller ada diantara View dan Model, Controller mendengar apa yang diinginkan View kemudian memberikan reaksi yang sesuai dengan yang diinginkan. Pada kasus ini reaksi tersebut adalah mengakses Model kemudian diteruskan kepada View untuk menampilkan data kepada pengguna.</p>
 
 
-## Suggestion
-Framework:
-- **Laravel Framework v7.11.0** yang dapat dilihat di [sini][laravel].
-
-Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
-- Windows, macOS, atau Linux untuk Admin, Siswa dan Guru yang bisa diakses menggunakan akun SCB. 
-
-
 ### Client
 - Sekolah Cendekia Badan Amil Zakat Nasional
 
