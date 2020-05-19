@@ -61,16 +61,16 @@
                     </table>
                     <h1 style="margin-top: 30px;text-align:center;font-weight:bold;color:red;">PENGUMUMAN</h1>
                     <div style="margin-top: 30px;text-align:justify;padding: 0px 50px 0px 50px;font-size:18px;">
-                    Peningkatan kinerja merupakan kewajiban setiap organisasi ataupun institusi termasuk Institut Pertanian Bogor (IPB). Opini siswa  dihimpun setiap semester untuk semua matakuliah dan dosen pengajar. Proses pengumpulan opini siswa di IPB dikenal dengan istilah Evaluasi Proses Kegiatan dan Belajar (EPBM).
+                    Peningkatan kinerja merupakan kewajiban setiap organisasi ataupun institusi termasuk SCB. Opini siswa  dihimpun setiap semester untuk semua matakuliah dan dosen pengajar. Proses pengumpulan opini siswa di SCB dikenal dengan istilah Evaluasi Proses Kegiatan dan Belajar (EPBM).
                     <br>
                     Adapun manual pengoperasian Sistem EPBM Online ini disiapkan dengan tujuan:
                     <ol>
                         <li>Membantu para pengguna dalam mengoperasikan atau menggunakan sistem EPBM online.
-                        <li>Membantu pihak Administrator (dalam hal ini: KMM) dalam menampung data evaluasi kegiatan belajar dan mengajar dari siswa.
+                        <li>Membantu pihak Administrator dalam menampung data evaluasi kegiatan belajar dan mengajar dari siswa.
                         <li>Memberikan informasi peningkatan proses kegiatan belajar dan mengajar dalam setiap semester dari tahun ke tahun.
                     </ol><br>Persyaratan yang harus dipenuhi saat mengakses sistem EPBM Online antara lain:
                     <ol>
-                        <li>Komputer yang digunakan terhubung ke jaringan internet maupun intranet kampus IPB. Pastikan komputer pengguna terhubung dengan jaringan LAN baik dengan menggunakan kabel UTP maupun menggunakan sarana Wireless yang sudah terpasang.</li>
+                        <li>Komputer yang digunakan terhubung ke jaringan internet maupun intranet SCB. Pastikan komputer pengguna terhubung dengan jaringan LAN baik dengan menggunakan kabel UTP maupun menggunakan sarana Wireless yang sudah terpasang.</li>
                         <li>Pastikan  komputer  yang  digunakan  sudah  terinstal  salah  satu  program  perambah  (browser) seperti Mozilla Firefox, Google Chrome, Internet Explorer, dll. untuk digunakan menjalankan Sistem EPBM.</li>
                         <li>Pengguna  mengakses  website  Evaluasi  Proses  Belajar  Mengajar pada  alamat http://epbm.scb.sch.id</li>
                         <li>Pastikan Username dan password anda pada jaringan SCB pengguna adalah benar dan aktif.</li>

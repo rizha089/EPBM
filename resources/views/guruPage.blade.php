@@ -27,7 +27,18 @@
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- SIDEBAR -->
-        @include("layouts/partials/sidebar")
+        <div class="sidebar">
+            <div class="brand">
+                <a href="/"><img src="/klorofil/img/logoSCB.png" alt="Logo" class="img-responsive logo"></a>
+            </div>
+            <div class="sidebar-scroll">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="{{route('dashboard')}}" {{Route::is('dashboard')?'class=active':''}}><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                       </ul>
+                </nav>
+            </div>
+        </div>
         <!-- END SIDEBAR -->
         <!-- MAIN -->
         <div class="main">
