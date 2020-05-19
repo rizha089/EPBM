@@ -31,7 +31,7 @@ class RatingController extends Controller
             'pertanyaan8' => $request->pertanyaan8,
             'pertanyaan9' => $request->pertanyaan9,
             'averageRate' => (
-                $request->pertanyaan1 + $request->pertanyaan2 + 
+                $request->pertanyaan1 + $request->pertanyaan2 +
                 $request->pertanyaan3 + $request->pertanyaan4 + $request->pertanyaan5 + $request->pertanyaan6 + $request->pertanyaan7
             ) / 7
         ]);

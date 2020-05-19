@@ -6,9 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Admin' => $baseDir . '/app/Admin.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Exports\\RateExport' => $baseDir . '/app/Exports/RateExport.php',
     'App\\Guru' => $baseDir . '/app/Guru.php',
+    'App\\Http\\Controllers\\AnnouncementEpbmController' => $baseDir . '/app/Http/Controllers/AnnouncementEpbmController.php',
+    'App\\Http\\Controllers\\Auth\\AdminController' => $baseDir . '/app/Http/Controllers/Auth/AdminController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\GuruController' => $baseDir . '/app/Http/Controllers/Auth/GuruController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',

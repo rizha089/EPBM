@@ -549,9 +549,13 @@ class ComposerStaticIniteccd96905cc1d89f8510b49fb9710533
     );
 
     public static $classMap = array (
+        'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Exports\\RateExport' => __DIR__ . '/../..' . '/app/Exports/RateExport.php',
         'App\\Guru' => __DIR__ . '/../..' . '/app/Guru.php',
+        'App\\Http\\Controllers\\AnnouncementEpbmController' => __DIR__ . '/../..' . '/app/Http/Controllers/AnnouncementEpbmController.php',
+        'App\\Http\\Controllers\\Auth\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AdminController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\GuruController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/GuruController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',

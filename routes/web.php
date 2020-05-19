@@ -18,7 +18,7 @@ Route::post('/tambahMatpel', 'DashboardController@tambahMatpel');
 Auth::routes();
 
 Route::group(['middleware'=>'auth'],function(){
-	Route::get('/epbm', ['as'=>'elements','uses'=>'ElementController@index']);
+	Route::get('/epbmOnline/EPBM', 'ElementController@index')->name('epbmOnline.EPBM');
 	Route::get('/charts', ['as'=>'charts','uses'=>'ChartsController@index']);
 	Route::get('/panels', ['as'=>'panels','uses'=>'PanelsController@index']);
 	Route::get('/profile', ['as'=>'profile','uses'=>'ProfileController@index']);
@@ -26,7 +26,8 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/tables', ['as'=>'tables','uses'=>'TablesController@index']);
 	Route::get('/typography', ['as'=>'typography','uses'=>'TypographyController@index']);
 	Route::get('/icons', ['as'=>'icons','uses'=>'IconsController@index']);
-	Route::get('/epbm/isi/{id}', 'EpbmController@isiEPBM');
+    Route::get('/epbmOnline/EPBM/isi/{id}', 'EpbmController@isiEPBM');
+    Route::get('/epbmOnline', ['as'=>'elements','uses'=>'AnnouncementEpbmController@index']);
 });
 
 
@@ -37,19 +38,40 @@ Route::get('/home', 'HomeController@index')->middleware('auth');
 
 
 // route guru
-Route::get('/guru', function(){
-    return view('guruPage');
-})->middleware('auth:guru')->name('guruPage');
+Route::get('/guru', 'GuruController@index')->middleware('auth:guru')->name('guruPage');
 Route::get('guru-login','Auth\GuruController@showLoginForm');
 Route::post('guru-login', ['as' => 'guru-login', 'uses' => 'Auth\GuruController@login']);
 Route::get('guru-register','Auth\GuruController@showRegisterPage');
 Route::post('guru-register', 'Auth\GuruController@register')->name('guru.register');
 
+
+// route admin
+Route::get('/admin', function(){
+    return view('admin');
+})->middleware('auth:admin')->name('admin');
+Route::get('admin-login','Auth\AdminController@showLoginForm');
+Route::post('admin-login', ['as' => 'admin-login', 'uses' => 'Auth\AdminController@login']);
+Route::get('admin-register','Auth\AdminController@showRegisterPage');
+Route::post('admin-register', 'Auth\AdminController@register')->name('admin.register');
+Route::get('/admin/daftarsiswa', ['as'=>'daftarsiswa','uses'=>'Auth\AdminController@daftarsiswa']);
+Route::get('/admin/siswa/hapus/{id}', 'Auth\AdminController@siswaDelete');
+Route::get('/admin/daftarguru', ['as'=>'daftarguru','uses'=>'Auth\AdminController@daftarguru']);
+Route::get('/admin/guru/hapus/{id}', 'Auth\AdminController@guruDelete');
+Route::get('/admin/daftarmatpel', ['as'=>'daftarmatpel','uses'=>'Auth\AdminController@daftarMatpel']);
+Route::get('/admin/matpel/hapus/{id}', 'Auth\AdminController@matpelDelete');
+
+
 Route::get('/test', 'MatpelUser@index');
 Route::post('/test', 'MatpelUser@tambah');
 
+<<<<<<< HEAD
 
 // Export rating
 Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');
 Route::get('/rating', 'RatingController@index');
 Route::get('/rating/export_excel', 'RatingController@export_excel');
+=======
+// route excel
+Route::get('/admin/export', ['as'=>'export','uses'=>'Auth\AdminController@export']);
+Route::get('/admin/export_excel', 'Auth\AdminController@export_excel');
+>>>>>>> aca68eda0985235380c0700d15ab8e236be52a1c
