@@ -94,16 +94,13 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 
 
 
-## 🎉 Features
+## 🎉 Features 
 
-- Login
-- Dashboard (Timeline)
-- Leaderboard
-- Komunitas
-- Profile
-- Upload Certificate
-- Absensi via QR Code
-- Trade Points
+- Login / Logout
+- Edit pertanyaan EPBM
+- Input jawaban terbuka dan tertutup
+- Export file ke Exel hasil rating
+- Cek nilai EPBM Guru
 
 ## 🚀 Object-oriented concept
 
