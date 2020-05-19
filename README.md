@@ -191,7 +191,14 @@ Menuliskan function atau class pada suatu program tanpa tujuan yang jelas. Istil
 [sm]: https://sourcemaking.com/antipatterns/poltergeists
 
 ## Suggestion
+Framework:
+- **Ionic Framework v4.12.0** yang dapat dilihat di [sini][ionic].
+- **Laravel Framework v5.7.16** yang dapat dilihat di [sini][laravel].
+- **Admin LTE** yang dapat dilihat di [sini][adminlte].
 
+Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
+- iOS atau Android untuk Mahasiswa yang bisa diakses menggunakan akun IPB.
+- Windows, macOS, atau Linux untuk Admin yang bisa diakses menggunakan akun admin. 
 
 ## 📄 Credit
 
