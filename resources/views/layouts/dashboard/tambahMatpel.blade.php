@@ -90,7 +90,7 @@ span {
 
                     <form class="form-horizontal" role="form" method="POST" action="/tambahMatpel">
                         {{ csrf_field() }}
-                    
+
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                             <select name="tambahMatpel" class="form control">

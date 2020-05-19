@@ -120,4 +120,11 @@ class AdminController extends Controller
 		return view('layouts/dashboard/export', ['rating'=>$rating]);
     }
 
+    public function cari(Request $request){
+        $guru_id = $request->input('guru_id');
+        $rating = RatePertanyaan::where('id_guru', $guru_id)->get();
+        return view('layouts/dashboard/export',compact('rating'));
+        //return back();
+        }
+
 }

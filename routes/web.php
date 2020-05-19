@@ -71,3 +71,4 @@ Route::get('/rating', 'RatingController@index');
 Route::get('/admin/export_excel', 'RatingController@export_excel');
 // route excel
 Route::get('/admin/export', ['as'=>'export','uses'=>'Auth\AdminController@export']);
+Route::get('/admin/export/{id}', 'Auth\AdminController@cari');

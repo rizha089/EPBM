@@ -25,7 +25,7 @@ class DashboardController extends Controller
     {
         //get semua matpel di tabel mata pelajaran
         $mata_pelajaran = MataPelajaran::all();
-        
+
         return view('/layouts/dashboard/tambahMatpel',compact('mata_pelajaran'));
     }
 
@@ -35,14 +35,14 @@ class DashboardController extends Controller
         $id_siswa = Auth::user()->id;
         $id_matpel = $request->input('tambahMatpel');
 
-        $tambahMatpel = MatpelSiswa::firstOrCreate([        
+        $tambahMatpel = MatpelSiswa::firstOrCreate([
             'mata_pelajaran_id' => $id_matpel,
             'siswa_id' => $id_siswa,
         ]);
-        
+
         $guru = \App\MatpelGuru::where('id_matpel', $id_matpel)->get();
-        
-        for ($j=0; $j < count($guru); $j++) { 
+
+        for ($j=0; $j < count($guru); $j++) {
             $program = Programs::FirstOrCreate([
                 'id_guru' => $guru[$j]->guru->id,
                 'id_matpel' => $id_matpel,
