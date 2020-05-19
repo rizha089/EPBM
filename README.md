@@ -20,7 +20,7 @@
 - **Laravel Framework v5.7.16** untuk pengembangan back-end sisi Mobile Apps maupun Web Development, ini bertujuan untuk Integrasi Data yang ada pada sisi admin dan sisi user (Mahasiswa).
 
 
-##📋 Contents
+##📋Contents
 
 - [Requirements](#-requirements)
 - [Diagrams](#-diagrams)
@@ -28,7 +28,7 @@
 - [Object-oriented programming](#-object-oriented-programming)
 - [Design-Patterns](#-design-pattern)
 
-##💬 Requirements
+##💬Requirements
 
 Framework:
 - **Laravel Framework 7.11.0** yang dapat dilihat di [sini][laravel].
