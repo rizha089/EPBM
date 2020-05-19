@@ -1,7 +1,7 @@
 # Sistem EPBM Sekolah Cendekia BAZNAS
 
 <p align="center">
-  <img width=500 src="readme-images/ilkomerz-juara-logo2.png" />
+  <img width=500 src="/readme-images/ilkomerz-juara-logo2.png" />
 </p>
 
 ## Sistem EPBM Sekolah Cendekia BAZNAS
