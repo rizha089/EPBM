@@ -27,7 +27,18 @@
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- SIDEBAR -->
-        @include("layouts/partials/sidebar")
+        <div class="sidebar">
+            <div class="brand">
+                <a href="/"><img src="/klorofil/img/logoSCB.png" alt="Logo" class="img-responsive logo"></a>
+            </div>
+            <div class="sidebar-scroll">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="{{route('dashboard')}}" {{Route::is('dashboard')?'class=active':''}}><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                       </ul>
+                </nav>
+            </div>
+        </div>
         <!-- END SIDEBAR -->
         <!-- MAIN -->
         <div class="main">
@@ -54,7 +65,7 @@
                     </div>
                 </div>
                 <div class="panel panel-headline">
-                    @for ($i = 0; $i < count($matpel); $i++)
+                    @for ($i = 0; $i < 1; $i++)
                     <div class="panel-heading">
                         <h3 class="panel-title">Hasil Evaluasi Untuk Mata Pelajaran:</h3>
                         <h3 class="panel-title"><b>{{$matpel[$i]}}</b></h3>
@@ -62,35 +73,34 @@
                         @for($j = 0; $j < count($pertanyaan); $j++)
                             <div class="panel-body">
                                 <div class="col">
-                                    <p class="h3" style="font-size: 20px;">{{ $pertanyaan[$j] }}</p>
+                                    <p class="h3" style="font-size: 30px;">{{ $pertanyaan[$j] }}</p>
                                     <table class="table table-striped">
                                         <thead>
                                             <tr>
                                                 <td><p class="h3"><b>Nilai</b></p></td>
-                                                <th scope="col"><p class="h4"><b>Sangat Kurang Baik</b></p></th>
-                                                <th scope="col"><p class="h4"><b>Kurang Baik</b></p></th>
-                                                <th scope="col"><p class="h4"><b>Cukup Baik</b></p></th>
-                                                <th scope="col"><p class="h4"><b>Baik</b></p></th>
-                                                <th scope="col"><p class="h4"><b>Sangat Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Sangat Kurang Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Kurang Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Cukup Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Baik</b></p></th>
+                                                <th scope="col"><p class="h3"><b>Sangat Baik</b></p></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><p class="h4"><b>Jumlah</b></p></td>
+                                                <td><p class="h3"><b>Jumlah</b></p></td>
                                                 @for($k = 0; $k < 5; $k++)
+                                                <td><p class="h3">{{$nilai[$i][$j][0][$k]}}</p></td>
                                                 @endfor
                                             </tr>
                                             <tr>
-                                                <td><p class="h4"><b>Rata-Rata</b></p></td>
-                                               </tr>
+                                                <td><p class="h3"><b>Rata-Rata</b></p></td>
+                                                <td style="padding-left: 8px"><p class="h3">{{ ((1 * $nilai[$i][$j][0][0]) + (2 * $nilai[$i][$j][0][1]) + (3 * $nilai[$i][$j][0][2]) + (4 * $nilai[$i][$j][0][3]) + (5 * $nilai[$i][$j][0][4])) / (100) }}</p></td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         @endfor
-                    <div class="panel-heading">
-                    </div>
-                    <br><br><br><br>
                     @endfor
                 </div>
             </div>
