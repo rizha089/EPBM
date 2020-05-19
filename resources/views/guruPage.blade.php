@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="panel panel-headline">
-                    @for ($i = 0; $i < 1; $i++)
+                    @for ($i = 0; $i < count($matpel); $i++)
                     <div class="panel-heading">
                         <h3 class="panel-title">Hasil Evaluasi Untuk Mata Pelajaran:</h3>
                         <h3 class="panel-title"><b>{{$matpel[$i]}}</b></h3>
@@ -90,6 +90,10 @@
                                 </div>
                             </div>
                         @endfor
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Rata-Rata Keseluruhan: {{$rata[$i]}}</h3>
+                    </div>
+                    <br><br><br><br>
                     @endfor
                 </div>
             </div>
