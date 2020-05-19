@@ -64,14 +64,10 @@ Route::get('/admin/matpel/hapus/{id}', 'Auth\AdminController@matpelDelete');
 Route::get('/test', 'MatpelUser@index');
 Route::post('/test', 'MatpelUser@tambah');
 
-<<<<<<< HEAD
 
 // Export rating
 Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');
 Route::get('/rating', 'RatingController@index');
-Route::get('/rating/export_excel', 'RatingController@export_excel');
-=======
+Route::get('/admin/export_excel', 'RatingController@export_excel');
 // route excel
 Route::get('/admin/export', ['as'=>'export','uses'=>'Auth\AdminController@export']);
-Route::get('/admin/export_excel', 'Auth\AdminController@export_excel');
->>>>>>> aca68eda0985235380c0700d15ab8e236be52a1c

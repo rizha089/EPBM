@@ -94,9 +94,9 @@
 				@foreach($rating as $s)
 				<tr>
 					<td>{{ $i++ }}</td>
-					<td>{{$s->id_siswa}}</td>
-					<td>{{$s->id_guru}}</td>
-					<td>{{$s->id_matpel}}</td>
+					<td>{{$s->siswa->nama}}</td>
+					<td>{{$s->guru->nama}}</td>
+					<td>{{$s->mata_pelajaran->nama_matpel}}</td>
                     <td>{{$s->pertanyaan1}}</td>
                     <td>{{$s->pertanyaan2}}</td>
                     <td>{{$s->pertanyaan3}}</td>
