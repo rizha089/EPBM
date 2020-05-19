@@ -6,9 +6,9 @@
 
 ## Sistem EPBM Sekolah Cendekia BAZNAS
 
-<p style="text-align: justify">Sistem EPBM Sekolah Cendekia BAZNAS adalah platform untuk menyalurkan kontribusi mahasiswa aktif ilmu komputer IPB lewat title juara, partisipasi dalam acara kompetitif baik internal maupun eksternal, dan komunitas yang ada di Ilkom IPB.</p>
+<p style="text-align: justify">Sebagai institusi sekolah yang dapat menyelenggarakan program pendidikan dengan mutu yang baik. Sekolah Cendekia BAZNAS merealisasikannya dengan banyak cara salah satunya dalah menghimpun opini siswa melalui survei. Hasil survei tersebut kemudian dianalisa sehingga diharapkan dapat memberikan informasi sebagai bahan evaluasi kinerja Sekolah Cendekia BAZNAS. Hingga tahun 2019, Evaluasi Proses Belajar Mengajar sebagai rangkaian kegiatan untuk melihat tingkat keberhasilan proses belajar mengajar oleh Sekolah Cendekia BAZNAS dilakukan secara manual. Hal tersebut menimbulkan berbagai permasalahan seperti waktu yang tersita dan sulitnya proses dokumentasi hasil survei. Dengan dasar panduan supervisi Sekolah Cendekia BAZNAS 2020, dikembangkanlah sistem Evaluasi Proses Belajar Mengajar secara daring untuk menyelesaikan permasalahan tersebut.</p>
 
-<p style="text-align: justify">Kontribusi ini digambarkan dengan sistem points yang didapatkan dari bukti partisipasi dari mahasiswa. Points ini didapatkan dari absen kegiatan komunitas, mengikuti kegiatan ilkom seperti workshop, pelatihan, dan konfirmasi sertifikat juara.</p>
+<p style="text-align: justify">Sistem ini juga menampilkan hasil penilaian guru yang didapatkan dari jawaban yang dikirimkan oleh siswa. Hasil penilaian ini merupakan jawaban dari 7 macam pertanyaan yang dikurasi mengacu kepada indikator keberhasilan proses belajar mengajar Sekolah Cendekia BAZNAS tahun 2020.</p>
 
 - **Simple.** Tampilan yang sederhana.
 - **SCB Account.** Login menggunakan akun SCB.
