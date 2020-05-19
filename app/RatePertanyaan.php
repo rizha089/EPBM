@@ -12,27 +12,27 @@ class RatePertanyaan extends Model
         'id_siswa',
         'id_guru',
         'id_matpel',
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
+        'pertanyaan1',
+        'pertanyaan2',
+        'pertanyaan3',
+        'pertanyaan4',
+        'pertanyaan5',
+        'pertanyaan6',
+        'pertanyaan7',
         'pertanyaan8',
         'pertanyaan9',
         'averageRate',
     ];
 
     public function siswa(){
-        return $this->belongsTo('App\Siswa');
+        return $this->belongsTo('App\Siswa', 'id_siswa', 'id');
     }
 
     public function guru(){
-        return $this->belongsTo('App\Guru');
+        return $this->belongsTo('App\Guru', 'id_guru', 'id');
     }
 
     public function mata_pelajaran(){
-        return $this->belongsTo('App\MataPelajaran');
+        return $this->belongsTo('App\MataPelajaran', 'id_matpel', 'id');
     }
 }

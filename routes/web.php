@@ -33,7 +33,7 @@ Route::group(['middleware'=>'auth'],function(){
 Route::get('/home', 'HomeController@index')->middleware('auth');
 // Route::get('/epbm', 'MatPelController@index');
 // Route::get('/charts', ['as'=>'charts','uses'=>'ChartsController@index']);
-Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');
+
 
 
 // route guru
@@ -47,3 +47,9 @@ Route::post('guru-register', 'Auth\GuruController@register')->name('guru.registe
 
 Route::get('/test', 'MatpelUser@index');
 Route::post('/test', 'MatpelUser@tambah');
+
+
+// Export rating
+Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');
+Route::get('/rating', 'RatingController@index');
+Route::get('/rating/export_excel', 'RatingController@export_excel');

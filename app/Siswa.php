@@ -9,13 +9,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Siswa extends Authenticatable
 {
     use Notifiable;
-    protected $guard = 'siswa';
-
     protected $table = "siswa";
 
-    protected $fillable = [
-        'nis', 'email', 'nama', 'kelas', 'password'
-    ];
+    protected $guard = [];
 
     protected $hidden = [
         'password',

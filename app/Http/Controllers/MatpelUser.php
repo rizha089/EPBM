@@ -12,6 +12,7 @@ class MatpelUser extends Controller
     //
     public function index(){
         $mata_pelajaran = \App\MataPelajaran::all();
+        
         $kelas = \App\Siswa::select('kelas')->distinct()->get();
         return view('viewcobasinat', compact('mata_pelajaran', 'kelas'));
     }
@@ -21,7 +22,7 @@ class MatpelUser extends Controller
         $id_matpel = $request->input('tambahMatpel');
 
         // dd($id_matpel);
-        $kelas = $request->kelas;
+        $kelas = $request->input('kelas');
         $siswa = \App\Siswa::where('kelas', $kelas)->get();
         $guru = \App\MatpelGuru::where('id_matpel', $id_matpel)->get();
 
