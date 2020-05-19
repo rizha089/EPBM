@@ -26,8 +26,7 @@
 - [Diagrams](#-diagrams)
 - [Features](#-features)
 - [Object-oriented programming](#-object-oriented-programming)
-- [Design Patterns](#-Design Pattern)
-- [Suggestion](#-suggestion)
+- [Design-Patterns](#-design-pattern)
 
 ## 📋 Requirements
 
@@ -81,7 +80,7 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 - Export Hasil Penilaian ke bentuk Excel
 
 
-## 🚀 Object-oriented concept
+## 🚀 Object-oriented programming
 
 Berikut class diagram dari Sistem EPBM.
 
