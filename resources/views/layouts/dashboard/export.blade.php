@@ -60,7 +60,8 @@
                 <!-- OVERVIEW -->
                 <div class="panel panel-headline">
                     <div class="panel-heading">
-                        <h3 class="panel-title">DAFTAR MATA PELAJARAN</h3>
+                        <h3 class="panel-title">Hasil EPBM</h3>
+                        <a style="position:absolute; left:900px;"href="/admin/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
 
                 </div>
 
@@ -71,26 +72,63 @@
                     <!-- <a href="/pegawai/tambah" class="btn btn-primary">Input Guru</a> -->
                     <br/>
                     <br/>
-                    <table class="table table-bordered table-hover table-striped">
-                        <thead>
-                            <tr>
-                                <th>Nama Mata Pelajaran</th>
-                                <th>Kode Mata Pelajaran</th>
-                                <th>OPSI</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($daftarMatpel as $s)
-                            <tr>
-                                <td>{{ $s->nama_matpel }}</td>
-                                <td>{{ $s->kode_matpel}}</td>
-                                <td>
-                                    <a href="/admin/matpel/hapus/{{ $s->id }}" class="btn btn-danger">Hapus</a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <table class='table table-striped table-bordered'>
+			<thead>
+                <tr>
+                    <div class="row">
+                        <div class="col-xs-2 col-sm-2">
+                            <select name="guru_id", id="guru_id">
+                                <option value="">Pilih Guru</option>
+                                @foreach(App\guru::all() as $g)
+                                <option class="option" value="{{$g->id}}">{{$g->nama}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-xs-2 col-sm-2">
+                            <a href='/admin/export/{id}'>Cari</a>
+                        </div>
+                    </div>
+                </tr>
+				<tr>
+					<th>No</th>
+					<th>Nama Siswa</th>
+					<th>Nama Guru</th>
+					<th>Nama Matpel</th>
+                    <th>Soal 1</th>
+                    <th>Soal 2</th>
+                    <th>Soal 3</th>
+                    <th>Soal 4</th>
+                    <th>Soal 5</th>
+                    <th>Soal 6</th>
+                    <th>Soal 7</th>
+                    <th>Soal 8</th>
+                    <th>Soal 9</th>
+                    <th>Rata-rata</th>
+				</tr>
+			</thead>
+			<tbody>
+				@php $i=1 @endphp
+				@foreach($rating as $s)
+				<tr>
+					<td>{{ $i++ }}</td>
+					<td>{{$s->siswa->nama}}</td>
+					<td>{{$s->guru->nama}}</td>
+					<td>{{$s->mata_pelajaran->nama_matpel}}</td>
+                    <td>{{$s->pertanyaan1}}</td>
+                    <td>{{$s->pertanyaan2}}</td>
+                    <td>{{$s->pertanyaan3}}</td>
+                    <td>{{$s->pertanyaan4}}</td>
+                    <td>{{$s->pertanyaan5}}</td>
+                    <td>{{$s->pertanyaan6}}</td>
+                    <td>{{$s->pertanyaan7}}</td>
+                    <td>{{$s->pertanyaan8}}</td>
+                    <td>{{$s->pertanyaan9}}</td>
+                    <td>{{$s->averageRate}}</td>
+                </tr>
+				@endforeach
+                {!! $rating->render() !!}
+			</tbody>
+		</table>
                 </div>
             </div>
         </div>

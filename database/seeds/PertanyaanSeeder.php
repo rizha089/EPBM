@@ -13,25 +13,25 @@ class PertanyaanSeeder extends Seeder
     {
          //insert data
          DB::table('pertanyaan')->insert([
-            'list_pertanyaan' => 'Mengacu pada KD yang ingin dicapai'
+            'list_pertanyaan' => ' Guru menyampaikan materi di kelas dengan jelas dan sesuai.'
         ]);
         DB::table('pertanyaan')->insert([
-            'list_pertanyaan' => 'Memuat proses dan gambaran hasil belajar yang ingin dicapai'
+            'list_pertanyaan' => 'Guru menanggapi pertanyaan/pendapat siswa dengan baik.'
         ]);
         DB::table('pertanyaan')->insert([
-            'list_pertanyaan' => 'Sesuai dengan kebutuhan belajar siswa'
+            'list_pertanyaan' => 'Guru mampu memotivasi dan melibatkan siswa untuk memperhatikan pembelajaran.'
         ]);
         DB::table('pertanyaan')->insert([
-            'list_pertanyaan' => 'Relevan untuk mencapai tujuan pembelajaran'
+            'list_pertanyaan' => 'Guru mampu memberikan contoh penerapan terkini konsep yang diajarkan.'
         ]);
         DB::table('pertanyaan')->insert([
-            'list_pertanyaan' => 'Memudahkan pemahaman siswa'
+            'list_pertanyaan' => 'Guru menunjukkan keteladanan dan melatih siswa untuk berperilaku terpuji.'
         ]);
         DB::table('pertanyaan')->insert([
-            'list_pertanyaan' => 'Variatif'
+            'list_pertanyaan' => 'Guru mengajar tepat waktu/disiplin sesuai dengan jadwal yang ditetapkan.'
         ]);
         DB::table('pertanyaan')->insert([
-            'list_pertanyaan' => 'Melibatkan siswa'
+            'list_pertanyaan' => 'Guru mengendalikan diri dalam berbagai situasi dan kondisi di kelas.'
         ]);
     }
 }

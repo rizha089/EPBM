@@ -1748,6 +1748,8 @@
             "laravel",
             "php",
             "phpspreadsheet"
+<<<<<<< HEAD
+=======
         ],
         "funding": [
             {
@@ -1758,6 +1760,7 @@
                 "url": "https://github.com/patrickbrouwers",
                 "type": "github"
             }
+>>>>>>> aca68eda0985235380c0700d15ab8e236be52a1c
         ]
     },
     {

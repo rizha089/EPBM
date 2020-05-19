@@ -39,6 +39,8 @@
                         <li><a href="{{route('daftarsiswa')}}" {{Route::is('daftarsiswa')?'class=active':''}}><i class="lnr lnr-code"></i> <span>Daftar Siswa</span></a></li>
                         <li><a href="{{route('daftarguru')}}" {{Route::is('daftarguru')?'class=active':''}}><i class="lnr lnr-user"></i> <span>Daftar Guru</span></a></li>
                         <li><a href="{{route('daftarmatpel')}}" {{Route::is('daftarmatpel')?'class=active':''}}><i class="lnr lnr-user"></i> <span>Daftar Mata Pelajaran</span></a></li>
+                        <li><a href="{{route('export')}}" {{Route::is('export')?'class=active':''}}><i class="lnr lnr-user"></i> <span>Export Excel</span></a></li>
+                        <li><a href="{{route('tambahMatpel')}}" {{Route::is('tambahMatpel')?'class=active':''}}><i class="lnr lnr-code"></i> <span>Tambah Matpel</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -59,8 +61,8 @@
                 <div class="panel panel-headline">
                     <div class="panel-heading">
                         <h3 class="panel-title">DAFTAR GURU</h3>
-                    
-                </div>    
+
+                </div>
 
                 <body>
         <div class="container-fluid">
@@ -97,9 +99,9 @@
     </body>
 
             </div>
-            
 
-                   
+
+
             </div>
             <!-- END MAIN CONTENT -->
             <footer>

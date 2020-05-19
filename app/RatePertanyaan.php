@@ -25,14 +25,14 @@ class RatePertanyaan extends Model
     ];
 
     public function siswa(){
-        return $this->belongsTo('App\Siswa');
+        return $this->belongsTo('App\Siswa', 'id_siswa', 'id');
     }
 
     public function guru(){
-        return $this->belongsTo('App\Guru');
+        return $this->belongsTo('App\Guru', 'id_guru', 'id');
     }
 
     public function mata_pelajaran(){
-        return $this->belongsTo('App\MataPelajaran');
+        return $this->belongsTo('App\MataPelajaran', 'id_matpel', 'id');
     }
 }

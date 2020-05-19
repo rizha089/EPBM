@@ -7,6 +7,7 @@ use App\Admin;
 use App\Siswa;
 use App\Guru;
 use App\MataPelajaran;
+use App\RatePertanyaan;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -77,7 +78,7 @@ class AdminController extends Controller
     public function siswaDelete($id){
         $siswa = Siswa::find($id);
         $siswa -> delete();
-        
+
         return back();
     }
 
@@ -91,7 +92,7 @@ class AdminController extends Controller
     public function guruDelete($id){
         $guru = Guru::find($id);
         $guru -> delete();
-        
+
         return back();
     }
 
@@ -105,7 +106,7 @@ class AdminController extends Controller
     public function matpelDelete($id){
         $matpel = MataPelajaran::find($id);
         $matpel -> delete();
-        
+
         return back();
     }
 
@@ -114,4 +115,54 @@ class AdminController extends Controller
 		return Excel::download(new RateExport, 'Hasil Penilaian.xlsx');
     }
 
+    public function export(){
+        $rating = RatePertanyaan::paginate(10);
+		return view('layouts/dashboard/export', ['rating' => $rating]);
+    }
+
+<<<<<<< HEAD
+    public function tambahMatpel(){
+        $mata_pelajaran = \App\MataPelajaran::all();
+        
+        $kelas = \App\Siswa::select('kelas')->distinct()->get();
+        return view('layouts/dashboard/tambahMatpel', compact('mata_pelajaran', 'kelas'));
+    }
+
+    public function tambah(Request $request){
+        // tambah matpel ke tabel mata pelajaran siswa
+        $id_matpel = $request->input('tambahMatpel');
+
+        // dd($id_matpel);
+        $kelas = $request->input('kelas');
+        $siswa = \App\Siswa::where('kelas', $kelas)->get();
+        $guru = \App\MatpelGuru::where('id_matpel', $id_matpel)->get();
+
+        for ($i=0; $i < count($siswa); $i++) { 
+            $tambahMatpel = MatpelSiswa::firstOrCreate([        
+                'mata_pelajaran_id' => $id_matpel,
+                'siswa_id' => $siswa[$i]->id,
+            ]); 
+        }
+        
+        for ($i=0; $i < count($siswa); $i++) { 
+            for ($j=0; $j < count($guru); $j++) { 
+                $program = Programs::FirstOrCreate([
+                    'id_guru' => $guru[$j]->guru->id,
+                    'id_matpel' => $id_matpel,
+                    'id_siswa' => $siswa[$i]->id
+                ]);
+            }
+        }
+        
+        return back();
+    }
+=======
+    public function cari(Request $request){
+        $guru_id = $request->input('guru_id');
+        $rating = RatePertanyaan::where('id_guru', $guru_id)->get();
+        return view('layouts/dashboard/export',compact('rating'));
+        //return back();
+        }
+
+>>>>>>> 974e6787254a9d6667ec1575fb1d7ab6b0ca413e
 }

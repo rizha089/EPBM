@@ -34,7 +34,6 @@ Route::group(['middleware'=>'auth'],function(){
 Route::get('/home', 'HomeController@index')->middleware('auth');
 // Route::get('/epbm', 'MatPelController@index');
 // Route::get('/charts', ['as'=>'charts','uses'=>'ChartsController@index']);
-Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');
 
 
 // route guru
@@ -44,11 +43,11 @@ Route::post('guru-login', ['as' => 'guru-login', 'uses' => 'Auth\GuruController@
 Route::get('guru-register','Auth\GuruController@showRegisterPage');
 Route::post('guru-register', 'Auth\GuruController@register')->name('guru.register');
 
-
 // route admin
 Route::get('/admin', function(){
     return view('admin');
 })->middleware('auth:admin')->name('admin');
+
 Route::get('admin-login','Auth\AdminController@showLoginForm');
 Route::post('admin-login', ['as' => 'admin-login', 'uses' => 'Auth\AdminController@login']);
 Route::get('admin-register','Auth\AdminController@showRegisterPage');
@@ -60,7 +59,16 @@ Route::get('/admin/guru/hapus/{id}', 'Auth\AdminController@guruDelete');
 Route::get('/admin/daftarmatpel', ['as'=>'daftarmatpel','uses'=>'Auth\AdminController@daftarMatpel']);
 Route::get('/admin/matpel/hapus/{id}', 'Auth\AdminController@matpelDelete');
 
+Route::get('/admin/tambahMatpel', ['as'=>'tambahMatpel','uses'=>'Auth\AdminController@tambahMatpel']);
 
 Route::get('/test', 'MatpelUser@index');
 Route::post('/test', 'MatpelUser@tambah');
-Route::get('/admin/export_excel', 'Auth\AdminController@export_excel');
+
+// Export rating
+Route::post('/rating/mata-pelajaran/guru/set-rating', 'RatingController@setRating');
+Route::get('/rating', 'RatingController@index');
+Route::get('/admin/export_excel', 'RatingController@export_excel');
+
+// route excel
+Route::get('/admin/export', ['as'=>'export','uses'=>'Auth\AdminController@export']);
+Route::get('/admin/export/{id}', 'Auth\AdminController@cari');
