@@ -216,11 +216,16 @@ class EpbmController extends Controller
 ```
 
 
-## 👏 Anti-patterns
+## 👏 Design Pattern
 
-### Dependency hell
+### Model View Controller (MVC)
 
-<p style="text-align: justify">Dependency hell dapat diartikan sebagai jumlah dependency yang besar dalam pengembangan. Hal ini terjadi karena Ilkomerz Juara tersedia untuk Mobile Apps dan Web sehingga banyaknya framework yang digunakan. Otomatis semakin banyak framework yang digunakan, maka semakin banyak dependency yang harus disiapkan sebelum melakukan developing. Kesulitan yang didapat pada anti-pattern ini adalah kalau misal ditemukan error pada suatu dependency, maka akan sulit untuk menemukan dependency mana yang harus di fix/update karena dependency yang besar.</p>
+<p align="center">
+  <img width=300 src="readme_gambar/design pattern.png" />
+</p>
+
+<p style="text-align: justify">Pola desain MVC membagi aplikasi yang terdiri dari model data, presentasi informasi, dan informasi kontrol. Pola tersebut memisahkan ketiganya menjadi objek yang berbeda.
+    Desain MVC membuat tiga objek yaitu Model, View dan Controller. Model hanya berisi data murni yang tidak mengandung logika untuk disajikan kepada pengguna. View menyajikan data model yang sudah diolah kepada pengguna, view mengerti cara mengakses model namun tidak mengerti maksud dari data tersebut. Controller ada diantara View dan Model, Controller mendengar apa yang diinginkan View kemudian memberikan reaksi yang sesuai dengan yang diinginkan. Pada kasus ini reaksi tersebut adalah mengakses Model kemudian diteruskan kepada View untuk menampilkan data kepada pengguna.</p>
 
 ### Poltergeists
 
