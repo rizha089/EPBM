@@ -47,6 +47,7 @@
 - [Features](#-features)
 - [Object-oriented concept](#-object-oriented-concept)
 - [Anti-patterns](#-anti-patterns)
+- [Suggestion](#-suggestion)
 - [Credit](#-credit)
 
 ## 📋 Requirements
@@ -189,6 +190,9 @@ class Admin extends user
 Menuliskan function atau class pada suatu program tanpa tujuan yang jelas. Istilah lain menurut [SourceMaking.com][sm] adalah `"I'm not exactly sure what this class does, but it sure is important!"`
 
 [sm]: https://sourcemaking.com/antipatterns/poltergeists
+
+## Suggestion
+
 
 ## 📄 Credit
 
