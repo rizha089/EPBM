@@ -62,8 +62,6 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Selamat Datang,</h3>
                         <h3 class="panel-title"><b> Admin </b></h3>
-
-                        <a href="/admin/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
                     </div>
                 </div>
             </div>

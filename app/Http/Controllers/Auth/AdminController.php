@@ -116,7 +116,7 @@ class AdminController extends Controller
     }
 
     public function export(){
-        $rating = RatePertanyaan::all();
+        $rating = RatePertanyaan::paginate(10);
 		return view('layouts/dashboard/export', ['rating'=>$rating]);
     }
 

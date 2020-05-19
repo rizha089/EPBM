@@ -59,7 +59,7 @@
                 <!-- OVERVIEW -->
                 <div class="panel panel-headline">
                     <div class="panel-heading">
-                        <h3 class="panel-title">DAFTAR GURU</h3>
+                        <h3 class="panel-title">Hasil EPBM</h3>
 
                 </div>
 
@@ -69,8 +69,9 @@
                 <div class="card-body">
                     <!-- <a href="/pegawai/tambah" class="btn btn-primary">Input Guru</a> -->
                     <br/>
+                    <a style="position:absolute; left:900px;"href="/admin/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
                     <br/>
-                    <table class='table table-bordered'>
+                    <table class='table table-striped table-bordered'>
 			<thead>
 				<tr>
 					<th>No</th>
@@ -109,6 +110,7 @@
                     <td>{{$s->averageRate}}</td>
                 </tr>
 				@endforeach
+                {!! $rating->render() !!}
 			</tbody>
 		</table>
                 </div>

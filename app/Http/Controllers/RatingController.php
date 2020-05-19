@@ -50,6 +50,6 @@ class RatingController extends Controller
     }
 
     public function export_excel(){
-        return Excel::download(new RateExports, 'rate.csv');
+        return Excel::download(new RateExports, 'rate.xlsx');
     }
 }
