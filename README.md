@@ -204,9 +204,9 @@ Aplikasi Ilkomerz Juara telah dikembangkan sejak mata kuliah SI hingga mata kuli
 ### Project Manager
 - Muhammad Farhan Dirhami  G64170099
 ### Front-end Developer
-- Aslam Alfathan           G64170076
-- Jimmi Alfriando          G64170005
 - Rizha Al-Fajri           G64170003
+- Jimmi Alfriando          G64170005
+- Aslam Alfathan           G64170076
 ### Back-end Developer
 - Irfan Alghani Khalid     G64170054
 - Julius Christopher       G64170097
