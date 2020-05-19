@@ -69,7 +69,7 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 ### Use Case Diagram
 
 <p align="center">
-  <img width=500 src="readme-images/use-case-diagram.jpg" />
+  <img width=500 src="readme_gambar/use case diagram.png" />
 </p>
 
 ### Class Diagram
