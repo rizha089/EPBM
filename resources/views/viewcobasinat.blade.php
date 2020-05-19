@@ -14,7 +14,7 @@ th, td {
 	<title>Cobacoba</title>
 </head>
 <body>
-	
+
 	<div class="form-group">
 		<table class="table table-bordered table-hover table-striped">
 			<thead>
@@ -29,7 +29,7 @@ th, td {
 				<th>avg</th>
 			</thead>
 			<tbody>
-				
+                @foreach($rate as $rate)
 				<tr>
 					<td> {{ $rate->guru->nama }} </td>
 					<td> {{ $rate->avg('pertanyaan1') }} </td>
@@ -41,11 +41,11 @@ th, td {
 					<td> {{ $rate->avg('pertanyaan7') }} </td>
 					<td> {{ $rate->avg('averageRate') }} </td>
 				</tr>
-				
+                @endforeach
 			</tbody>
 		</table>
 	</div>
-	
+
 
 <div id="select">
 
