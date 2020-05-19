@@ -221,7 +221,7 @@ class EpbmController extends Controller
 ### Model View Controller (MVC)
 
 <p align="center">
-  <img width=300 src="readme_gambar/design pattern.png" />
+  <img width=500 src="readme_gambar/design pattern.png" />
 </p>
 
 <p style="text-align: justify">Pola desain MVC membagi aplikasi yang terdiri dari model data, presentasi informasi, dan informasi kontrol. Pola tersebut memisahkan ketiganya menjadi objek yang berbeda.
