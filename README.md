@@ -35,6 +35,7 @@
 
 ### Software
 - Visual Studio Code
+- Sublime Text
 - PHPMyAdmin
 
 ### Hardware
@@ -44,6 +45,7 @@
 - Laravel + Bootstrap (Front-end)
 - PHP + JS (Back-end)
 - MySQL (DBMS)
+- Apache (Server)
 
 ## 💬 Requirements
 
