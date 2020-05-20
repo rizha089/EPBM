@@ -94,7 +94,7 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
 - Penilaian EPBM Guru
 - Tambah Mata Pelajaran per Kelas
 - Dashboard Tampilan Hasil Penilaian Guru
-- Export Hasil Penilaian ke bentuk Excel
+- Export Hasil Penilaian ke Bentuk Excel
 
 
 ## 📦 Object-Oriented Programming
