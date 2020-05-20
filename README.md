@@ -19,7 +19,7 @@
 
 - **Laravel Framework v5.7.16** untuk pengembangan back-end sisi Mobile Apps maupun Web Development, ini bertujuan untuk Integrasi Data yang ada pada sisi admin dan sisi user (Mahasiswa).
 
-## 🗒️ Contents
+## 🗒️ Table of Contents
 
 - [Scope of Development](#-scope-of-development)
 - [Requirements](#-requirements)
@@ -51,7 +51,7 @@ Framework:
 - **Laravel Framework 7.11.0** yang dapat dilihat di [sini][laravel].
 
 Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
-- Windows, macOS, atau Linux untuk Siswa, Guru dan Admin yang bisa diakses menggunakan akun masing masing. 
+- Windows, macOS, atau Linux untuk Siswa, Guru dan Admin yang bisa diakses menggunakan akun masing-masing. 
 
 [laravel]: https://laravel.com/docs/7.x/installation
 
@@ -78,7 +78,7 @@ Sistem EPBM Sekolah Cendekia BAZNAS menargetkan pengguna dengan sistem operasi:
   <img width=500 src="readme_gambar/aktivity diagram.png" />
 </p>
 
-- Aktivity diagram mengisi EPBM 
+- Activity diagram mengisi EPBM 
 
 <p align="center">
   <img width=400 src="readme_gambar/aktivity diagram mengisi epbm.png" />
