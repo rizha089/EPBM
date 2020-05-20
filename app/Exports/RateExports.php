@@ -22,7 +22,7 @@ class RateExports implements FromArray
 
         foreach ($rate as $r) {
             $rate_array[] = array(
-                'Nama_Siswa' => $r->siswa->nama,
+                'Nama_Siswa' => $r->id_siswa,
                 'Nama_Guru' => $r->guru->nama,
                 'Mata_Pelajaran' => $r->mata_pelajaran->nama_matpel,
                 'Pertanyaan_1' => $r->pertanyaan1,

@@ -113,7 +113,7 @@
 				@foreach($rating as $s)
 				<tr>
 					<td>{{ $i++ }}</td>
-					<td>{{$s->siswa->nama}}</td>
+					<td>{{$s->id_siswa}}</td>
 					<td>{{$s->guru->nama}}</td>
 					<td>{{$s->mata_pelajaran->nama_matpel}}</td>
                     <td>{{$s->pertanyaan1}}</td>
