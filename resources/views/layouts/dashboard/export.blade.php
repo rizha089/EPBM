@@ -80,7 +80,7 @@
                             <div class="col-xs-2 col-sm-2">
                                 <select name="guru_id", id="guru_id">
                                     <option value="">Pilih Guru</option>
-                                    @foreach(App\guru::all() as $g)
+                                    @foreach(App\Guru::all() as $g)
                                         <option class="option" value="{{$g->id}}">{{$g->nama}}</option>
                                     @endforeach
                                 </select>
