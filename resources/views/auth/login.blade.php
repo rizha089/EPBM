@@ -21,7 +21,7 @@ span.align-right { text-align:right; }
     <div class="card mb-8" >
   <div class="row no-gutters">
   <div class="col-md-6">
-    <img src="/klorofil/img/lOGIN.jpg" alt="Logo" class="img-responsive logo">
+    <img src="{{ asset('/klorofil/img/lOGIN.jpg') }}" alt="Logo" class="img-responsive logo">
 </div>
     <div class="col-md-6">
       <div class="card-body">

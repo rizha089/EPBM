@@ -1319,8 +1319,6 @@
                 "php",
                 "phpspreadsheet"
             ],
-<<<<<<< HEAD
-=======
             "funding": [
                 {
                     "url": "https://laravel-excel.com/commercial-support",
@@ -1331,7 +1329,6 @@
                     "type": "github"
                 }
             ],
->>>>>>> aca68eda0985235380c0700d15ab8e236be52a1c
             "time": "2020-02-28T15:47:45+00:00"
         },
         {

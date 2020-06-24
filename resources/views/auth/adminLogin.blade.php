@@ -19,7 +19,7 @@
   <div class="row no-gutters">
     <div class="col-md-6">
     
-                     <img src="/klorofil/img/lOGIN.jpg" alt="Logo" 
+                     <img src="{{ asset('/klorofil/img/lOGIN.jpg') }}" alt="Logo" 
                              class="img-responsive logo">
        
     </div>
